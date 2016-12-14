@@ -1,3 +1,4 @@
+
 <?php
 require_once "../../database/dbUsuario.php";
 require_once "../../database/dbColaborador.php";
@@ -68,7 +69,7 @@ $colab = new dbColaborador();
 				</h2>
 				<!-- Breadcrumb -->
 				<div class="bread-crumb pull-right">
-					<a href="dash.php" style=" color: white"><i class="fa fa-home"></i> Página Inicial</a>
+					<a href="/SimulacaoCelpa/view/Dashboard/dash.php" style=" color: white"><i class="fa fa-home"></i> Página Inicial</a>
 					<!-- Divider -->
 					<span class="divider">/</span>
 					<a href="#" class="bread-current" style=" color: white">Usuários</a>

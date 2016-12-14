@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="db_equatorial" uuid="4da41fdc-2ec4-4847-a084-8c5f848b4781">
+      <secret-storage>master_key</secret-storage>
+      <user-name>root</user-name>
+      <schema-pattern>db_equatorial.*</schema-pattern>
+      <default-schemas>phpmyadmin.*</default-schemas>
+    </data-source>
+  </component>
+</project>

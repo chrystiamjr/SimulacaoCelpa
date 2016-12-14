@@ -159,8 +159,8 @@ class dbRelacionamento
 		}
 	}
 
-	public function removerTodosRelacionamentoColaboradorEquipes ($cpf_colaborador) {
-		$sql = "DELETE FROM colaborador_equipes WHERE id_colaborador = (SELECT id_colaborador FROM colaborador WHERE cpf_colaborador = '{$cpf_colaborador}')";
+	public function removerTodosRelacionamentoColaboradorEquipes ($id_equipes) {
+		$sql = "DELETE FROM colaborador_equipes WHERE id_equipes = {$id_equipes}";
 		$stmt = $this->conn->exec($sql);
 		if($stmt){
 			$_SESSION['msg'] = '<div class="alert alert-info" role="alert" id="msg">Dados removidos com sucesso!<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a></div>';

@@ -3,16 +3,16 @@
 		<!-- Menu button for smallar screens -->
 		<div class="navbar-header">
 			<a href="#" id="ShowHide" class="navbar-brand" style="font-size: 20px"><i class="fa fa-bars" aria-hidden="true"></i></a>
-			<a href="/SimulacaoCelpa/dash.php" class="navbar-brand">Metro <span class="bold">King</span></a>
+			<a href="/SimulacaoCelpa/view/Dashboard/dash.php" class="navbar-brand">Metro <span class="bold">King</span></a>
 		</div>
 		<!-- Site name for smallar screens -->
 		<!-- Navigation starts -->
-		<nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">     
+		<nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
 			<!-- Links -->
 			<ul class="nav navbar-nav navbar-right">
-				<li class="dropdown">            
+				<li class="dropdown">
 					<a data-toggle="dropdown" class="dropdown-toggle" href="#">
-						<img src="img/user.jpg" alt="" class="nav-user-pic img-responsive" /> Admin <b class="caret"></b>  
+						<img src="img/user.jpg" alt="" class="nav-user-pic img-responsive" /> Admin <b class="caret"></b>
 					</a>
 					<!-- Dropdown menu -->
 					<ul class="dropdown-menu">

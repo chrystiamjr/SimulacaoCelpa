@@ -66,7 +66,7 @@ $equipe = new dbEquipe();
 			</h2>
 			<!-- Breadcrumb -->
 			<div class="bread-crumb pull-right">
-				<a href="dash.php" style=" color: white"><i class="fa fa-home"></i> Página Inicial</a>
+				<a href="/SimulacaoCelpa/view/Dashboard/dash.php" style=" color: white"><i class="fa fa-home"></i> Página Inicial</a>
 				<!-- Divider -->
 				<span class="divider">/</span>
 				<a href="#" class="bread-current" style=" color: white">Relacionamento Equipes</a>
