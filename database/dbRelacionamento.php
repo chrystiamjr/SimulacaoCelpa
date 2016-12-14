@@ -64,8 +64,8 @@ class dbRelacionamento
 		}
 	}
 
-	public function removerTodosRelacionamentoEquipesEquipamentos ($cod_equatorial) {
-		$sql = "DELETE FROM equipes_equipamentos WHERE id_equipes = (SELECT id_equipes FROM equipes WHERE cod_equatorial = '{$cod_equatorial}')";
+	public function removerTodosRelacionamentoEquipesEquipamentos ($id_equipes) {
+		$sql = "DELETE FROM equipes_equipamentos WHERE id_equipes = {$id_equipes}";
 		$stmt = $this->conn->exec($sql);
 		if($stmt){
 			$_SESSION['msg'] = '<div class="alert alert-info" role="alert" id="msg">Dados removidos com sucesso!<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a></div>';
@@ -112,8 +112,8 @@ class dbRelacionamento
 		}
 	}
 
-	public function removerTodosRelacionamentoColaboradorEquipamentos ($cpf_colaborador) {
-		$sql = "DELETE FROM colaborador_equipamentos WHERE id_colaborador = (SELECT id_colaborador FROM colaborador WHERE cpf_colaborador = '{$cpf_colaborador}')";
+	public function removerTodosRelacionamentoColaboradorEquipamentos ($id_colaborador) {
+		$sql = "DELETE FROM colaborador_equipamentos WHERE id_colaborador = {$id_colaborador}";
 		$stmt = $this->conn->exec($sql);
 		if($stmt){
 			$_SESSION['msg'] = '<div class="alert alert-info" role="alert" id="msg">Dados removidos com sucesso!<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a></div>';

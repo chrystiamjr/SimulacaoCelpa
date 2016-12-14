@@ -24,7 +24,7 @@
 						<li><a href="/SimulacaoCelpa/view/Equipe/cadastroEquipe.php"><i class="fa fa-asterisk" aria-hidden="true"></i>  Equipes</a></li>
 						<li><a href="/SimulacaoCelpa/view/Instalacoes/cadastroInstalacao.php"><i class="fa fa-asterisk" aria-hidden="true"></i>  Instalações</a></li> 
 						<li><a href="/SimulacaoCelpa/view/Obras/cadastroObra.php"><i class="fa fa-asterisk" aria-hidden="true"></i>  Obras</a></li> 
-						<li><a href="widgets1.html"><i class="fa fa-asterisk" aria-hidden="true"></i>  Regional</a></li> 
+<!--						<li><a href="widgets1.html"><i class="fa fa-asterisk" aria-hidden="true"></i>  Regional</a></li> -->
 						<li><a href="/SimulacaoCelpa/view/Usuario/cadastroUsuario.php"><i class="fa fa-asterisk" aria-hidden="true"></i>  Usuários</a></li>
 						<li><a href="/SimulacaoCelpa/view/Veiculos/cadastroVeiculo.php"><i class="fa fa-asterisk" aria-hidden="true"></i> Veículos</a></li> 
 					</ul>

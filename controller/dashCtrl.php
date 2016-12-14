@@ -7,26 +7,35 @@ $sOP = $_POST['sOP'];
 if($sOP == "DeletarTodosColaboradoresPorEquipe")
 {
 	$relacionamento->removerTodosRelacionamentoColaboradorEquipes($_POST['idEquipeRemover']);
-	header("location:/SimulacaoCelpa/view/Atividades/cadastroAtividade.php");
-} elseif($sOP == "Editar")
+	header("location:/SimulacaoCelpa/view/Dashboard/dash.php");
+}
+
+elseif($sOP == "DeletarUmColaboradorPorEquipe")
 {
-	$id = $_POST['idAtividade'];
-	$descricao = mb_strtoupper($_POST['descricao']);
-	$sigla = mb_strtoupper($_POST['sigla']);
-	if($id != null && $descricao != null && $sigla != null)
-	{
-		$atividade->alterarAtividade($id, mb_strtoupper($descricao), mb_strtoupper($sigla));
-	} else
-	{
-		$_SESSION['msg'] = '<div class="alert alert-danger" role="alert" id="msg">Os campos não podem estar em branco!<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a></div>';
-	}
-	header("location:/SimulacaoCelpa/view/Atividades/cadastroAtividade.php");
-} elseif($sOP == "Deletar")
+	$relacionamento->removerUmRelacionamentoColaboradorEquipes($_POST['cpf_colaborador'], $_POST['id_equipes']);
+	header("location:/SimulacaoCelpa/view/Dashboard/dash.php");
+}
+
+elseif($sOP == "DeletarTodosEquipamentosPorColaborador")
 {
-	$id = $_POST['idAtividade'];
-	if($id != null)
-	{
-		$atividade->removerAtividade($id);
-	}
-	header("location:/SimulacaoCelpa/view/Atividades/cadastroAtividade.php");
+	$relacionamento->removerTodosRelacionamentoColaboradorEquipamentos($_POST['idColaboradorRemover']);
+	header("location:/SimulacaoCelpa/view/Dashboard/dash.php");
+}
+
+elseif($sOP == "DeletarUmEquipamentoPorColaborador")
+{
+	$relacionamento->removerUmRelacionamentoColaboradorEquipamentos($_POST['cpf_colaborador'],$_POST['id_equipamentos']);
+	header("location:/SimulacaoCelpa/view/Dashboard/dash.php");
+}
+
+elseif($sOP == "DeletarTodosEquipamentosPorEquipe")
+{
+	$relacionamento->removerTodosRelacionamentoEquipesEquipamentos($_POST['idEquipeRemover']);
+	header("location:/SimulacaoCelpa/view/Dashboard/dash.php");
+}
+
+elseif($sOP == "DeletarUmEquipamentoPorEquipe")
+{
+	$relacionamento->removerUmRelacionamentoEquipesEquipamentos($_POST['cod_equatorial'],$_POST['id_equipamentos']);
+	header("location:/SimulacaoCelpa/view/Dashboard/dash.php");
 }

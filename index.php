@@ -28,52 +28,49 @@
 <!-- Form area -->
 <div class="admin-form">
 	<!-- Widget starts -->
-	<div class="widget wblue">
-		<!-- Widget head -->
-		<div class="widget-head">
-			<i class="fa fa-lock"></i> Login
-		</div>
+	<form class="form-horizontal" action="#" method="post">
+		<div class="widget wblue">
+			<!-- Widget head -->
+			<div class="widget-head">
+				<i class="fa fa-lock"></i> Login
+			</div>
 
-		<div class="widget-content">
-			<div class="padd">
-				<!-- Login form -->
-				<form class="form-horizontal">
+			<div class="widget-content">
+				<div class="padd">
 					<!-- Email -->
 					<div class="form-group">
-						<label class="control-label col-lg-3" for="inputEmail">Email</label>
+						<label class="control-label col-md-2" for="cpfLogin" style="text-align: center">CPF:</label>
 						<div class="col-lg-9">
-							<input type="text" class="form-control" id="inputEmail" placeholder="Email">
+							<input type="text" class="form-control" id="cpfLogin" name="cpf" pattern=".{14,}" required maxlength="14" OnKeyPress="formatar('###.###.###-##', this)" placeholder="CPF">
 						</div>
 					</div>
 					<!-- Password -->
 					<div class="form-group">
-						<label class="control-label col-lg-3" for="inputPassword">Senha</label>
+						<label class="control-label col-md-2" for="inputPassword" style="text-align: center">Senha:</label>
 						<div class="col-lg-9">
-							<input type="password" class="form-control" id="inputPassword" placeholder="Senha">
+							<input type="password" class="form-control" id="inputPassword" placeholder="Senha" required>
 						</div>
 					</div>
 					<!-- Remember me checkbox and sign in button -->
 					<div class="form-group">
-						<div class="col-lg-9 col-lg-offset-3">
-							<div class="checkbox">
+						<div class="pull-right" style="margin-right: 60px">
+							<div class="checkbox" >
 								<label>
 									<input type="checkbox"> Lembre de mim
 								</label>
 							</div>
 						</div>
-						<div class="col-lg-9 col-lg-offset-3">
-							<button type="submit" class="btn btn-primary">Sign in</button>
-							<button type="reset" class="btn btn-default">Limpar campos</button>
-						</div>
 					</div>
-				</form>
-				<div class="clearfix"></div>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+			<div class="widget-foot">
+					<button type="submit" class="btn btn-primary">Entar no sistema</button>
+					<button type="reset" class="btn btn-default pull-right">Limpar campos</button>
 			</div>
 		</div>
-		<div class="widget-foot">
-			Não possui cadastro? <a href="register.html">Cadastre-se aqui</a>
-		</div>
-	</div>
+
+	</form>
 </div>
 
 
@@ -86,5 +83,8 @@
 <script src="js/respond.min.js"></script>
 <!-- HTML5 Support for IE -->
 <script src="js/html5shiv.js"></script>
+
+<?php include 'includes/scripts.php'?>
+
 </body>
 </html>

@@ -39,7 +39,7 @@
 			</div>
 			<div class="modal-body">
 				<form class="form-horizontal" action="/SimulacaoCelpa/controller/dashCtrl.php" method="post">
-					<input type="hidden" name="sOP" value="DeletarTodosColaboradoresPorEquipe">
+					<input type="hidden" name="sOP" value="DeletarUmColaboradorPorEquipe">
 					<input type="hidden" id="idEquipeRemoveColab" name="id_equipes">
 					<input type="hidden" id="cpfColaboradorRemoveColab" name="cpf_colaborador">
 					<div class="content">
@@ -66,7 +66,7 @@
 			</div>
 			<div class="modal-body">
 				<form class="form-horizontal" action="/SimulacaoCelpa/controller/dashCtrl.php" method="post">
-					<input type="hidden" name="sOP" value="DeletarTodosColaboradoresPorEquipe">
+					<input type="hidden" name="sOP" value="DeletarTodosEquipamentosPorColaborador">
 					<div class="content">
 						<h4 style="text-align: center;">Deseja remover a entrada?</h4>
 						<select name="idColaboradorRemover" style="margin-left: 25%;width: 50%";>
@@ -96,7 +96,7 @@
 			</div>
 			<div class="modal-body">
 				<form class="form-horizontal" action="/SimulacaoCelpa/controller/dashCtrl.php" method="post">
-					<input type="hidden" name="sOP" value="DeletarTodosColaboradoresPorEquipe">
+					<input type="hidden" name="sOP" value="DeletarUmEquipamentoPorColaborador">
 					<input type="hidden" id="idEquipamentoRemoveEquipamento" name="id_equipamentos">
 					<input type="hidden" id="cpfColaboradorRemoveEquipamento" name="cpf_colaborador">
 					<div class="content">
@@ -123,7 +123,7 @@
 			</div>
 			<div class="modal-body">
 				<form class="form-horizontal" action="/SimulacaoCelpa/controller/dashCtrl.php" method="post">
-					<input type="hidden" name="sOP" value="DeletarTodosColaboradoresPorEquipe">
+					<input type="hidden" name="sOP" value="DeletarTodosEquipamentosPorEquipe">
 					<div class="content">
 						<h4 style="text-align: center;">Deseja remover a entrada?</h4>
 						<select name="idEquipeRemover" style="margin-left: 25%;width: 50%";>
@@ -153,7 +153,7 @@
 			</div>
 			<div class="modal-body">
 				<form class="form-horizontal" action="/SimulacaoCelpa/controller/dashCtrl.php" method="post">
-					<input type="hidden" name="sOP" value="DeletarTodosColaboradoresPorEquipe">
+					<input type="hidden" name="sOP" value="DeletarUmEquipamentoPorEquipe">
 					<input type="hidden" id="idEquipamentoRemoveEquipe" name="id_equipamentos">
 					<input type="hidden" id="equatorialRemoveEquipe" name="cod_equatorial">
 					<div class="content">
