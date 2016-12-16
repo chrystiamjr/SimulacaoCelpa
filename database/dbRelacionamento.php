@@ -142,14 +142,9 @@ class dbRelacionamento
 {
 	private $conn;
 
-	function __construct()
-	{
-		try {
-			$this->conn = new PDO("mysql:dbname=db_equatorial;host=localhost;charset=utf8", "root", "");
-			// echo "Sucesso";
-		} catch (PDOException $e) {
-			echo "Falha: " . $e->getMessage();
-		}
+	function __construct (){
+		require_once 'dbConexao.php';
+		$this->conn = conectar();
 	}
 
 	public function listarEPCPorEquipes_EquipesEquipamentos($id)
