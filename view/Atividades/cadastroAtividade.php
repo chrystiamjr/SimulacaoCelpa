@@ -46,7 +46,7 @@ $atv = new dbAtividade();
 		</style>
 
 		<!-- Favicon -->
-		<link rel="shortcut icon" href="#">
+		<link rel="shortcut icon" href="/SimulacaoCelpa/img/favicon/favicon.png">
 	</head>
 
 	<body>
@@ -54,7 +54,7 @@ $atv = new dbAtividade();
 	<?php include '../../includes/header.php'; ?>
 
 	<!-- Main content starts -->
-	<div class="content">
+	<div class="content" style="margin-top: 36px;">
 		<?php include '../../includes/sidebar.php'; ?>
 
 		<!-- Main bar -->
@@ -141,7 +141,7 @@ $atv = new dbAtividade();
 		window.onbeforeunload = function() {
 			<?php unset($_SESSION['msg']); ?>
 			console.log('Dados da session[msg] apagados');
-		}
+		};
 
 		$(".editar").click(function(){
 			var desc = $(this).find('.editaDescricao').val();

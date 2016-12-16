@@ -397,7 +397,7 @@
 					filtereddata = filtereddata.substr(0,254);
 				}
 				humandata=filtereddata;
-			      filtereddata = getCode39ASCIIMappedString(filtereddata)
+			      filtereddata = getCode39ASCIIMappedString(filtereddata);
 				// cd = generateCheckDigit(filtereddata);
 			}
 			else
@@ -429,7 +429,7 @@
 				{
 					filtereddata = filtereddata.substr(0,254);
 				}
-			      filtereddata = getCode39ASCIIMappedString(filtereddata)
+			      filtereddata = getCode39ASCIIMappedString(filtereddata);
 				// cd = generateCheckDigit(filtereddata);
 			}
 			else
@@ -449,7 +449,7 @@
 
 		function getCode39ASCIIMappedString(inputx)
 		{
-			var CODE39ASCIIMAP=new Array("%U", "$A", "$B", "$C", "$D", "$E", "$F", "$G", "$H", "$I", "$J", "$K", "$L", "$M", "$N", "$O", "$P", "$Q", "$R", "$S", "$T", "$U", "$V", "$W", "$X", "$Y", "$Z", "%A", "%B", "%C", "%D", "%E", " ", "/A", "/B", "/C", "/D", "/E", "/F", "/G", "/H", "/I", "/J", "/K", "/L", "-", ".", "/O", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "/Z", "%F", "%G", "%H", "%I", "%J", "%V", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "%K", "%L", "%M", "%N", "%O", "%W", "+A", "+B", "+C", "+D", "+E", "+F", "+G", "+H", "+I", "+J", "+K", "+L", "+M", "+N", "+O", "+P", "+Q", "+R", "+S", "+T", "+U", "+V", "+W", "+X", "+Y", "+Z", "%P", "%Q", "%R", "%S", "%T");
+			var CODE39ASCIIMAP=["%U", "$A", "$B", "$C", "$D", "$E", "$F", "$G", "$H", "$I", "$J", "$K", "$L", "$M", "$N", "$O", "$P", "$Q", "$R", "$S", "$T", "$U", "$V", "$W", "$X", "$Y", "$Z", "%A", "%B", "%C", "%D", "%E", " ", "/A", "/B", "/C", "/D", "/E", "/F", "/G", "/H", "/I", "/J", "/K", "/L", "-", ".", "/O", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "/Z", "%F", "%G", "%H", "%I", "%J", "%V", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "%K", "%L", "%M", "%N", "%O", "%W", "+A", "+B", "+C", "+D", "+E", "+F", "+G", "+H", "+I", "+J", "+K", "+L", "+M", "+N", "+O", "+P", "+Q", "+R", "+S", "+T", "+U", "+V", "+W", "+X", "+Y", "+Z", "%P", "%Q", "%R", "%S", "%T"];
 			var strResult="";
 			var datalength=inputx.length;
 			for (x=0;x<datalength;x++)
@@ -460,20 +460,20 @@
 		}
 
 		function getCode39Character(inputdecimal) {
-			var CODE39MAP=new Array("0","1","2","3","4","5","6","7","8","9",
+			var CODE39MAP=["0","1","2","3","4","5","6","7","8","9",
 							"A","B","C","D","E","F","G","H","I","J",
 							"K","L","M","N","O","P","Q","R","S","T",
 							"U","V","W","X","Y","Z","-","."," ","$",
-							"/","+","%");
+							"/","+","%"];
 			return CODE39MAP[inputdecimal];
 		}
 
 		function getCode39Value(inputchar) {
-			var CODE39MAP=new Array("0","1","2","3","4","5","6","7","8","9",
+			var CODE39MAP=["0","1","2","3","4","5","6","7","8","9",
 							"A","B","C","D","E","F","G","H","I","J",
 							"K","L","M","N","O","P","Q","R","S","T",
 							"U","V","W","X","Y","Z","-","."," ","$",
-							"/","+","%");
+							"/","+","%"];
 			var RVal=-1;
 			for (i=0;i<43;i++)
 			{

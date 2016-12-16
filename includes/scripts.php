@@ -1,4 +1,3 @@
-
 <!-- jQuery -->
 <script src="/SimulacaoCelpa/js/jquery.js"></script>
 <!-- Bootstrap JS -->
@@ -34,19 +33,19 @@
 <script src="/SimulacaoCelpa/js/code39ascii.js"></script>
 
 <script>
-	function formatar(mascara, documento){
+	function formatar(mascara, documento) {
 		var i = documento.value.length;
-		var saida = mascara.substring(0,1);
-		var texto = mascara.substring(i)
+		var saida = mascara.substring(0, 1);
+		var texto = mascara.substring(i);
 
-		if (texto.substring(0,1) != saida){
-			documento.value += texto.substring(0,1);
+		if (texto.substring(0, 1) != saida) {
+			documento.value += texto.substring(0, 1);
 		}
 	}
 </script>
 
 <style>
-	.hideSidebar{
+	.hideSidebar {
 		margin-left: 20px;
 		margin-right: 20px;
 	}
@@ -54,23 +53,25 @@
 
 <script type="text/javascript">
 	var toggle = false;
-	$('#ShowHide').click(function () {
+	$('#ShowHide').click(toggleBar);
+
+	function toggleBar() {
 		toggle = !toggle;
 		if (toggle) {
-			$('.mainbar').animate({marginLeft: "0",});
+			$('.mainbar').animate({marginLeft: "0"});
 			$('.sidebar').animate({left: -400});
-			$('div.container').addClass("hideSidebar");
-			$('div.container').removeClass("container");
+			$('div.matter').find('.container').addClass("hideSidebar");
+			$('div.matter').find('.container').removeClass("container");
 		}
 		else {
-			$('.mainbar').animate({marginLeft: "230px",});
+			$('.mainbar').animate({marginLeft: "230px"},400);
 			$('.sidebar').animate({left: 0});
-			$('div.hideSidebar').addClass("container");
-			$('div.hideSidebar').removeClass("hideSidebar");
+			$('div.matter').find('.container').removeClass("hideSidebar");
 		}
-	});
+	}
+
 </script>
 
 <script>
-	
+
 </script>

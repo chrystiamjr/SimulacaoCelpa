@@ -7,7 +7,7 @@
 			<ul class="navi">
 				<!-- Use the class nred, ngreen, nblue, nlightblue, nviolet or norange to add background color. You need to use this in <li> tag. -->
 
-				<li class="nred current"><a href="/SimulacaoCelpa/view/Dashboard/dash.php"><i class="fa fa-desktop"></i> Tela inicial</a></li>
+				<li class="nred"><a href="/SimulacaoCelpa/view/Dashboard/dash2.php"><i class="fa fa-desktop"></i> Tela inicial</a></li>
 
 				<!-- Menu with sub menu -->
 				<li class="has_submenu nlightblue">

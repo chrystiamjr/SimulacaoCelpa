@@ -26,7 +26,7 @@ CREATE TABLE IF NOT EXISTS `db_equatorial`.`atividades` (
   `descricao` VARCHAR(60) NULL,
   `sigla` VARCHAR(5) NULL,
   PRIMARY KEY (`id_atividades`))
-ENGINE = InnoDB;
+  ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
@@ -37,7 +37,7 @@ CREATE TABLE IF NOT EXISTS `db_equatorial`.`veiculo` (
   `placa` VARCHAR(10) NULL,
   `tpo_veiculo` TINYINT(1) NOT NULL COMMENT '0 = Carro; 1 = Moto;',
   PRIMARY KEY (`id_veiculo`))
-ENGINE = InnoDB;
+  ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
@@ -47,7 +47,7 @@ CREATE TABLE IF NOT EXISTS `db_equatorial`.`holding` (
   `id_holding` INT NOT NULL AUTO_INCREMENT,
   `nm_holding` VARCHAR(45) NULL,
   PRIMARY KEY (`id_holding`))
-ENGINE = InnoDB;
+  ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
@@ -61,11 +61,11 @@ CREATE TABLE IF NOT EXISTS `db_equatorial`.`distribuidora` (
   PRIMARY KEY (`id_distribuidora`),
   INDEX `fk_distribuidora_holding_idx` (`id_holding` ASC),
   CONSTRAINT `fk_distribuidora_holding`
-    FOREIGN KEY (`id_holding`)
-    REFERENCES `db_equatorial`.`holding` (`id_holding`)
+  FOREIGN KEY (`id_holding`)
+  REFERENCES `db_equatorial`.`holding` (`id_holding`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
-ENGINE = InnoDB;
+  ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
@@ -78,11 +78,11 @@ CREATE TABLE IF NOT EXISTS `db_equatorial`.`diretoria` (
   PRIMARY KEY (`id_diretoria`),
   INDEX `fk_diretoria_distribuidora1_idx` (`id_distribuidora` ASC),
   CONSTRAINT `fk_diretoria_distribuidora1`
-    FOREIGN KEY (`id_distribuidora`)
-    REFERENCES `db_equatorial`.`distribuidora` (`id_distribuidora`)
+  FOREIGN KEY (`id_distribuidora`)
+  REFERENCES `db_equatorial`.`distribuidora` (`id_distribuidora`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
-ENGINE = InnoDB;
+  ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
@@ -95,11 +95,11 @@ CREATE TABLE IF NOT EXISTS `db_equatorial`.`gerencia_executiva` (
   PRIMARY KEY (`id_gerencia_executiva`),
   INDEX `fk_gerencia_executiva_diretoria1_idx` (`id_diretoria` ASC),
   CONSTRAINT `fk_gerencia_executiva_diretoria1`
-    FOREIGN KEY (`id_diretoria`)
-    REFERENCES `db_equatorial`.`diretoria` (`id_diretoria`)
+  FOREIGN KEY (`id_diretoria`)
+  REFERENCES `db_equatorial`.`diretoria` (`id_diretoria`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
-ENGINE = InnoDB;
+  ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
@@ -112,11 +112,11 @@ CREATE TABLE IF NOT EXISTS `db_equatorial`.`area_executiva` (
   PRIMARY KEY (`id_area_executiva`),
   INDEX `fk_area_executiva_gerencia_executiva1_idx` (`id_gerencia_executiva` ASC),
   CONSTRAINT `fk_area_executiva_gerencia_executiva1`
-    FOREIGN KEY (`id_gerencia_executiva`)
-    REFERENCES `db_equatorial`.`gerencia_executiva` (`id_gerencia_executiva`)
+  FOREIGN KEY (`id_gerencia_executiva`)
+  REFERENCES `db_equatorial`.`gerencia_executiva` (`id_gerencia_executiva`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
-ENGINE = InnoDB;
+  ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
@@ -130,11 +130,11 @@ CREATE TABLE IF NOT EXISTS `db_equatorial`.`regional` (
   PRIMARY KEY (`id_regional`),
   INDEX `fk_regional_area_executiva1_idx` (`id_area_executiva` ASC),
   CONSTRAINT `fk_regional_area_executiva1`
-    FOREIGN KEY (`id_area_executiva`)
-    REFERENCES `db_equatorial`.`area_executiva` (`id_area_executiva`)
+  FOREIGN KEY (`id_area_executiva`)
+  REFERENCES `db_equatorial`.`area_executiva` (`id_area_executiva`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
-ENGINE = InnoDB;
+  ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
@@ -152,21 +152,21 @@ CREATE TABLE IF NOT EXISTS `db_equatorial`.`equipes` (
   INDEX `fk_equipes_veiculo1_idx` (`id_veiculo` ASC),
   INDEX `fk_equipes_regional1_idx` (`id_regional` ASC),
   CONSTRAINT `fk_equipes_atividades1`
-    FOREIGN KEY (`id_atividades`)
-    REFERENCES `db_equatorial`.`atividades` (`id_atividades`)
+  FOREIGN KEY (`id_atividades`)
+  REFERENCES `db_equatorial`.`atividades` (`id_atividades`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_equipes_veiculo1`
-    FOREIGN KEY (`id_veiculo`)
-    REFERENCES `db_equatorial`.`veiculo` (`id_veiculo`)
+  FOREIGN KEY (`id_veiculo`)
+  REFERENCES `db_equatorial`.`veiculo` (`id_veiculo`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_equipes_regional1`
-    FOREIGN KEY (`id_regional`)
-    REFERENCES `db_equatorial`.`regional` (`id_regional`)
+  FOREIGN KEY (`id_regional`)
+  REFERENCES `db_equatorial`.`regional` (`id_regional`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
-ENGINE = InnoDB;
+  ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
@@ -177,7 +177,7 @@ CREATE TABLE IF NOT EXISTS `db_equatorial`.`equipamentos` (
   `tipo_equipamento` INT NOT NULL COMMENT '0 = EPI; 1 = EPC; 2 = Ferramenta;',
   `descricao` VARCHAR(60) NULL,
   PRIMARY KEY (`id_equipamentos`))
-ENGINE = InnoDB;
+  ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
@@ -200,31 +200,31 @@ CREATE TABLE IF NOT EXISTS `db_equatorial`.`colaborador` (
   INDEX `fk_colaborador_distribuidora1_idx` (`id_distribuidora` ASC),
   INDEX `fk_colaborador_regional1_idx` (`id_regional` ASC),
   CONSTRAINT `fk_colaborador_diretoria1`
-    FOREIGN KEY (`id_diretoria`)
-    REFERENCES `db_equatorial`.`diretoria` (`id_diretoria`)
+  FOREIGN KEY (`id_diretoria`)
+  REFERENCES `db_equatorial`.`diretoria` (`id_diretoria`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_colaborador_area_executiva1`
-    FOREIGN KEY (`id_area_executiva`)
-    REFERENCES `db_equatorial`.`area_executiva` (`id_area_executiva`)
+  FOREIGN KEY (`id_area_executiva`)
+  REFERENCES `db_equatorial`.`area_executiva` (`id_area_executiva`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_colaborador_gerencia_executiva1`
-    FOREIGN KEY (`id_gerencia_executiva`)
-    REFERENCES `db_equatorial`.`gerencia_executiva` (`id_gerencia_executiva`)
+  FOREIGN KEY (`id_gerencia_executiva`)
+  REFERENCES `db_equatorial`.`gerencia_executiva` (`id_gerencia_executiva`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_colaborador_distribuidora1`
-    FOREIGN KEY (`id_distribuidora`)
-    REFERENCES `db_equatorial`.`distribuidora` (`id_distribuidora`)
+  FOREIGN KEY (`id_distribuidora`)
+  REFERENCES `db_equatorial`.`distribuidora` (`id_distribuidora`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_colaborador_regional1`
-    FOREIGN KEY (`id_regional`)
-    REFERENCES `db_equatorial`.`regional` (`id_regional`)
+  FOREIGN KEY (`id_regional`)
+  REFERENCES `db_equatorial`.`regional` (`id_regional`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
-ENGINE = InnoDB;
+  ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
@@ -242,16 +242,16 @@ CREATE TABLE IF NOT EXISTS `db_equatorial`.`instalacoes` (
   INDEX `fk_instalacoes_regional1_idx` (`id_regional` ASC),
   INDEX `fk_instalacoes_atividades1_idx` (`id_atividades` ASC),
   CONSTRAINT `fk_instalacoes_regional1`
-    FOREIGN KEY (`id_regional`)
-    REFERENCES `db_equatorial`.`regional` (`id_regional`)
+  FOREIGN KEY (`id_regional`)
+  REFERENCES `db_equatorial`.`regional` (`id_regional`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_instalacoes_atividades1`
-    FOREIGN KEY (`id_atividades`)
-    REFERENCES `db_equatorial`.`atividades` (`id_atividades`)
+  FOREIGN KEY (`id_atividades`)
+  REFERENCES `db_equatorial`.`atividades` (`id_atividades`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
-ENGINE = InnoDB;
+  ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
@@ -262,7 +262,7 @@ CREATE TABLE IF NOT EXISTS `db_equatorial`.`obras` (
   `descricao` VARCHAR(60) NULL,
   `sigla` VARCHAR(5) NULL,
   PRIMARY KEY (`id_obras`))
-ENGINE = InnoDB;
+  ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
@@ -276,11 +276,11 @@ CREATE TABLE IF NOT EXISTS `db_equatorial`.`usuario` (
   PRIMARY KEY (`id_usuario`, `id_colaborador`),
   INDEX `fk_usuario_colaborador1_idx` (`id_colaborador` ASC),
   CONSTRAINT `fk_usuario_colaborador1`
-    FOREIGN KEY (`id_colaborador`)
-    REFERENCES `db_equatorial`.`colaborador` (`id_colaborador`)
+  FOREIGN KEY (`id_colaborador`)
+  REFERENCES `db_equatorial`.`colaborador` (`id_colaborador`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
-ENGINE = InnoDB;
+  ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
@@ -293,16 +293,16 @@ CREATE TABLE IF NOT EXISTS `db_equatorial`.`colaborador_equipes` (
   INDEX `fk_colaborador_has_equipes_equipes1_idx` (`id_equipes` ASC),
   INDEX `fk_colaborador_has_equipes_colaborador1_idx` (`id_colaborador` ASC),
   CONSTRAINT `fk_colaborador_has_equipes_colaborador1`
-    FOREIGN KEY (`id_colaborador`)
-    REFERENCES `db_equatorial`.`colaborador` (`id_colaborador`)
+  FOREIGN KEY (`id_colaborador`)
+  REFERENCES `db_equatorial`.`colaborador` (`id_colaborador`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_colaborador_has_equipes_equipes1`
-    FOREIGN KEY (`id_equipes`)
-    REFERENCES `db_equatorial`.`equipes` (`id_equipes`)
+  FOREIGN KEY (`id_equipes`)
+  REFERENCES `db_equatorial`.`equipes` (`id_equipes`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
-ENGINE = InnoDB;
+  ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
@@ -315,16 +315,16 @@ CREATE TABLE IF NOT EXISTS `db_equatorial`.`equipes_equipamentos` (
   INDEX `fk_equipes_has_equipamentos_equipamentos1_idx` (`id_equipamentos` ASC),
   INDEX `fk_equipes_has_equipamentos_equipes1_idx` (`id_equipes` ASC),
   CONSTRAINT `fk_equipes_has_equipamentos_equipes1`
-    FOREIGN KEY (`id_equipes`)
-    REFERENCES `db_equatorial`.`equipes` (`id_equipes`)
+  FOREIGN KEY (`id_equipes`)
+  REFERENCES `db_equatorial`.`equipes` (`id_equipes`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_equipes_has_equipamentos_equipamentos1`
-    FOREIGN KEY (`id_equipamentos`)
-    REFERENCES `db_equatorial`.`equipamentos` (`id_equipamentos`)
+  FOREIGN KEY (`id_equipamentos`)
+  REFERENCES `db_equatorial`.`equipamentos` (`id_equipamentos`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
-ENGINE = InnoDB;
+  ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
@@ -337,16 +337,16 @@ CREATE TABLE IF NOT EXISTS `db_equatorial`.`colaborador_equipamentos` (
   INDEX `fk_colaborador_has_equipamentos_equipamentos1_idx` (`id_equipamentos` ASC),
   INDEX `fk_colaborador_has_equipamentos_colaborador1_idx` (`id_colaborador` ASC),
   CONSTRAINT `fk_colaborador_has_equipamentos_colaborador1`
-    FOREIGN KEY (`id_colaborador`)
-    REFERENCES `db_equatorial`.`colaborador` (`id_colaborador`)
+  FOREIGN KEY (`id_colaborador`)
+  REFERENCES `db_equatorial`.`colaborador` (`id_colaborador`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_colaborador_has_equipamentos_equipamentos1`
-    FOREIGN KEY (`id_equipamentos`)
-    REFERENCES `db_equatorial`.`equipamentos` (`id_equipamentos`)
+  FOREIGN KEY (`id_equipamentos`)
+  REFERENCES `db_equatorial`.`equipamentos` (`id_equipamentos`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
-ENGINE = InnoDB;
+  ENGINE = InnoDB;
 
 
 SET SQL_MODE=@OLD_SQL_MODE;
@@ -421,3 +421,9 @@ INSERT INTO `atividades`(`descricao`, `sigla`) VALUES ('PLANTÃO', 'PL');
 INSERT INTO `veiculo` (`placa`, `tpo_veiculo`) values ('JUR-8387' ,1);
 INSERT INTO `veiculo` (`placa`, `tpo_veiculo`) values ('DBZ-1983' ,0);
 
+-- ---------------------- --
+-- Insert Table Colaborador + Usuário
+-- ---------------------- --
+
+INSERT INTO `colaborador` (`id_distribuidora`,`id_diretoria`,`id_gerencia_executiva`,`id_area_executiva`,`id_regional`,`nm_colaborador`,`cpf_colaborador`,`matricula`) VALUES (1,1,1,1,1,'Colaborador Administrativo', '12312312312','COLAB182634');
+INSERT INTO `usuario` (`id_colaborador`,`tp_user`,`pswd`) VALUES (1000000,0,'admin123');

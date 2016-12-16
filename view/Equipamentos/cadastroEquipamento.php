@@ -46,7 +46,7 @@ $equip = new dbEquipamento();
 		</style>
 
 		<!-- Favicon -->
-		<link rel="shortcut icon" href="#">
+		<link rel="shortcut icon" href="/SimulacaoCelpa/img/favicon/favicon.png">
 	</head>
 
 	<body>
@@ -54,7 +54,7 @@ $equip = new dbEquipamento();
 	<?php include '../../includes/header.php'; ?>
 
 	<!-- Main content starts -->
-	<div class="content">
+	<div class="content" style="margin-top: 36px;">
 		<?php include '../../includes/sidebar.php'; ?>
 
 		<!-- Main bar -->
@@ -153,7 +153,7 @@ $equip = new dbEquipamento();
 		window.onbeforeunload = function() {
 			<?php unset($_SESSION['msg']); ?>
 			console.log('Dados da session[msg] apagados');
-		}
+		};
 
 		$(".editar").click(function(){
 			var desc = $(this).find('.editaDescricao').val();
@@ -196,7 +196,7 @@ $equip = new dbEquipamento();
 				}
 
 				var dados = '';
-				dados += '<div id="itens">'
+				dados += '<div id="itens">';
 				dados += '<h5 id="printDescricaoEquipamento"></h5>';
 				dados += '<h5 id="printTipoEquipamento"></h5>';
 				dados += '<hr>';
@@ -210,7 +210,7 @@ $equip = new dbEquipamento();
 				$('#printDescricaoEquipamento').append("Descrição: "+descricaoCodigo);
 				$('#printTipoEquipamento').append("Tipo: "+tipoCodigoFinal);
 
-				$('#imprimirCodigo').on('click', function(){$("#Codigo").print({addGlobalStyles : true,stylesheet : null,rejectWindow : true,noPrintSelector : ".no-print",append : null,prepend : null});});
+				$('#imprimirCodigo').on('click', function(){$("#Codigo").print({addGlobalStyles : true,stylesheet : '/SimulacaoCelpa/css/printing.css',rejectWindow : true,noPrintSelector : ".no-print",append : null,prepend : null});});
 			}
 		});
 
