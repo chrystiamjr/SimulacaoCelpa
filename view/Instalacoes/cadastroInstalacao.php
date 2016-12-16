@@ -1,3 +1,4 @@
+
 <?php
 require_once "../../database/dbInstalacao.php";
 require_once "../../database/dbRegional.php";
@@ -49,7 +50,7 @@ $ativ = new dbAtividade();
 		</style>
 
 		<!-- Favicon -->
-		<link rel="shortcut icon" href="#">
+		<link rel="shortcut icon" href="/SimulacaoCelpa/img/favicon/favicon.png">
 	</head>
 
 	<body>
@@ -57,7 +58,7 @@ $ativ = new dbAtividade();
 	<?php include '../../includes/header.php'; ?>
 
 	<!-- Main content starts -->
-	<div class="content">
+	<div class="content" style="margin-top: 36px;">
 		<?php include '../../includes/sidebar.php'; ?>
 
 		<!-- Main bar -->
@@ -70,7 +71,7 @@ $ativ = new dbAtividade();
 				</h2>
 				<!-- Breadcrumb -->
 				<div class="bread-crumb pull-right">
-					<a href="dash.php" style=" color: white"><i class="fa fa-home"></i> Página Inicial</a>
+					<a href="/SimulacaoCelpa/view/Dashboard/dash.php" style=" color: white"><i class="fa fa-home"></i> Página Inicial</a>
 					<!-- Divider -->
 					<span class="divider">/</span>
 					<a href="#" class="bread-current" style=" color: white">Instalações</a>
@@ -167,7 +168,7 @@ $ativ = new dbAtividade();
 		window.onbeforeunload = function() {
 			<?php unset($_SESSION['msg']); ?>
 			console.log('Dados da session[msg] apagados');
-		}
+		};
 
 		$(".editar").click(function(){
 			var id = $(this).find('.editaID').val();

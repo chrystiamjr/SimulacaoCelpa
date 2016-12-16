@@ -7,7 +7,7 @@
 			<ul class="navi">
 				<!-- Use the class nred, ngreen, nblue, nlightblue, nviolet or norange to add background color. You need to use this in <li> tag. -->
 
-				<li class="nred current"><a href="/SimulacaoCelpa/dash.php"><i class="fa fa-desktop"></i> Tela inicial</a></li>
+				<li class="nred"><a href="/SimulacaoCelpa/view/Dashboard/dash2.php"><i class="fa fa-desktop"></i> Tela inicial</a></li>
 
 				<!-- Menu with sub menu -->
 				<li class="has_submenu nlightblue">
@@ -24,7 +24,7 @@
 						<li><a href="/SimulacaoCelpa/view/Equipe/cadastroEquipe.php"><i class="fa fa-asterisk" aria-hidden="true"></i>  Equipes</a></li>
 						<li><a href="/SimulacaoCelpa/view/Instalacoes/cadastroInstalacao.php"><i class="fa fa-asterisk" aria-hidden="true"></i>  Instalações</a></li> 
 						<li><a href="/SimulacaoCelpa/view/Obras/cadastroObra.php"><i class="fa fa-asterisk" aria-hidden="true"></i>  Obras</a></li> 
-						<li><a href="widgets1.html"><i class="fa fa-asterisk" aria-hidden="true"></i>  Regional</a></li> 
+<!--						<li><a href="widgets1.html"><i class="fa fa-asterisk" aria-hidden="true"></i>  Regional</a></li> -->
 						<li><a href="/SimulacaoCelpa/view/Usuario/cadastroUsuario.php"><i class="fa fa-asterisk" aria-hidden="true"></i>  Usuários</a></li>
 						<li><a href="/SimulacaoCelpa/view/Veiculos/cadastroVeiculo.php"><i class="fa fa-asterisk" aria-hidden="true"></i> Veículos</a></li> 
 					</ul>

@@ -1,0 +1,568 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="db_equatorial" uuid="4da41fdc-2ec4-4847-a084-8c5f848b4781">
+    <database-info product="MySQL" version="5.5.5-10.1.19-MariaDB" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower"/>
+    <database-model serializer="dbm" rdbms="MYSQL" format-version="2.5">
+      <schema id="1" name="db_equatorial"/>
+      <table id="2" parent="1" name="area_executiva"/>
+      <table id="3" parent="1" name="atividades"/>
+      <table id="4" parent="1" name="colaborador"/>
+      <table id="5" parent="1" name="colaborador_equipamentos"/>
+      <table id="6" parent="1" name="colaborador_equipes"/>
+      <table id="7" parent="1" name="diretoria"/>
+      <table id="8" parent="1" name="distribuidora"/>
+      <table id="9" parent="1" name="equipamentos"/>
+      <table id="10" parent="1" name="equipes"/>
+      <table id="11" parent="1" name="equipes_equipamentos"/>
+      <table id="12" parent="1" name="gerencia_executiva"/>
+      <table id="13" parent="1" name="holding"/>
+      <table id="14" parent="1" name="instalacoes"/>
+      <table id="15" parent="1" name="obras"/>
+      <table id="16" parent="1" name="regional"/>
+      <table id="17" parent="1" name="usuario"/>
+      <table id="18" parent="1" name="veiculo"/>
+      <column id="19" parent="2" name="id_area_executiva">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="20" parent="2" name="id_gerencia_executiva">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="21" parent="2" name="nm_area_executiva">
+        <data-type>varchar(80)</data-type>
+      </column>
+      <index id="22" parent="2" name="fk_area_executiva_gerencia_executiva1_idx">
+        <columns>id_gerencia_executiva</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="23" parent="2" name="PRIMARY">
+        <columns>id_area_executiva</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="24" parent="2" name="fk_area_executiva_gerencia_executiva1">
+        <columns>id_gerencia_executiva</columns>
+        <ref-key>~.gerencia_executiva.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="25" parent="3" name="id_atividades">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="26" parent="3" name="descricao">
+        <data-type>varchar(60)</data-type>
+      </column>
+      <column id="27" parent="3" name="sigla">
+        <data-type>varchar(5)</data-type>
+      </column>
+      <key id="28" parent="3" name="PRIMARY">
+        <columns>id_atividades</columns>
+        <primary>1</primary>
+      </key>
+      <column id="29" parent="4" name="id_colaborador">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="30" parent="4" name="id_distribuidora">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="31" parent="4" name="id_diretoria">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="32" parent="4" name="id_gerencia_executiva">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="33" parent="4" name="id_area_executiva">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="34" parent="4" name="id_regional">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="35" parent="4" name="nm_colaborador">
+        <data-type>varchar(120)</data-type>
+      </column>
+      <column id="36" parent="4" name="cpf_colaborador">
+        <data-type>varchar(11)</data-type>
+      </column>
+      <column id="37" parent="4" name="matricula">
+        <data-type>varchar(45)</data-type>
+      </column>
+      <index id="38" parent="4" name="fk_colaborador_area_executiva1_idx">
+        <columns>id_area_executiva</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="39" parent="4" name="fk_colaborador_diretoria1_idx">
+        <columns>id_diretoria</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="40" parent="4" name="fk_colaborador_distribuidora1_idx">
+        <columns>id_distribuidora</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="41" parent="4" name="fk_colaborador_gerencia_executiva1_idx">
+        <columns>id_gerencia_executiva</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="42" parent="4" name="fk_colaborador_regional1_idx">
+        <columns>id_regional</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="43" parent="4" name="PRIMARY">
+        <columns>id_colaborador</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="44" parent="4" name="fk_colaborador_area_executiva1">
+        <columns>id_area_executiva</columns>
+        <ref-key>~.area_executiva.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="45" parent="4" name="fk_colaborador_diretoria1">
+        <columns>id_diretoria</columns>
+        <ref-key>~.diretoria.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="46" parent="4" name="fk_colaborador_distribuidora1">
+        <columns>id_distribuidora</columns>
+        <ref-key>~.distribuidora.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="47" parent="4" name="fk_colaborador_gerencia_executiva1">
+        <columns>id_gerencia_executiva</columns>
+        <ref-key>~.gerencia_executiva.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="48" parent="4" name="fk_colaborador_regional1">
+        <columns>id_regional</columns>
+        <ref-key>~.regional.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="49" parent="5" name="id_colaborador">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="50" parent="5" name="id_equipamentos">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <index id="51" parent="5" name="fk_colaborador_has_equipamentos_colaborador1_idx">
+        <columns>id_colaborador</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="52" parent="5" name="fk_colaborador_has_equipamentos_equipamentos1_idx">
+        <columns>id_equipamentos</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="53" parent="5" name="PRIMARY">
+        <columns>id_colaborador
+id_equipamentos</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="54" parent="5" name="fk_colaborador_has_equipamentos_colaborador1">
+        <columns>id_colaborador</columns>
+        <ref-key>~.colaborador.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="55" parent="5" name="fk_colaborador_has_equipamentos_equipamentos1">
+        <columns>id_equipamentos</columns>
+        <ref-key>~.equipamentos.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="56" parent="6" name="id_colaborador">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="57" parent="6" name="id_equipes">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <index id="58" parent="6" name="fk_colaborador_has_equipes_colaborador1_idx">
+        <columns>id_colaborador</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="59" parent="6" name="fk_colaborador_has_equipes_equipes1_idx">
+        <columns>id_equipes</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="60" parent="6" name="PRIMARY">
+        <columns>id_colaborador
+id_equipes</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="61" parent="6" name="fk_colaborador_has_equipes_colaborador1">
+        <columns>id_colaborador</columns>
+        <ref-key>~.colaborador.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="62" parent="6" name="fk_colaborador_has_equipes_equipes1">
+        <columns>id_equipes</columns>
+        <ref-key>~.equipes.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="63" parent="7" name="id_diretoria">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="64" parent="7" name="id_distribuidora">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="65" parent="7" name="nm_diretoria">
+        <data-type>varchar(60)</data-type>
+      </column>
+      <index id="66" parent="7" name="fk_diretoria_distribuidora1_idx">
+        <columns>id_distribuidora</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="67" parent="7" name="PRIMARY">
+        <columns>id_diretoria</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="68" parent="7" name="fk_diretoria_distribuidora1">
+        <columns>id_distribuidora</columns>
+        <ref-key>~.distribuidora.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="69" parent="8" name="id_distribuidora">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="70" parent="8" name="id_holding">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="71" parent="8" name="nm_distribuidora">
+        <data-type>varchar(80)</data-type>
+      </column>
+      <column id="72" parent="8" name="sigla">
+        <data-type>varchar(5)</data-type>
+      </column>
+      <index id="73" parent="8" name="fk_distribuidora_holding_idx">
+        <columns>id_holding</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="74" parent="8" name="PRIMARY">
+        <columns>id_distribuidora</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="75" parent="8" name="fk_distribuidora_holding">
+        <columns>id_holding</columns>
+        <ref-key>~.holding.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="76" parent="9" name="id_equipamentos">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="77" parent="9" name="tipo_equipamento">
+        <comment>0 = EPI; 1 = EPC; 2 = Ferramenta;</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="78" parent="9" name="descricao">
+        <data-type>varchar(60)</data-type>
+      </column>
+      <key id="79" parent="9" name="PRIMARY">
+        <columns>id_equipamentos</columns>
+        <primary>1</primary>
+      </key>
+      <column id="80" parent="10" name="id_equipes">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="81" parent="10" name="id_atividades">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="82" parent="10" name="id_veiculo">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="83" parent="10" name="id_regional">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="84" parent="10" name="cod_equatorial">
+        <data-type>varchar(21)</data-type>
+      </column>
+      <column id="85" parent="10" name="nm_equipe">
+        <data-type>varchar(60)</data-type>
+      </column>
+      <index id="86" parent="10" name="fk_equipes_atividades1_idx">
+        <columns>id_atividades</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="87" parent="10" name="fk_equipes_regional1_idx">
+        <columns>id_regional</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="88" parent="10" name="fk_equipes_veiculo1_idx">
+        <columns>id_veiculo</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="89" parent="10" name="PRIMARY">
+        <columns>id_equipes</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="90" parent="10" name="fk_equipes_atividades1">
+        <columns>id_atividades</columns>
+        <ref-key>~.atividades.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="91" parent="10" name="fk_equipes_regional1">
+        <columns>id_regional</columns>
+        <ref-key>~.regional.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="92" parent="10" name="fk_equipes_veiculo1">
+        <columns>id_veiculo</columns>
+        <ref-key>~.veiculo.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="93" parent="11" name="id_equipes">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="94" parent="11" name="id_equipamentos">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <index id="95" parent="11" name="fk_equipes_has_equipamentos_equipamentos1_idx">
+        <columns>id_equipamentos</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="96" parent="11" name="fk_equipes_has_equipamentos_equipes1_idx">
+        <columns>id_equipes</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="97" parent="11" name="PRIMARY">
+        <columns>id_equipes
+id_equipamentos</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="98" parent="11" name="fk_equipes_has_equipamentos_equipamentos1">
+        <columns>id_equipamentos</columns>
+        <ref-key>~.equipamentos.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="99" parent="11" name="fk_equipes_has_equipamentos_equipes1">
+        <columns>id_equipes</columns>
+        <ref-key>~.equipes.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="100" parent="12" name="id_gerencia_executiva">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="101" parent="12" name="id_diretoria">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="102" parent="12" name="nm_gerencia">
+        <data-type>varchar(80)</data-type>
+      </column>
+      <index id="103" parent="12" name="fk_gerencia_executiva_diretoria1_idx">
+        <columns>id_diretoria</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="104" parent="12" name="PRIMARY">
+        <columns>id_gerencia_executiva</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="105" parent="12" name="fk_gerencia_executiva_diretoria1">
+        <columns>id_diretoria</columns>
+        <ref-key>~.diretoria.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="106" parent="13" name="id_holding">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="107" parent="13" name="nm_holding">
+        <data-type>varchar(45)</data-type>
+      </column>
+      <key id="108" parent="13" name="PRIMARY">
+        <columns>id_holding</columns>
+        <primary>1</primary>
+      </key>
+      <column id="109" parent="14" name="id_instalacoes">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="110" parent="14" name="id_regional">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="111" parent="14" name="id_atividades">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="112" parent="14" name="cod_equatorial">
+        <data-type>varchar(21)</data-type>
+      </column>
+      <column id="113" parent="14" name="nm_instalacao">
+        <data-type>varchar(60)</data-type>
+      </column>
+      <column id="114" parent="14" name="tp_instalacao">
+        <comment>0 = Subestação; 1 = Agência; 2 = Usina; 3 = Almoxarifado; 4 = Oficina; 5 = Escritório; 6 = Linha de Transmissão;</comment>
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="115" parent="14" name="sigla">
+        <data-type>varchar(5)</data-type>
+      </column>
+      <index id="116" parent="14" name="fk_instalacoes_atividades1_idx">
+        <columns>id_atividades</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="117" parent="14" name="fk_instalacoes_regional1_idx">
+        <columns>id_regional</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="118" parent="14" name="PRIMARY">
+        <columns>id_instalacoes</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="119" parent="14" name="fk_instalacoes_atividades1">
+        <columns>id_atividades</columns>
+        <ref-key>~.atividades.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="120" parent="14" name="fk_instalacoes_regional1">
+        <columns>id_regional</columns>
+        <ref-key>~.regional.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="121" parent="15" name="id_obras">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="122" parent="15" name="descricao">
+        <data-type>varchar(60)</data-type>
+      </column>
+      <column id="123" parent="15" name="sigla">
+        <data-type>varchar(5)</data-type>
+      </column>
+      <key id="124" parent="15" name="PRIMARY">
+        <columns>id_obras</columns>
+        <primary>1</primary>
+      </key>
+      <column id="125" parent="16" name="id_regional">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="126" parent="16" name="id_area_executiva">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="127" parent="16" name="nm_regional">
+        <data-type>varchar(80)</data-type>
+      </column>
+      <column id="128" parent="16" name="sigla">
+        <data-type>varchar(5)</data-type>
+      </column>
+      <index id="129" parent="16" name="fk_regional_area_executiva1_idx">
+        <columns>id_area_executiva</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="130" parent="16" name="PRIMARY">
+        <columns>id_regional</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="131" parent="16" name="fk_regional_area_executiva1">
+        <columns>id_area_executiva</columns>
+        <ref-key>~.area_executiva.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="132" parent="17" name="id_usuario">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="133" parent="17" name="id_colaborador">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="134" parent="17" name="tp_user">
+        <comment>0 = Corporativo; 1 = Gestão; 2 = Operação;</comment>
+        <data-type>char(1)</data-type>
+      </column>
+      <column id="135" parent="17" name="pswd">
+        <data-type>varchar(80)</data-type>
+      </column>
+      <index id="136" parent="17" name="fk_usuario_colaborador1_idx">
+        <columns>id_colaborador</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="137" parent="17" name="PRIMARY">
+        <columns>id_usuario
+id_colaborador</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="138" parent="17" name="fk_usuario_colaborador1">
+        <columns>id_colaborador</columns>
+        <ref-key>~.colaborador.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <column id="139" parent="18" name="id_veiculo">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+        <sequence-identity>1</sequence-identity>
+      </column>
+      <column id="140" parent="18" name="placa">
+        <data-type>varchar(10)</data-type>
+      </column>
+      <column id="141" parent="18" name="tpo_veiculo">
+        <comment>0 = Carro; 1 = Moto;</comment>
+        <mandatory>1</mandatory>
+        <data-type>tinyint(1)</data-type>
+      </column>
+      <key id="142" parent="18" name="PRIMARY">
+        <columns>id_veiculo</columns>
+        <primary>1</primary>
+      </key>
+    </database-model>
+  </data-source>
+</component>

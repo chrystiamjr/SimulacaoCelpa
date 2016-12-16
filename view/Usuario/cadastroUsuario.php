@@ -1,3 +1,4 @@
+
 <?php
 require_once "../../database/dbUsuario.php";
 require_once "../../database/dbColaborador.php";
@@ -47,7 +48,7 @@ $colab = new dbColaborador();
 		</style>
 
 		<!-- Favicon -->
-		<link rel="shortcut icon" href="#">
+		<link rel="shortcut icon" href="/SimulacaoCelpa/img/favicon/favicon.png">
 	</head>
 
 	<body>
@@ -55,7 +56,7 @@ $colab = new dbColaborador();
 	<?php include '../../includes/header.php'; ?>
 
 	<!-- Main content starts -->
-	<div class="content">
+	<div class="content" style="margin-top: 36px;">
 		<?php include '../../includes/sidebar.php'; ?>
 
 		<!-- Main bar -->
@@ -68,7 +69,7 @@ $colab = new dbColaborador();
 				</h2>
 				<!-- Breadcrumb -->
 				<div class="bread-crumb pull-right">
-					<a href="dash.php" style=" color: white"><i class="fa fa-home"></i> Página Inicial</a>
+					<a href="/SimulacaoCelpa/view/Dashboard/dash.php" style=" color: white"><i class="fa fa-home"></i> Página Inicial</a>
 					<!-- Divider -->
 					<span class="divider">/</span>
 					<a href="#" class="bread-current" style=" color: white">Usuários</a>
@@ -149,7 +150,7 @@ $colab = new dbColaborador();
 		window.onbeforeunload = function() {
 			<?php unset($_SESSION['msg']); ?>
 			console.log('Dados da session[msg] apagados');
-		}
+		};
 
 		$(".editar").click(function(){
 			var id = $(this).find('.editaID').val();

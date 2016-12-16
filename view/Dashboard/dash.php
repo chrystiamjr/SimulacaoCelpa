@@ -1,8 +1,11 @@
+
 <?php
-require 'database/dbRelacionamento.php';
-require 'database/dbEquipe.php';
+require '../../database/dbRelacionamento.php';
+require '../../database/dbEquipe.php';
+require '../../database/dbColaborador.php';
 $relacionamento = new dbRelacionamento();
 $equipe = new dbEquipe();
+$colaborador = new dbColaborador();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -47,17 +50,17 @@ $equipe = new dbEquipe();
 	</style>
 
 	<!-- Favicon -->
-	<link rel="shortcut icon" href="#">
+	<link rel="shortcut icon" href="/SimulacaoCelpa/img/favicon/favicon.png">
 
 </head>
 
 <body>
 
-<?php include 'includes/header.php'; ?>
+<?php include '../../includes/header.php'; ?>
 
 <!-- Main content starts -->
-<div class="content">
-	<?php include 'includes/sidebar.php'; ?>
+<div class="content" style="margin-top: 36px;">
+	<?php include '../../includes/sidebar.php'; ?>
 
 	<!-- Main bar -->
 	<div class="mainbar">
@@ -69,7 +72,7 @@ $equipe = new dbEquipe();
 			</h2>
 			<!-- Breadcrumb -->
 			<div class="bread-crumb pull-right">
-				<a href="dash.php" style=" color: white"><i class="fa fa-home"></i> Página Inicial</a>
+				<a href="/SimulacaoCelpa/view/Dashboard/dash.php" style=" color: white"><i class="fa fa-home"></i> Página Inicial</a>
 				<!-- Divider -->
 				<span class="divider">/</span>
 			</div>
@@ -87,7 +90,7 @@ $equipe = new dbEquipe();
 									<i class="fa fa-trash" aria-hidden="true"></i>
 								</button>
 								<button type="button" class="relacionamento" id="compactarTab1">
-									<i class="fa fa-sort-asc" aria-hidden="true"></i>
+									<i class="fa fa-sort-desc" aria-hidden="true"></i>
 								</button>
 							</div>
 						</h4>
@@ -121,8 +124,9 @@ $equipe = new dbEquipe();
 										?></td>
 									<td style="vertical-align: middle;"><?php echo $dado['matricula']; ?></td>
 									<td style="vertical-align: middle;font-size: 18px;">
-										<button class="relacionamento remover" title="Remover" style="margin: 0" data-toggle="modal" data-target="#Deletar">
-											<input type="hidden" class="editaID" value="<?php echo $dado['id_atividades']; ?>">
+										<button class="relacionamento removerUmColaboradorPorEquipe" title="Remover" style="margin: 0" data-toggle="modal" data-target="#DeletarUmColaboradorPorEquipe">
+											<input type="hidden" class="idEquipeRemoveColab" value="<?php echo $dado['id_equipes']; ?>">
+											<input type="hidden" class="cpfColaboradorRemoveColab" value="<?php echo $dado['cpf_colaborador']; ?>">
 											<i class="fa fa-trash" aria-hidden="true"></i>&nbsp;
 										</button>
 									</td>
@@ -138,12 +142,12 @@ $equipe = new dbEquipe();
 					<div class="container">
 						<h4 align="center">Colaboradores/Equipamentos
 							<div class="pull-right" style="position:relative; bottom: 4px; font-size: 40px;">
-								<button type="button" class="relacionamento" data-toggle="modal" data-target="#Adicionar">
+								<button type="button" class="relacionamento" data-toggle="modal" data-target="#DeletarTodosEquipamentosPorColaborador">
 									<i class="fa fa-trash" aria-hidden="true"></i>
 								</button>
 								</button>
 								<button type="button" class="relacionamento" id="compactarTab2">
-									<i class="fa fa-sort-asc" aria-hidden="true"></i>
+									<i class="fa fa-sort-desc" aria-hidden="true"></i>
 								</button>
 							</div>
 						</h4>
@@ -183,8 +187,9 @@ $equipe = new dbEquipe();
 										?></td>
 									<td style="vertical-align: middle;"><?php echo $dado['descricao']; ?></td>
 									<td style="vertical-align: middle;font-size: 18px;">
-										<button class="relacionamento remover" title="Remover" style="margin: 0" data-toggle="modal" data-target="#Deletar">
-											<input type="hidden" class="editaID" value="<?php echo $dado['id_atividades']; ?>">
+										<button class="relacionamento removerUmEquipamentoPorColaborador" title="Remover" style="margin: 0" data-toggle="modal" data-target="#DeletarUmEquipamentoPorColaborador">
+											<input type="hidden" class="idEquipamentoRemoveEquipamento" value="<?php echo $dado['id_equipamentos']; ?>">
+											<input type="hidden" class="cpfColaboradorRemoveEquipamento" value="<?php echo $dado['cpf_colaborador']; ?>">
 											<i class="fa fa-trash" aria-hidden="true"></i>&nbsp;
 										</button>
 									</td>
@@ -201,12 +206,12 @@ $equipe = new dbEquipe();
 					<div class="container"">
 						<h4 align="center">Equipes/Equipamentos
 							<div class="pull-right" style="position:relative; bottom: 4px; font-size: 40px;">
-								<button type="button" class="relacionamento" data-toggle="modal" data-target="#Adicionar">
+								<button type="button" class="relacionamento" data-toggle="modal" data-target="#DeletarTodosEquipamentosPorEquipe">
 									<i class="fa fa-trash" aria-hidden="true"></i>
 								</button>
 								</button>
 								<button type="button" class="relacionamento" id="compactarTab3">
-									<i class="fa fa-sort-asc" aria-hidden="true"></i>
+									<i class="fa fa-sort-desc" aria-hidden="true"></i>
 								</button>
 							</div>
 						</h4>
@@ -238,8 +243,9 @@ $equipe = new dbEquipe();
 										?></td>
 									<td style="vertical-align: middle;"><?php echo $dado['descricao']; ?></td>
 									<td style="vertical-align: middle;font-size: 18px;">
-										<button class="relacionamento remover" title="Remover" style="margin: 0" data-toggle="modal" data-target="#Deletar">
-											<input type="hidden" class="editaID" value="<?php echo $dado['id_atividades']; ?>">
+										<button class="relacionamento removerUmEquipamentoPorEquipe" title="Remover" style="margin: 0" data-toggle="modal" data-target="#DeletarUmEquipamentoPorEquipe">
+											<input type="hidden" class="idEquipamentoRemoveEquipe" value="<?php echo $dado['id_equipamentos']; ?>">
+											<input type="hidden" class="equatorialRemoveEquipe" value="<?php echo $dado['cod_equatorial']; ?>">
 											<i class="fa fa-trash" aria-hidden="true"></i>&nbsp;
 										</button>
 									</td>
@@ -260,27 +266,50 @@ $equipe = new dbEquipe();
 <!-- Scroll to top -->
 <span class="totop"><a href="#"><i class="fa fa-chevron-up"></i></a></span>
 
-<?php include 'includes/scripts.php'; ?>
+<?php include '../../includes/scripts.php'; ?>
 
 <script type="text/javascript">
 	$(document).ready(function(){
 		$('.listaRelacionamento').DataTable({
 			"bLengthChange": false,"language": {"search":"Pesquisar:","paginate": {"first":"Primeiro","last":"Ultimo","next":"Próximo","previous": "Anterior"}},
-			"info": false
+			"info": false,
+			"iDisplayLength": 5
 		});
+		$('#Tab1').hide();
+		$('#Tab2').hide();
+		$('#Tab3').hide();
 	});
 
 	window.onbeforeunload = function() {
 		<?php unset($_SESSION['msg']); ?>
 		console.log('Dados da session[msg] apagados');
-	}
+	};
 
-	$(".remover").click(function(){
-		var id = $(this).find('.editaID').val();
-		$('#idAtividadeRemover').val(id);
+	$(".removerUmColaboradorPorEquipe").click(function(){
+		var id = $(this).find('.idEquipeRemoveColab').val();
+		var cpf = $(this).find('.cpfColaboradorRemoveColab').val();
+
+		$('#idEquipeRemoveColab').val(id);
+		$('#cpfColaboradorRemoveColab').val(cpf);
 	});
 
-	var toggle1 = false;
+	$(".removerUmEquipamentoPorColaborador").click(function(){
+		var id = $(this).find('.idEquipamentoRemoveEquipamento').val();
+		var cpf = $(this).find('.cpfColaboradorRemoveEquipamento').val();
+		
+		$('#idEquipamentoRemoveEquipamento').val(id);
+		$('#cpfColaboradorRemoveEquipamento').val(cpf);
+	});
+
+	$(".removerUmEquipamentoPorEquipe").click(function(){
+		var id = $(this).find('.idEquipamentoRemoveEquipe').val();
+		var cod = $(this).find('.equatorialRemoveEquipe').val();
+
+		$('#idEquipamentoRemoveEquipe').val(id);
+		$('#equatorialRemoveEquipe').val(cod);
+	});
+
+	var toggle1 = true;
 	$('#compactarTab1').click(function () {
 		toggle1 = !toggle1;
 		if (toggle1) {
@@ -302,7 +331,7 @@ $equipe = new dbEquipe();
 		}
 	});
 
-	var toggle2 = false;
+	var toggle2 = true;
 	$('#compactarTab2').click(function () {
 		toggle2 = !toggle2;
 		if (toggle2) {
@@ -324,7 +353,7 @@ $equipe = new dbEquipe();
 		}
 	});
 
-	var toggle3 = false;
+	var toggle3 = true;
 	$('#compactarTab3').click(function () {
 		toggle3 = !toggle3;
 		if (toggle3) {
@@ -350,33 +379,4 @@ $equipe = new dbEquipe();
 </body>
 </html>
 
-<!-- Modal Deletar todos colaboradores baseado em um Colaborador -->
-<div class="modal fade" id="DeletarTodosColaboradoresPorEquipe" role="dialog" aria-labelledby="myModalLabel">
-	<div class="modal-dialog" role="document">
-		<div class="modal-content">
-			<div class="modal-header" style="background-color: #31708f;">
-				<h4 class="modal-title" id="myModalLabel" style="color: white">
-					<i class="fa fa-plus-circle modal-title" aria-hidden="true"></i> Remover item</h4>
-			</div>
-			<div class="modal-body">
-				<form class="form-horizontal" action="/SimulacaoCelpa/controller/equipeCtrl.php" method="post">
-					<input type="hidden" name="sOP" value="Deletar">
-					<input type="hidden" name="idEquipeRemover" id="idEquipeRemover">
-					<div class="content">
-						<h4 style="text-align: center;">Deseja remover a entrada?</h4>
-						<select name="" id="" style="margin-left: 25%;width: 50%";>
-							<?php foreach ($equipe->listarTodosEquipe() as $dado) { ?>
-								<option value="<?php echo $dado['id_equipes']?>"><?php echo $dado['nm_equipe'] ?></option>
-							<?php } ?>
-						</select>
-					</div>
-					<br>
-					<div class="modal-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
-						<button type="submit" class="btn btn-primary">Remover</button>
-					</div>
-				</form>
-			</div>
-		</div>
-	</div>
-</div>
+<?php include_once 'modalDash.php';

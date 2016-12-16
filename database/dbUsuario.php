@@ -76,4 +76,37 @@ class dbUsuario
 		}
 	}
 
+	public function loginUsuarioColaborador ($cpf, $senha) {
+		$sql = "SELECT 
+						    colab.nm_colaborador, colab.cpf_colaborador, user.pswd
+						FROM
+						    usuario user
+						        INNER JOIN
+						    colaborador colab ON colab.id_colaborador = user.id_colaborador
+						WHERE
+						    colab.cpf_colaborador = '{$cpf}' AND user.pswd = '{$senha}'";
+		$stmt = $this->conn->query($sql);
+		$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+		if(isset($result) && $result != null) {
+			return $result;
+		} else {
+			return false;
+		}
+	}
+
+}
+
+function login(){
+	$usuario = new dbUsuario();
+	if($usuario->loginUsuarioColaborador($_POST['cpf'], $_POST['senha'])){
+		echo "1";
+	} else{
+		echo "0";
+	}
+}
+if(isset($_POST['action']) && !empty($_POST['action'])) {
+	switch ($_POST['action']) {
+		case 'login' : login();break;
+	}
 }

@@ -1,3 +1,4 @@
+
 <?php
 require_once "../../database/dbColaborador.php";
 $colaborador = new dbColaborador();
@@ -45,7 +46,7 @@ $colaborador = new dbColaborador();
 	</style>
 
 	<!-- Favicon -->
-	<link rel="shortcut icon" href="#">
+	<link rel="shortcut icon" href="/SimulacaoCelpa/img/favicon/favicon.png">
 </head>
 
 <body>
@@ -53,7 +54,7 @@ $colaborador = new dbColaborador();
 <?php include '../../includes/header.php'; ?>
 
 <!-- Main content starts -->
-<div class="content">
+<div class="content" style="margin-top: 36px;">
 	<?php include '../../includes/sidebar.php'; ?>
 
 	<!-- Main bar -->
@@ -66,7 +67,7 @@ $colaborador = new dbColaborador();
 			</h2>
 			<!-- Breadcrumb -->
 			<div class="bread-crumb pull-right">
-				<a href="dash.php" style=" color: white"><i class="fa fa-home"></i> Página Inicial</a>
+				<a href="/SimulacaoCelpa/view/Dashboard/dash.php" style=" color: white"><i class="fa fa-home"></i> Página Inicial</a>
 				<!-- Divider -->
 				<span class="divider">/</span>
 				<a href="#" class="bread-current" style=" color: white">Relacionamento Colaborador</a>
@@ -159,7 +160,7 @@ $colaborador = new dbColaborador();
 	window.onbeforeunload = function() {
 		<?php unset($_SESSION['msg']); ?>
 		console.log('Dados da session[msg] apagados');
-	}
+	};
 
 	$('#id_colaborador').val($('#colaborador').val());
 
@@ -168,7 +169,7 @@ $colaborador = new dbColaborador();
 		$('#id_colaborador').val(id_equipe);
 	});
 
-	var id = new Array();
+	var id = [];
 	var tp_Equip = '';
 	$('#equipamento').keypress(function(event) {
 		var keycode = event.keyCode || event.which;

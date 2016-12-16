@@ -1,3 +1,4 @@
+
 <?php
 require_once "../../database/dbColaborador.php";
 require_once "../../database/dbDistribuidora.php";
@@ -55,7 +56,7 @@ $regional = new dbRegional();
 		</style>
 
 		<!-- Favicon -->
-		<link rel="shortcut icon" href="#">
+		<link rel="shortcut icon" href="/SimulacaoCelpa/img/favicon/favicon.png">
 	</head>
 
 	<body>
@@ -63,7 +64,7 @@ $regional = new dbRegional();
 	<?php include '../../includes/header.php'; ?>
 
 	<!-- Main content starts -->
-	<div class="content">
+	<div class="content" style="margin-top: 36px;">
 		<?php include '../../includes/sidebar.php'; ?>
 
 		<!-- Main bar -->
@@ -76,7 +77,7 @@ $regional = new dbRegional();
 				</h2>
 				<!-- Breadcrumb -->
 				<div class="bread-crumb pull-right">
-					<a href="dash.php" style=" color: white"><i class="fa fa-home"></i> Página Inicial</a>
+					<a href="/SimulacaoCelpa/view/Dashboard/dash.php" style=" color: white"><i class="fa fa-home"></i> Página Inicial</a>
 					<!-- Divider -->
 					<span class="divider">/</span>
 					<a href="#" class="bread-current" style=" color: white">Colaboradores</a>
@@ -180,7 +181,7 @@ $regional = new dbRegional();
 		window.onbeforeunload = function() {
 			<?php unset($_SESSION['msg']); ?>
 			console.log('Dados da session[msg] apagados');
-		}
+		};
 
 		$(".editar").click(function(){
 			var id = $(this).find('.editaID').val();
@@ -225,7 +226,7 @@ $regional = new dbRegional();
 				cpfCodigo = $(this).find('.codigoCPF').val();
 
 				var dados = '';
-				dados += '<div id="itens">'
+				dados += '<div id="itens">';
 				dados += '<h5 id="printNomeColaborador"></h5>';
 				dados += '<h5 id="printCPFColaborador"></h5>';
 				dados += '<hr>';
@@ -239,7 +240,7 @@ $regional = new dbRegional();
 				$('#printNomeColaborador').append("Nome do Colaborador: "+nomeCodigo);
 				$('#printCPFColaborador').append("CPF: "+cpfCodigo);
 
-				$('#imprimirCodigo').on('click', function(){$("#Codigo").print({addGlobalStyles : true,stylesheet : null,rejectWindow : true,noPrintSelector : ".no-print",append : null,prepend : null});});
+				$('#imprimirCodigo').on('click', function(){$("#Codigo").print({addGlobalStyles : true,stylesheet : '/SimulacaoCelpa/css/printing.css',rejectWindow : true,noPrintSelector : ".no-print",append : null,prepend : null});});
 			}
 		});
 

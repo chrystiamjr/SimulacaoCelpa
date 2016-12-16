@@ -1,3 +1,4 @@
+
 <?php
 require_once "../../database/dbObra.php";
 $obr = new dbObra();
@@ -45,7 +46,7 @@ $obr = new dbObra();
 		</style>
 
 		<!-- Favicon -->
-		<link rel="shortcut icon" href="#">
+		<link rel="shortcut icon" href="/SimulacaoCelpa/img/favicon/favicon.png">
 	</head>
 
 	<body>
@@ -53,7 +54,7 @@ $obr = new dbObra();
 	<?php include '../../includes/header.php'; ?>
 
 	<!-- Main content starts -->
-	<div class="content">
+	<div class="content" style="margin-top: 36px;">
 		<?php include '../../includes/sidebar.php'; ?>
 
 		<!-- Main bar -->
@@ -66,7 +67,7 @@ $obr = new dbObra();
 				</h2>
 				<!-- Breadcrumb -->
 				<div class="bread-crumb pull-right">
-					<a href="dash.php" style=" color: white"><i class="fa fa-home"></i> Página Inicial</a>
+					<a href="/SimulacaoCelpa/view/Dashboard/dash.php" style=" color: white"><i class="fa fa-home"></i> Página Inicial</a>
 					<!-- Divider -->
 					<span class="divider">/</span>
 					<a href="#" class="bread-current" style=" color: white">Obras</a>
@@ -140,7 +141,7 @@ $obr = new dbObra();
 		window.onbeforeunload = function() {
 			<?php unset($_SESSION['msg']); ?>
 			console.log('Dados da session[msg] apagados');
-		}
+		};
 
 		$(".editar").click(function(){
 			var desc = $(this).find('.editaDescricao').val();

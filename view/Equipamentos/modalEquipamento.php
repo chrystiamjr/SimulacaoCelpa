@@ -112,9 +112,11 @@
 					<div id="dados">
 					</div>
 				</div>
-				<div class="modal-footer no-print">
-					<button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
-					<button type="button" class="btn btn-default" id="imprimirCodigo">Imprimir</button>
+				<div class=" no-print">
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+						<button type="button" class="btn btn-default" id="imprimirCodigo">Imprimir</button>
+					</div>
 				</div>
 			</div>
 		</div>
