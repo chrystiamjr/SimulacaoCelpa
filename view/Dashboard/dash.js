@@ -125,7 +125,7 @@ $('.listaColaboradores').click(function () {
   })
 });
 
-var conteudoEPCFerramenta = "";
+var conteudoEPC = "";
 $('.listaEPCFerramenta').click(function () {
   globalIDEquipes = $(this).find('.idEquipe').val();
   $('#listagemEquipamentos tr').remove();
@@ -165,10 +165,42 @@ $('.listaEPCFerramenta').click(function () {
   })
 });
 
-// function verificaConteudo(){
-//   if(conteudoEquipes != null){
-//     console.log(conteudoEquipes);
-//   }
-//   setTimeout(verificaConteudo,2000);
-// }
-// setTimeout(verificaConteudo,500);
+var conteudoEPCFerramenta = "";
+$('.listaEPCFerramenta').click(function () {
+  globalIDEquipes = $(this).find('.idEquipe').val();
+  $('#listagemEquipamentos tr').remove();
+  conteudoEPCFerramenta = "";
+
+  $.ajax({
+    url: "/SimulacaoCelpa/database/dbRelacionamento.php",
+    data: {"id": globalIDEquipes, "action": 'listarEquipamentoPorEquipeID'},
+    type: "post",
+    success: function (data) {
+      var tipo = "";
+      for (var i = 0; i < data.length; i++) {
+        if(data[i].tipo_equipamento == 0){tipo = "EPI";}
+        else if(data[i].tipo_equipamento == 1){tipo = "EPC";}
+        else if(data[i].tipo_equipamento == 2){tipo = "FERRAMENTA";}
+        conteudoEPCFerramenta += "<tr>";
+        conteudoEPCFerramenta += "<td>" + data[i].id_equipamentos + "</td>";
+        conteudoEPCFerramenta += "<td>" + tipo + "</td>";
+        conteudoEPCFerramenta += "<td>" + data[i].descricao + "</td>";
+        // conteudoEPCFerramenta += '<td><button class="relacionamento listaEPIColaborador" title="Listar EPIs" style="margin: 0" data-toggle="modal" data-target="#"></button></td>';
+        conteudoEPCFerramenta += "</tr>";
+      }
+      $('#listagemEquipamentos').append(conteudoEPCFerramenta);
+
+      if (!$.fn.DataTable.isDataTable('#listaRelacionamentoEquipamentosPorEquipe')) {
+        $('#listaRelacionamentoEquipamentosPorEquipe').DataTable({
+          "bLengthChange": false,
+          "language": {
+            "search": "Pesquisar:",
+            "paginate": {"first": "Primeiro", "last": "Ultimo", "next": "Próximo", "previous": "Anterior"}
+          },
+          "info": false,
+          "iDisplayLength": 5
+        });
+      }
+    }
+  })
+});

@@ -104,32 +104,37 @@ $colaborador = new dbColaborador();
 						</div>
 					</div>
 
+					<center><div id="layourFluido"></div></center>
 					<br><br>
 					<hr>
 					<br>
 
 				</div>
 
-				<form method="post" action="/SimulacaoCelpa/controller/relacionamentoCtrl.php">
-					<input type="hidden" name="tipo" value="colaboradorEquipamento">
-					<input type="hidden" name="id_colaborador" id="id_colaborador">
-					<table class="table table-bordered table-responsive" id="listaColaborador">
-						<thead style="background-color: rgba(39, 72, 114, 1); font-weight: bold;">
-						<tr>
-							<th style="color: white; text-align: center;vertical-align: middle">Código</th>
-							<th style="color: white; text-align: center;vertical-align: middle">Tipo</th>
-							<th style="color: white; text-align: center;vertical-align: middle">Descrição</th>
-							<th style="color: white; text-align: center;vertical-align: middle">Ações</th>
-						</tr>
-						</thead>
-						<tbody id="dadosColaborador" align="center"></tbody>
-					</table>
+				<div class="col-md-12 table-responsive">
+					<form method="post" action="/SimulacaoCelpa/controller/relacionamentoCtrl.php">
+						<input type="hidden" name="tipo" value="colaboradorEquipamento">
+						<input type="hidden" name="id_colaborador" id="id_colaborador">
+						<table class="table table-bordered table-responsive" id="listaColaborador">
+							<thead style="background-color: rgba(39, 72, 114, 1); font-weight: bold;">
+							<tr>
+								<th style="color: white; text-align: center;vertical-align: middle">Código</th>
+								<th style="color: white; text-align: center;vertical-align: middle">Tipo</th>
+								<th style="color: white; text-align: center;vertical-align: middle">Descrição</th>
+								<th style="color: white; text-align: center;vertical-align: middle">Ações</th>
+							</tr>
+							</thead>
+							<tbody id="dadosColaborador" align="center"></tbody>
+						</table>
 
-					<br>
-					<hr>
-					<br>
-					<button class="btn btn-success pull-right" type="submit" style="margin-right: 20px; width: 120px">Salvar</button>
-				</form>
+						<br>
+						<hr>
+						<br>
+						<button class="btn btn-success pull-right" type="submit" style="margin-right: 20px; width: 120px">Salvar</button>
+						<br>
+						<br>
+					</form>
+				</div>
 
 
 			</div>
@@ -168,55 +173,9 @@ $colaborador = new dbColaborador();
 		var id_equipe = $('#colaborador').val();
 		$('#id_colaborador').val(id_equipe);
 	});
-
-	var id = [];
-	var tp_Equip = '';
-	$('#equipamento').keypress(function(event) {
-		var keycode = event.keyCode || event.which;
-		if (keycode == '13') {
-			if($.inArray($('#equipamento').val(), id) == -1) {
-				id.push($('#equipamento').val());
-				$.ajax({
-					url: '/SimulacaoCelpa/database/dbRelacionamento.php',
-					type: 'post',
-					data: {'id': $('#equipamento').val(), 'action': 'equipamento'},
-					datatype: 'json',
-					success: function (output) {
-						console.log(output);
-						if(output != false){
-							if(output[0].tipo_equipamento == 0){
-								tp_Equip = 'EPI';
-							}else if(output[0].tipo_equipamento == 1){
-								tp_Equip = 'EPC';
-							}else if(output[0].tipo_equipamento == 2){
-								tp_Equip = 'FERRAMENTA';
-							}
-							var dados = '';
-							dados += '<tr id="itens">';
-							dados += '<td style="vertical-align: middle;">' + output[0].id_equipamentos;
-							dados += '<input type="hidden" name="id_equipamentos[]" value="' + output[0].id_equipamentos+ '"></td>';
-							dados += '<td style="vertical-align: middle;">' + tp_Equip + '</td>';
-							dados += '<td style="vertical-align: middle;">' + output[0].descricao + '</td>';
-							dados += '<td style="vertical-align: middle;font-size: 18px;"><button class="addColaborador removerlinha"><i class="fa fa-trash" aria-hidden="true"></i>&nbsp;</button></td>';
-							dados += '</tr>';
-							$('#dadosColaborador').append(dados);
-
-							$(".removerlinha").click(function () {
-								$(this).closest('tr').remove();
-							});
-						} else {
-							alert('Código não existente!');
-							id.splice( $.inArray($('#equipamento').val(), id), 1 );
-						}
-					}
-				});
-			} else{
-				alert('Dados repetidos!');
-			}
-			$('#equipamento').val('');
-		}
-	});
 </script>
+
+<script type="text/javascript" src="ajaxColaboradorEquipamento.js"></script>
 
 </body>
 </html>

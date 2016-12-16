@@ -427,3 +427,26 @@ INSERT INTO `veiculo` (`placa`, `tpo_veiculo`) values ('DBZ-1983' ,0);
 
 INSERT INTO `colaborador` (`id_distribuidora`,`id_diretoria`,`id_gerencia_executiva`,`id_area_executiva`,`id_regional`,`nm_colaborador`,`cpf_colaborador`,`matricula`) VALUES (1,1,1,1,1,'Colaborador Administrativo', '12312312312','COLAB182634');
 INSERT INTO `usuario` (`id_colaborador`,`tp_user`,`pswd`) VALUES (1000000,0,'admin123');
+
+-- ---------------------- --
+-- Insert Table equipamentos
+-- ---------------------- --
+
+INSERT INTO `equipamentos` (`tipo_equipamento`,`descricao`) VALUES (0, 'CAPACETE');
+INSERT INTO `equipamentos` (`tipo_equipamento`,`descricao`) VALUES (0, 'LUVA');
+INSERT INTO `equipamentos` (`tipo_equipamento`,`descricao`) VALUES (0, 'MASCARA PROTETORA');
+INSERT INTO `equipamentos` (`tipo_equipamento`,`descricao`) VALUES (0, 'VISEIRA');
+INSERT INTO `equipamentos` (`tipo_equipamento`,`descricao`) VALUES (0, 'CINTO PARAQUEDISTA');
+INSERT INTO `equipamentos` (`tipo_equipamento`,`descricao`) VALUES (0, 'BOTA DE BORRACHA');
+INSERT INTO `equipamentos` (`tipo_equipamento`,`descricao`) VALUES (0, 'BOTINA DE SEGURANÇA COM BIQUEIRA');
+INSERT INTO `equipamentos` (`tipo_equipamento`,`descricao`) VALUES (0, 'CAPA DE SEGURANÇA');
+INSERT INTO `equipamentos` (`tipo_equipamento`,`descricao`) VALUES (1, 'EXTINTOR DE INCÊNDIO');
+INSERT INTO `equipamentos` (`tipo_equipamento`,`descricao`) VALUES (1, 'KIT DE PRIMEIROS SOCORROS');
+INSERT INTO `equipamentos` (`tipo_equipamento`,`descricao`) VALUES (1, 'FITA DE SINALIZAÇÃO');
+INSERT INTO `equipamentos` (`tipo_equipamento`,`descricao`) VALUES (1, 'CONE');
+INSERT INTO `equipamentos` (`tipo_equipamento`,`descricao`) VALUES (2, 'MARTELO');
+INSERT INTO `equipamentos` (`tipo_equipamento`,`descricao`) VALUES (2, 'MARRETA');
+INSERT INTO `equipamentos` (`tipo_equipamento`,`descricao`) VALUES (2, 'VARA PARA FIO TERRA');
+INSERT INTO `equipamentos` (`tipo_equipamento`,`descricao`) VALUES (2, 'ESCADA');
+INSERT INTO `equipamentos` (`tipo_equipamento`,`descricao`) VALUES (2, 'LANTERNA');
+

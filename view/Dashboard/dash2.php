@@ -83,7 +83,7 @@ $colaborador = new dbColaborador();
 			<div class="matter">
 				<div class="container">
 
-					<div class="col-md-12">
+					<div class="col-md-12 table-responsive">
 						<div class="container">
 							<h4 align="center">Equipes/Colaboradores
 								<div class="pull-right" style="position:relative; bottom: 4px; font-size: 40px;">
@@ -119,7 +119,11 @@ $colaborador = new dbColaborador();
 													<input type="hidden" class="idEquipe" value="<?php echo $dado['id_equipes']; ?>">
 													<i class="fa fa-address-card" aria-hidden="true"></i>&nbsp;
 												</button>
-												<button class="relacionamento listaEPCFerramenta"  title="Listar EPCs e Ferramentas" style="margin: 0" data-toggle="modal" href="#listaEquipamentosPorEquipe">
+												<button class="relacionamento listaEPC"  title="Listar EPCs" style="margin: 0" data-toggle="modal" href="#listaEquipamentosPorEquipe">
+													<input type="hidden" class="idEquipe" value="<?php echo $dado['id_equipes']; ?>">
+													<i class="fa fa-wrench" aria-hidden="true"></i>&nbsp;
+												</button>
+												<button class="relacionamento listaFerramenta"  title="Listar Ferramentas" style="margin: 0" data-toggle="modal" href="#listaEquipamentosPorEquipe">
 													<input type="hidden" class="idEquipe" value="<?php echo $dado['id_equipes']; ?>">
 													<i class="fa fa-wrench" aria-hidden="true"></i>&nbsp;
 												</button>

@@ -40,6 +40,27 @@
 			}
 		}
 
+		public function listarUmColaboradorDisponível ($id) {
+			$sql = "SELECT *
+							FROM
+							  colaborador
+							WHERE
+							  id_colaborador NOT IN (
+							  SELECT 
+            			id_colaborador
+				        FROM
+			            colaborador_equipes)
+			        AND id_colaborador = {$id}";
+			$stmt = $this->conn->query($sql);
+			$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+			if(isset($result) && $result != null) {
+				return $result;
+			} else {
+				return false;
+			}
+		}
+
 		public function cadastroColaborador ($id_distribuidora, $id_diretoria, $id_gerencia, $area_executiva, $id_regional, $nome, $cpf, $matricula) {
 			$sql = "INSERT INTO colaborador (id_distribuidora, id_diretoria, id_gerencia_executiva, id_area_executiva, id_regional, nm_colaborador, cpf_colaborador, matricula) values ({$id_distribuidora}, {$id_diretoria}, {$id_gerencia}, {$area_executiva}, {$id_regional}, '{$nome}', '{$cpf}', '{$matricula}')";
 			$stmt = $this->conn->exec($sql);

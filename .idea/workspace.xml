@@ -2,28 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c3b6166d-4b9d-41fe-b1f3-0d317661f300" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/printing.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/Dashboard/dash.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/img/favicon/favicon.png" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/Colaborador/ajaxColaboradorEquipamento.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/Colaborador/ajaxColaboradorEquipe.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/Equipe/ajaxEquipeEquipamento.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/style.css" afterPath="$PROJECT_DIR$/css/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/dbColaborador.php" afterPath="$PROJECT_DIR$/database/dbColaborador.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/dbEquipamento.php" afterPath="$PROJECT_DIR$/database/dbEquipamento.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/dbRelacionamento.php" afterPath="$PROJECT_DIR$/database/dbRelacionamento.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/dbUsuario.php" afterPath="$PROJECT_DIR$/database/dbUsuario.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/db_equatorial.sql" afterPath="$PROJECT_DIR$/database/db_equatorial.sql" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/header.php" afterPath="$PROJECT_DIR$/includes/header.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/scripts.php" afterPath="$PROJECT_DIR$/includes/scripts.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/sidebar.php" afterPath="$PROJECT_DIR$/includes/sidebar.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/bootstrap-select.js" afterPath="$PROJECT_DIR$/js/bootstrap-select.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/code39ascii.js" afterPath="$PROJECT_DIR$/js/code39ascii.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/jquery.prettyPhoto.js" afterPath="$PROJECT_DIR$/js/jquery.prettyPhoto.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/Atividades/cadastroAtividade.php" afterPath="$PROJECT_DIR$/view/Atividades/cadastroAtividade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/Colaborador/cadastroColaborador.php" afterPath="$PROJECT_DIR$/view/Colaborador/cadastroColaborador.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/Colaborador/relacionamentoColaboradorEquipamento.php" afterPath="$PROJECT_DIR$/view/Colaborador/relacionamentoColaboradorEquipamento.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/Colaborador/relacionamentoColaboradorEquipe.php" afterPath="$PROJECT_DIR$/view/Colaborador/relacionamentoColaboradorEquipe.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/Dashboard/dash.php" afterPath="$PROJECT_DIR$/view/Dashboard/dash.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/Dashboard/dash.js" afterPath="$PROJECT_DIR$/view/Dashboard/dash.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/Dashboard/dash2.php" afterPath="$PROJECT_DIR$/view/Dashboard/dash2.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/Dashboard/modalDash2.php" afterPath="$PROJECT_DIR$/view/Dashboard/modalDash2.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/Equipamentos/cadastroEquipamento.php" afterPath="$PROJECT_DIR$/view/Equipamentos/cadastroEquipamento.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/Equipamentos/modalEquipamento.php" afterPath="$PROJECT_DIR$/view/Equipamentos/modalEquipamento.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/Equipe/cadastroEquipe.php" afterPath="$PROJECT_DIR$/view/Equipe/cadastroEquipe.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/Equipe/relacionamentoEquipeEquipamento.php" afterPath="$PROJECT_DIR$/view/Equipe/relacionamentoEquipeEquipamento.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/Instalacoes/cadastroInstalacao.php" afterPath="$PROJECT_DIR$/view/Instalacoes/cadastroInstalacao.php" />
@@ -64,17 +59,123 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="dash2.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="dash.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/view/Dashboard/dash.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1069">
+              <caret line="112" column="6" selection-start-line="112" selection-start-column="6" selection-end-line="112" selection-end-column="6" />
+              <folding>
+                <marker date="1481918495618" expanded="true" signature="2091:2100" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dbRelacionamento.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/database/dbRelacionamento.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="794">
+              <caret line="185" column="71" selection-start-line="185" selection-start-column="71" selection-end-line="185" selection-end-column="71" />
+              <folding>
+                <marker date="1481918470089" expanded="true" signature="3884:4154" placeholder="SELECT eqpmt... equipes_equipamentos" />
+                <marker date="1481918470089" expanded="true" signature="3884:4159" placeholder="SELECT eqpmt... equipes_equipamentos" />
+                <marker date="1481918470089" expanded="true" signature="3884:4177" placeholder="SELECT eqpmt... equipes_equipamentos" />
+                <marker date="1481918470089" expanded="true" signature="3884:4190" placeholder="SELECT eqpmt... equipes_equipamentos" />
+                <marker date="1481918470089" expanded="true" signature="4457:4762" placeholder="SELECT eqpmt... equipes_equipamentos" />
+                <marker date="1481918470089" expanded="true" signature="4457:4763" placeholder="SELECT eqpmt... equipes_equipamentos" />
+                <marker date="1481918470089" expanded="true" signature="5020:5388" placeholder="SELECT eqp.c... equipes" />
+                <marker date="1481918470089" expanded="true" signature="5662:5714" placeholder="DELETE FROM " />
+                <marker date="1481918470089" expanded="true" signature="5662:5727" placeholder="DELETE FROM " />
+                <marker date="1481918470089" expanded="true" signature="6317:6444" placeholder="DELETE FROM " />
+                <marker date="1481918470089" expanded="true" signature="6317:6467" placeholder="DELETE FROM " />
+                <marker date="1481918470089" expanded="true" signature="6317:6485" placeholder="DELETE FROM " />
+                <marker date="1481918470089" expanded="true" signature="6370:6443" placeholder="SELECT id_eq... equipes" />
+                <marker date="1481918470089" expanded="true" signature="7043:7465" placeholder="SELECT colab... colaborador" />
+                <marker date="1481918470089" expanded="true" signature="7747:7807" placeholder="DELETE FROM " />
+                <marker date="1481918470089" expanded="true" signature="7747:7824" placeholder="DELETE FROM " />
+                <marker date="1481918470089" expanded="true" signature="7807:7824" placeholder="SELECT id_co... colaborador" />
+                <marker date="1481918470089" expanded="true" signature="8419:8587" placeholder="DELETE FROM " />
+                <marker date="1481918470089" expanded="true" signature="8480:8563" placeholder="SELECT id_co... colaborador" />
+                <marker date="1481918470089" expanded="true" signature="8562:8563" placeholder="SELECT id_eq... equipes" />
+                <marker date="1481918470089" expanded="true" signature="9158:9441" placeholder="SELECT colab... colaborador" />
+                <marker date="1481918470089" expanded="true" signature="9158:9518" placeholder="SELECT colab... colaborador" />
+                <marker date="1481918470089" expanded="true" signature="9791:9841" placeholder="DELETE FROM " />
+                <marker date="1481918470089" expanded="true" signature="9791:9842" placeholder="DELETE FROM " />
+                <marker date="1481918470089" expanded="true" signature="9791:9855" placeholder="DELETE FROM " />
+                <marker date="1481918470089" expanded="true" signature="10444:10597" placeholder="DELETE FROM " />
+                <marker date="1481918470089" expanded="true" signature="10444:10677" placeholder="DELETE FROM " />
+                <marker date="1481918470089" expanded="true" signature="10500:10583" placeholder="SELECT id_co... colaborador" />
+                <marker date="1481918470089" expanded="true" signature="10603:10676" placeholder="SELECT id_eq... equipes" />
+                <marker date="1481918470089" expanded="true" signature="11224:11666" placeholder="SELECT eqp.i... equipes" />
+                <marker date="1481918470089" expanded="true" signature="11924:12214" placeholder="SELECT colab... colaborador" />
+                <marker date="1481918470089" expanded="true" signature="12487:12822" placeholder="SELECT colab... colaborador" />
+                <marker date="1481918470089" expanded="true" signature="12487:12859" placeholder="SELECT eqpmt... colaborador" />
+                <marker date="1481918470089" expanded="true" signature="12487:12864" placeholder="SELECT eqpmt... colaborador" />
+                <marker date="1481918470089" expanded="true" signature="13127:13396" placeholder="SELECT eqpmt... equipe" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dbEquipamento.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/database/dbEquipamento.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-187">
+              <caret line="28" column="5" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
+              <folding>
+                <marker date="1481917285586" expanded="true" signature="404:430" placeholder="SELECT * FRO... equipamentos" />
+                <marker date="1481917285586" expanded="true" signature="677:728" placeholder="SELECT * FRO... equipamentos" />
+                <marker date="1481917285586" expanded="true" signature="984:1035" placeholder="SELECT * FRO... equipamentos" />
+                <marker date="1481917285586" expanded="true" signature="984:1065" placeholder="SELECT * FRO... equipamentos" />
+                <marker date="1481917285586" expanded="true" signature="1315:1397" placeholder="SELECT * FRO... equipamentos" />
+                <marker date="1481917285586" expanded="true" signature="1651:1922" placeholder="SELECT * FRO... equipamentos" />
+                <marker date="1481917285586" expanded="true" signature="1754:1853" placeholder="SELECT id_eq... equipes_equipamentos" />
+                <marker date="1481917285586" expanded="true" signature="2173:2254" placeholder="SELECT * FRO... equipamentos" />
+                <marker date="1481917285586" expanded="true" signature="2512:2593" placeholder="SELECT * FRO... equipamentos" />
+                <marker date="1481917285586" expanded="true" signature="2851:3116" placeholder="SELECT * FRO... equipamentos" />
+                <marker date="1481917285586" expanded="true" signature="2851:3121" placeholder="SELECT * FRO... equipamentos" />
+                <marker date="1481917285586" expanded="true" signature="2950:3045" placeholder="SELECT id_eq... colaborador_equipamentos" />
+                <marker date="1481917285586" expanded="true" signature="3377:3458" placeholder="INSERT INTO equipamentos... " />
+                <marker date="1481917285586" expanded="true" signature="4020:4118" placeholder="UPDATE equip... " />
+                <marker date="1481917285586" expanded="true" signature="4669:4718" placeholder="DELETE FROM " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dash2.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/view/Dashboard/dash2.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="74" column="55" selection-start-line="74" selection-start-column="55" selection-end-line="74" selection-end-column="55" />
+            <state relative-caret-position="402">
+              <caret line="125" column="86" selection-start-line="125" selection-start-column="86" selection-end-line="125" selection-end-column="86" />
               <folding>
-                <marker date="1481899057951" expanded="true" signature="4162:4176" placeholder="..." />
-                <marker date="1481899057951" expanded="false" signature="4162:4195" placeholder="..." />
-                <marker date="1481899057951" expanded="false" signature="4876:4920" placeholder="..." />
-                <marker date="1481899057951" expanded="false" signature="4989:5019" placeholder="..." />
+                <marker date="1481918537240" expanded="true" signature="4179:4193" placeholder="..." />
+                <marker date="1481918537240" expanded="false" signature="4179:4212" placeholder="..." />
+                <marker date="1481918537240" expanded="false" signature="5214:5258" placeholder="..." />
+                <marker date="1481918537240" expanded="false" signature="5327:5357" placeholder="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="modalDash2.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/view/Dashboard/modalDash2.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="58">
+              <caret line="126" column="36" selection-start-line="126" selection-start-column="36" selection-end-line="126" selection-end-column="36" />
+              <folding>
+                <marker date="1481918572469" expanded="false" signature="4877:4910" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="db_equatorial.sql" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/database/db_equatorial.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="594">
+              <caret line="452" column="0" selection-start-line="452" selection-start-column="0" selection-end-line="452" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -95,10 +196,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/controller/colaboradorCtrl.php" />
-        <option value="$PROJECT_DIR$/controller/usuarioCtrl.php" />
-        <option value="$PROJECT_DIR$/view/Equipes/modalEquipes.php" />
-        <option value="$PROJECT_DIR$/view/Equipes/cadastroEquipes.php" />
         <option value="$PROJECT_DIR$/view/Instalacoes/modalInstalacao.php" />
         <option value="$PROJECT_DIR$/controller/equipesCtrl.php" />
         <option value="$PROJECT_DIR$/controller/equipeCtrl.php" />
@@ -108,7 +205,6 @@
         <option value="$PROJECT_DIR$/view/Colaborador/relColaboradorEquipe.php" />
         <option value="$PROJECT_DIR$/view/Equipe/modalEquipe.php" />
         <option value="$PROJECT_DIR$/view/Colaborador/modalColaborador.php" />
-        <option value="$PROJECT_DIR$/database/dbColaborador.php" />
         <option value="$PROJECT_DIR$/view/Colaborador/relColaboradorEquipamento.php" />
         <option value="$PROJECT_DIR$/database/dbAtividade.php" />
         <option value="$PROJECT_DIR$/oniichan.php" />
@@ -123,29 +219,34 @@
         <option value="$PROJECT_DIR$/controller/dashCtrl.php" />
         <option value="$PROJECT_DIR$/view/Equipamentos/modalEquipamento.php" />
         <option value="$PROJECT_DIR$/css/printing.css" />
+        <option value="$PROJECT_DIR$/view/Dashboard/dash.php" />
+        <option value="$PROJECT_DIR$/css/style.css" />
+        <option value="$PROJECT_DIR$/database/dbUsuario.php" />
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/includes/sidebar.php" />
+        <option value="$PROJECT_DIR$/includes/scripts.php" />
         <option value="$PROJECT_DIR$/view/Atividades/cadastroAtividade.php" />
         <option value="$PROJECT_DIR$/view/Colaborador/cadastroColaborador.php" />
-        <option value="$PROJECT_DIR$/view/Colaborador/relacionamentoColaboradorEquipamento.php" />
-        <option value="$PROJECT_DIR$/view/Colaborador/relacionamentoColaboradorEquipe.php" />
-        <option value="$PROJECT_DIR$/view/Dashboard/dash.php" />
         <option value="$PROJECT_DIR$/view/Equipamentos/cadastroEquipamento.php" />
         <option value="$PROJECT_DIR$/view/Equipe/cadastroEquipe.php" />
+        <option value="$PROJECT_DIR$/view/Instalacoes/cadastroInstalacao.php" />
         <option value="$PROJECT_DIR$/view/Obras/cadastroObra.php" />
         <option value="$PROJECT_DIR$/view/Usuario/cadastroUsuario.php" />
         <option value="$PROJECT_DIR$/view/Veiculos/cadastroVeiculo.php" />
-        <option value="$PROJECT_DIR$/view/Instalacoes/cadastroInstalacao.php" />
-        <option value="$PROJECT_DIR$/css/style.css" />
-        <option value="$PROJECT_DIR$/database/db_equatorial.sql" />
+        <option value="$PROJECT_DIR$/includes/header.php" />
+        <option value="$PROJECT_DIR$/view/Colaborador/relacionamentoColaboradorEquipamento.php" />
+        <option value="$PROJECT_DIR$/database/dbColaborador.php" />
+        <option value="$PROJECT_DIR$/view/Colaborador/ajaxColaboradorEquipe.js" />
+        <option value="$PROJECT_DIR$/view/Colaborador/relacionamentoColaboradorEquipe.php" />
+        <option value="$PROJECT_DIR$/database/dbEquipamento.php" />
         <option value="$PROJECT_DIR$/view/Equipe/relacionamentoEquipeEquipamento.php" />
-        <option value="$PROJECT_DIR$/database/dbUsuario.php" />
-        <option value="$PROJECT_DIR$/includes/scripts.php" />
-        <option value="$PROJECT_DIR$/view/Dashboard/modalDash2.php" />
+        <option value="$PROJECT_DIR$/view/Colaborador/ajaxColaboradorEquipamento.js" />
+        <option value="$PROJECT_DIR$/view/Equipe/ajaxEquipeEquipamento.js" />
         <option value="$PROJECT_DIR$/database/dbRelacionamento.php" />
         <option value="$PROJECT_DIR$/view/Dashboard/dash.js" />
-        <option value="$PROJECT_DIR$/index.php" />
-        <option value="$PROJECT_DIR$/includes/header.php" />
-        <option value="$PROJECT_DIR$/includes/sidebar.php" />
         <option value="$PROJECT_DIR$/view/Dashboard/dash2.php" />
+        <option value="$PROJECT_DIR$/view/Dashboard/modalDash2.php" />
+        <option value="$PROJECT_DIR$/database/db_equatorial.sql" />
       </list>
     </option>
   </component>
@@ -163,10 +264,10 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="784" />
+    <option name="x" value="1" />
+    <option name="y" value="1" />
+    <option name="width" value="1364" />
+    <option name="height" value="766" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -244,6 +345,20 @@
               <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SimulacaoCelpa" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="SimulacaoCelpa" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="database" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
@@ -254,7 +369,7 @@
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
-    <property name="SearchEverywhereHistoryKey" value="side&#9;FILE&#9;file://C:/xampp/htdocs/SimulacaoCelpa/includes/sidebar.php&#10;hea&#9;FILE&#9;file://C:/xampp/htdocs/SimulacaoCelpa/includes/header.php&#10;dash.&#9;FILE&#9;file://C:/xampp/htdocs/SimulacaoCelpa/view/Dashboard/dash.php&#10;dash&#9;FILE&#9;file://C:/xampp/htdocs/SimulacaoCelpa/view/Dashboard/modalDash.php&#10;scrip&#9;FILE&#9;file://C:/xampp/htdocs/SimulacaoCelpa/includes/scripts.php&#10;head&#9;FILE&#9;file://C:/xampp/htdocs/SimulacaoCelpa/includes/header.php&#10;he&#9;FILE&#9;file://C:/xampp/htdocs/SimulacaoCelpa/includes/header.php&#10;rela&#9;FILE&#9;file://C:/xampp/htdocs/SimulacaoCelpa/view/Equipe/relacionamentoEquipeEquipamento.php&#10;scri&#9;FILE&#9;file://C:/xampp/htdocs/SimulacaoCelpa/includes/scripts.php&#10;cadEqui&#9;FILE&#9;file://C:/xampp/htdocs/SimulacaoCelpa/view/Equipe/cadastroEquipe.php&#10;caCola&#9;FILE&#9;file://C:/xampp/htdocs/SimulacaoCelpa/view/Colaborador/cadastroColaborador.php&#10;modal&#9;FILE&#9;file://C:/xampp/htdocs/SimulacaoCelpa/view/Equipamentos/modalEquipamento.php&#10;equi&#9;FILE&#9;file://C:/xampp/htdocs/SimulacaoCelpa/view/Equipamentos/cadastroEquipamento.php&#10;ind&#9;FILE&#9;file://C:/xampp/htdocs/SimulacaoCelpa/index.php&#10;cadast&#9;FILE&#9;file://C:/xampp/htdocs/SimulacaoCelpa/view/Colaborador/cadastroColaborador.php&#10;header&#9;FILE&#9;file://C:/xampp/htdocs/SimulacaoCelpa/includes/header.php&#10;cadas&#9;FILE&#9;file://C:/xampp/htdocs/SimulacaoCelpa/view/Equipamentos/cadastroEquipamento.php&#10;ca&#9;FILE&#9;file://C:/xampp/htdocs/SimulacaoCelpa/view/Colaborador/cadastroColaborador.php&#10;ShowH&#9;null&#9;null&#10;id&#9;FILE&#9;file://C:/xampp/htdocs/SimulacaoCelpa/view/Atividades/cadastroAtividade.php&#10;cad&#9;FILE&#9;file://C:/xampp/htdocs/SimulacaoCelpa/view/Atividades/cadastroAtividade.php&#10;db&#9;FILE&#9;file://C:/xampp/htdocs/SimulacaoCelpa/database/dbEquipe.php&#10;si&#9;FILE&#9;file://C:/xampp/htdocs/SimulacaoCelpa/includes/sidebar.php&#10;dbEquipe&#9;FILE&#9;file://C:/xampp/htdocs/SimulacaoCelpa/database/dbEquipe.php&#10;r&#9;FILE&#9;file://C:/xampp/htdocs/SimulacaoCelpa/controller/relacionamentoCtrl.php&#10;sid&#9;FILE&#9;file://C:/xampp/htdocs/SimulacaoCelpa/includes/sidebar.php&#10;s&#9;FILE&#9;file://C:/xampp/htdocs/SimulacaoCelpa/includes/sidebar.php" />
+    <property name="SearchEverywhereHistoryKey" value="dbR&#9;FILE&#9;file://C:/xampp/htdocs/SimulacaoCelpa/database/dbRelacionamento.php&#10;d&#9;FILE&#9;file://C:/xampp/htdocs/SimulacaoCelpa/database/dbRelacionamento.php&#10;relacionamento&#9;FILE&#9;file://C:/xampp/htdocs/SimulacaoCelpa/view/Colaborador/relacionamentoColaboradorEquipamento.php&#10;relacionamentoColaboradorEquipamentos&#9;null&#9;null&#10;head&#9;FILE&#9;file://C:/xampp/htdocs/SimulacaoCelpa/includes/header.php&#10;sc&#9;FILE&#9;file://C:/xampp/htdocs/SimulacaoCelpa/includes/scripts.php&#10;side&#9;FILE&#9;file://C:/xampp/htdocs/SimulacaoCelpa/includes/sidebar.php&#10;hea&#9;FILE&#9;file://C:/xampp/htdocs/SimulacaoCelpa/includes/header.php&#10;dash.&#9;FILE&#9;file://C:/xampp/htdocs/SimulacaoCelpa/view/Dashboard/dash.php&#10;dash&#9;FILE&#9;file://C:/xampp/htdocs/SimulacaoCelpa/view/Dashboard/modalDash.php&#10;scrip&#9;FILE&#9;file://C:/xampp/htdocs/SimulacaoCelpa/includes/scripts.php&#10;he&#9;FILE&#9;file://C:/xampp/htdocs/SimulacaoCelpa/includes/header.php&#10;rela&#9;FILE&#9;file://C:/xampp/htdocs/SimulacaoCelpa/view/Equipe/relacionamentoEquipeEquipamento.php&#10;scri&#9;FILE&#9;file://C:/xampp/htdocs/SimulacaoCelpa/includes/scripts.php&#10;cadEqui&#9;FILE&#9;file://C:/xampp/htdocs/SimulacaoCelpa/view/Equipe/cadastroEquipe.php&#10;caCola&#9;FILE&#9;file://C:/xampp/htdocs/SimulacaoCelpa/view/Colaborador/cadastroColaborador.php&#10;modal&#9;FILE&#9;file://C:/xampp/htdocs/SimulacaoCelpa/view/Equipamentos/modalEquipamento.php&#10;equi&#9;FILE&#9;file://C:/xampp/htdocs/SimulacaoCelpa/view/Equipamentos/cadastroEquipamento.php&#10;ind&#9;FILE&#9;file://C:/xampp/htdocs/SimulacaoCelpa/index.php&#10;cadast&#9;FILE&#9;file://C:/xampp/htdocs/SimulacaoCelpa/view/Colaborador/cadastroColaborador.php&#10;header&#9;FILE&#9;file://C:/xampp/htdocs/SimulacaoCelpa/includes/header.php&#10;cadas&#9;FILE&#9;file://C:/xampp/htdocs/SimulacaoCelpa/view/Equipamentos/cadastroEquipamento.php&#10;ca&#9;FILE&#9;file://C:/xampp/htdocs/SimulacaoCelpa/view/Colaborador/cadastroColaborador.php&#10;ShowH&#9;null&#9;null&#10;id&#9;FILE&#9;file://C:/xampp/htdocs/SimulacaoCelpa/view/Atividades/cadastroAtividade.php&#10;cad&#9;FILE&#9;file://C:/xampp/htdocs/SimulacaoCelpa/view/Atividades/cadastroAtividade.php&#10;db&#9;FILE&#9;file://C:/xampp/htdocs/SimulacaoCelpa/database/dbEquipe.php&#10;si&#9;FILE&#9;file://C:/xampp/htdocs/SimulacaoCelpa/includes/sidebar.php&#10;dbEquipe&#9;FILE&#9;file://C:/xampp/htdocs/SimulacaoCelpa/database/dbEquipe.php&#10;r&#9;FILE&#9;file://C:/xampp/htdocs/SimulacaoCelpa/controller/relacionamentoCtrl.php&#10;sid&#9;FILE&#9;file://C:/xampp/htdocs/SimulacaoCelpa/includes/sidebar.php&#10;s&#9;FILE&#9;file://C:/xampp/htdocs/SimulacaoCelpa/includes/sidebar.php" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
@@ -319,18 +434,18 @@
       <workItem from="1481684033420" duration="5178000" />
       <workItem from="1481716944876" duration="12460000" />
       <workItem from="1481736175517" duration="11682000" />
-      <workItem from="1481802869619" duration="29921000" />
+      <workItem from="1481802869619" duration="40556000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="122654000" />
+    <option name="totallyTimeSpent" value="133289000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
+    <frame x="1" y="1" width="1364" height="766" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14714494" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1491098" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3283582" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -384,28 +499,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/database/dbVeiculo.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="564">
-          <caret line="43" column="86" selection-start-line="43" selection-start-column="14" selection-end-line="43" selection-end-column="86" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controller/equipeCtrl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="4" column="19" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controller/colaboradorCtrl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="464">
-          <caret line="59" column="78" selection-start-line="55" selection-start-column="4" selection-end-line="59" selection-end-column="78" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testeAjax.php" />
     <entry file="file://$PROJECT_DIR$/js/code39ascii.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="338">
@@ -420,13 +513,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/dbColaborador.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="103" column="123" selection-start-line="103" selection-start-column="123" selection-end-line="103" selection-end-column="123" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/database/dbAtividade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="448">
@@ -436,14 +522,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/oniichan.php" />
-    <entry file="file://$PROJECT_DIR$/controller/relacionamentoCtrl.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="867">
-          <caret line="51" column="46" selection-start-line="51" selection-start-column="46" selection-end-line="51" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/database/dbEquipe.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="497">
@@ -501,78 +579,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/Atividades/cadastroAtividade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="56" column="2" selection-start-line="56" selection-start-column="2" selection-end-line="56" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/Colaborador/cadastroColaborador.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="66" column="2" selection-start-line="66" selection-start-column="2" selection-end-line="66" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/Colaborador/relacionamentoColaboradorEquipamento.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="56" column="0" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/Colaborador/relacionamentoColaboradorEquipe.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="58" column="0" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/Equipamentos/cadastroEquipamento.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="56" column="2" selection-start-line="56" selection-start-column="2" selection-end-line="56" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/Equipe/cadastroEquipe.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="62" column="2" selection-start-line="62" selection-start-column="2" selection-end-line="62" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/Obras/cadastroObra.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="56" column="2" selection-start-line="56" selection-start-column="2" selection-end-line="56" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/Usuario/cadastroUsuario.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="58" column="2" selection-start-line="58" selection-start-column="2" selection-end-line="58" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/Veiculos/cadastroVeiculo.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="56" column="2" selection-start-line="56" selection-start-column="2" selection-end-line="56" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/view/Veiculos/modalVeiculo.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="314">
@@ -613,14 +619,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/Instalacoes/cadastroInstalacao.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="60" column="2" selection-start-line="60" selection-start-column="2" selection-end-line="60" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/view/Instalacoes/modalInstalacao.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="314">
@@ -653,22 +651,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/db_equatorial.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="428" column="88" selection-start-line="428" selection-start-column="88" selection-end-line="428" selection-end-column="88" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/scripts.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="382">
-          <caret line="66" column="52" selection-start-line="66" selection-start-column="52" selection-end-line="66" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/database/dbUsuario.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="399">
@@ -681,19 +663,6 @@
             <marker date="1481822527331" expanded="true" signature="2276:2315" placeholder="DELETE FROM " />
             <marker date="1481822527331" expanded="true" signature="2868:2875" placeholder="SELECT * FRO... usuario" />
             <marker date="1481822527331" expanded="true" signature="2868:3155" placeholder="SELECT colab... usuario" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/Equipe/relacionamentoEquipeEquipamento.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="182" column="38" selection-start-line="182" selection-start-column="38" selection-end-line="182" selection-end-column="38" />
-          <folding>
-            <marker date="1481827958434" expanded="true" signature="6232:6255" placeholder="..." />
-            <marker date="1481827958434" expanded="true" signature="6428:6451" placeholder="..." />
-            <marker date="1481827958434" expanded="true" signature="6505:6528" placeholder="..." />
-            <marker date="1481827958434" expanded="true" signature="6593:6632" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -714,85 +683,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/Dashboard/dash.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2329">
-          <caret line="137" column="30" selection-start-line="137" selection-start-column="30" selection-end-line="137" selection-end-column="30" />
-          <folding>
-            <marker date="1481898960015" expanded="true" signature="2091:2100" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/Dashboard/modalDash2.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="433">
-          <caret line="145" column="45" selection-start-line="145" selection-start-column="25" selection-end-line="145" selection-end-column="45" />
-          <folding>
-            <element signature="n#style#0;n#div#3;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#3;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#3;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#4;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#4;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#4;n#!!top" expanded="true" />
-            <marker date="1481897580713" expanded="false" signature="4877:4910" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/dbRelacionamento.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1105">
-          <caret line="65" column="34" selection-start-line="65" selection-start-column="34" selection-end-line="65" selection-end-column="34" />
-          <folding>
-            <marker date="1481898595637" expanded="true" signature="2157:2525" placeholder="SELECT eqp.c... equipes" />
-            <marker date="1481898595637" expanded="true" signature="2799:2851" placeholder="DELETE FROM " />
-            <marker date="1481898595637" expanded="true" signature="2799:2864" placeholder="DELETE FROM " />
-            <marker date="1481898595637" expanded="true" signature="3454:3581" placeholder="DELETE FROM " />
-            <marker date="1481898595637" expanded="true" signature="3454:3604" placeholder="DELETE FROM " />
-            <marker date="1481898595637" expanded="true" signature="3454:3622" placeholder="DELETE FROM " />
-            <marker date="1481898595637" expanded="true" signature="3507:3580" placeholder="SELECT id_eq... equipes" />
-            <marker date="1481898595637" expanded="true" signature="4180:4602" placeholder="SELECT colab... colaborador" />
-            <marker date="1481898595637" expanded="true" signature="4884:4944" placeholder="DELETE FROM " />
-            <marker date="1481898595637" expanded="true" signature="4884:4961" placeholder="DELETE FROM " />
-            <marker date="1481898595637" expanded="true" signature="4944:4961" placeholder="SELECT id_co... colaborador" />
-            <marker date="1481898595637" expanded="true" signature="5556:5724" placeholder="DELETE FROM " />
-            <marker date="1481898595637" expanded="true" signature="5617:5700" placeholder="SELECT id_co... colaborador" />
-            <marker date="1481898595637" expanded="true" signature="5699:5700" placeholder="SELECT id_eq... equipes" />
-            <marker date="1481898595637" expanded="true" signature="6295:6578" placeholder="SELECT colab... colaborador" />
-            <marker date="1481898595637" expanded="true" signature="6295:6655" placeholder="SELECT colab... colaborador" />
-            <marker date="1481898595637" expanded="true" signature="6928:6978" placeholder="DELETE FROM " />
-            <marker date="1481898595637" expanded="true" signature="6928:6979" placeholder="DELETE FROM " />
-            <marker date="1481898595637" expanded="true" signature="6928:6992" placeholder="DELETE FROM " />
-            <marker date="1481898595637" expanded="true" signature="7581:7734" placeholder="DELETE FROM " />
-            <marker date="1481898595637" expanded="true" signature="7581:7814" placeholder="DELETE FROM " />
-            <marker date="1481898595637" expanded="true" signature="7637:7720" placeholder="SELECT id_co... colaborador" />
-            <marker date="1481898595637" expanded="true" signature="7740:7813" placeholder="SELECT id_eq... equipes" />
-            <marker date="1481898595637" expanded="true" signature="8361:8809" placeholder="SELECT eqp.i... equipes" />
-            <marker date="1481898595637" expanded="true" signature="9067:9357" placeholder="SELECT colab... colaborador" />
-            <marker date="1481898595637" expanded="true" signature="9630:9965" placeholder="SELECT colab... colaborador" />
-            <marker date="1481898595637" expanded="true" signature="9630:10002" placeholder="SELECT eqpmt... colaborador" />
-            <marker date="1481898595637" expanded="true" signature="9630:10007" placeholder="SELECT eqpmt... colaborador" />
-            <marker date="1481898595637" expanded="true" signature="10270:10539" placeholder="SELECT eqpmt... equipe" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/includes/sidebar.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="82">
           <caret line="9" column="70" selection-start-line="9" selection-start-column="70" selection-end-line="9" selection-end-column="70" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/includes/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="53" selection-start-line="6" selection-start-column="53" selection-end-line="6" selection-end-column="53" />
-          <folding>
-            <element signature="n#style#0;n#img#1;n#a#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -804,16 +699,299 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/view/Atividades/cadastroAtividade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="107">
+          <caret line="81" column="22" selection-start-line="81" selection-start-column="22" selection-end-line="81" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/Colaborador/cadastroColaborador.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="515">
+          <caret line="91" column="48" selection-start-line="91" selection-start-column="48" selection-end-line="91" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/Equipamentos/cadastroEquipamento.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="311">
+          <caret line="81" column="48" selection-start-line="81" selection-start-column="48" selection-end-line="81" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/Instalacoes/cadastroInstalacao.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="362">
+          <caret line="85" column="50" selection-start-line="85" selection-start-column="50" selection-end-line="85" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/Obras/cadastroObra.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="81" column="50" selection-start-line="81" selection-start-column="50" selection-end-line="81" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/Usuario/cadastroUsuario.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="83" column="50" selection-start-line="83" selection-start-column="50" selection-end-line="83" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/Veiculos/cadastroVeiculo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="311">
+          <caret line="81" column="50" selection-start-line="81" selection-start-column="50" selection-end-line="81" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/Equipe/cadastroEquipe.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="464">
+          <caret line="87" column="48" selection-start-line="87" selection-start-column="48" selection-end-line="87" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/scripts.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="756">
+          <caret line="76" column="3" selection-start-line="72" selection-start-column="2" selection-end-line="76" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/includes/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="8" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
+          <folding>
+            <element signature="n#style#0;n#a#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/Colaborador/relacionamentoColaboradorEquipamento.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="58">
+          <caret line="106" column="22" selection-start-line="106" selection-start-column="22" selection-end-line="106" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/relacionamentoCtrl.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="867">
+          <caret line="51" column="46" selection-start-line="51" selection-start-column="46" selection-end-line="51" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/Colaborador/ajaxColaboradorEquipe.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="2" column="3" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#42#0" expanded="false" />
+            <marker date="1481916976296" expanded="true" signature="707:730" placeholder="..." />
+            <marker date="1481916976296" expanded="true" signature="911:934" placeholder="..." />
+            <marker date="1481916976296" expanded="true" signature="1009:1048" placeholder="..." />
+            <marker date="1481916976296" expanded="true" signature="2634:2657" placeholder="..." />
+            <marker date="1481916976296" expanded="true" signature="2834:2857" placeholder="..." />
+            <marker date="1481916976296" expanded="true" signature="2930:2969" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/Colaborador/relacionamentoColaboradorEquipe.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="177" column="60" selection-start-line="177" selection-start-column="60" selection-end-line="177" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/Colaborador/ajaxColaboradorEquipamento.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="85" column="18" selection-start-line="85" selection-start-column="18" selection-end-line="85" selection-end-column="18" />
+          <caret line="87" column="18" selection-start-line="87" selection-start-column="18" selection-end-line="87" selection-end-column="18" />
+          <caret line="89" column="18" selection-start-line="89" selection-start-column="18" selection-end-line="89" selection-end-column="18" />
+          <caret line="95" column="66" selection-start-line="95" selection-start-column="66" selection-end-line="95" selection-end-column="66" />
+          <folding>
+            <marker date="1481917530663" expanded="true" signature="1277:1300" placeholder="..." />
+            <marker date="1481917530663" expanded="true" signature="1484:1507" placeholder="..." />
+            <marker date="1481917530663" expanded="true" signature="1566:1589" placeholder="..." />
+            <marker date="1481917530663" expanded="true" signature="1659:1698" placeholder="..." />
+            <marker date="1481917530663" expanded="true" signature="3380:3403" placeholder="..." />
+            <marker date="1481917530663" expanded="true" signature="3583:3606" placeholder="..." />
+            <marker date="1481917530663" expanded="true" signature="3661:3684" placeholder="..." />
+            <marker date="1481917530663" expanded="true" signature="3752:3791" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/Equipe/relacionamentoEquipeEquipamento.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-741">
+          <caret line="105" column="22" selection-start-line="105" selection-start-column="22" selection-end-line="105" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/dbColaborador.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="92">
+          <caret line="42" column="49" selection-start-line="42" selection-start-column="20" selection-end-line="42" selection-end-column="49" />
+          <folding>
+            <marker date="1481916490644" expanded="true" signature="407:432" placeholder="SELECT * FRO... colaborador" />
+            <marker date="1481916490644" expanded="true" signature="681:730" placeholder="SELECT * FRO... colaborador" />
+            <marker date="1481916490644" expanded="true" signature="994:1214" placeholder="SELECT * FRO... colaborador" />
+            <marker date="1481916490644" expanded="true" signature="1091:1180" placeholder="SELECT id_co... colaborador_equipes" />
+            <marker date="1481916490644" expanded="true" signature="1567:1856" placeholder="INSERT INTO colaborador... " />
+            <marker date="1481916490644" expanded="true" signature="2521:2815" placeholder="UPDATE colab... " />
+            <marker date="1481916490644" expanded="true" signature="3388:3431" placeholder="DELETE FROM " />
+            <marker date="1481916490644" expanded="true" signature="3497:3544" placeholder="DELETE FROM " />
+            <marker date="1481916490644" expanded="true" signature="4115:4162" placeholder="DELETE FROM " />
+            <marker date="1481916490644" expanded="true" signature="4742:4837" placeholder="INSERT INTO colaborador_equipes... " />
+            <marker date="1481916490644" expanded="true" signature="5428:5539" placeholder="INSERT INTO colaborador_equipamentos... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/Equipe/ajaxEquipeEquipamento.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1430">
+          <caret line="117" column="3" selection-start-line="117" selection-start-column="3" selection-end-line="117" selection-end-column="3" />
+          <folding>
+            <marker date="1481917570941" expanded="true" signature="1249:1272" placeholder="..." />
+            <marker date="1481917570941" expanded="true" signature="1455:1478" placeholder="..." />
+            <marker date="1481917570941" expanded="true" signature="1537:1560" placeholder="..." />
+            <marker date="1481917570941" expanded="true" signature="1630:1669" placeholder="..." />
+            <marker date="1481917570941" expanded="true" signature="3340:3363" placeholder="..." />
+            <marker date="1481917570941" expanded="true" signature="3542:3565" placeholder="..." />
+            <marker date="1481917570941" expanded="true" signature="3620:3643" placeholder="..." />
+            <marker date="1481917570941" expanded="true" signature="3711:3750" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/dbEquipamento.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-187">
+          <caret line="28" column="5" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
+          <folding>
+            <marker date="1481917285586" expanded="true" signature="404:430" placeholder="SELECT * FRO... equipamentos" />
+            <marker date="1481917285586" expanded="true" signature="677:728" placeholder="SELECT * FRO... equipamentos" />
+            <marker date="1481917285586" expanded="true" signature="984:1035" placeholder="SELECT * FRO... equipamentos" />
+            <marker date="1481917285586" expanded="true" signature="984:1065" placeholder="SELECT * FRO... equipamentos" />
+            <marker date="1481917285586" expanded="true" signature="1315:1397" placeholder="SELECT * FRO... equipamentos" />
+            <marker date="1481917285586" expanded="true" signature="1651:1922" placeholder="SELECT * FRO... equipamentos" />
+            <marker date="1481917285586" expanded="true" signature="1754:1853" placeholder="SELECT id_eq... equipes_equipamentos" />
+            <marker date="1481917285586" expanded="true" signature="2173:2254" placeholder="SELECT * FRO... equipamentos" />
+            <marker date="1481917285586" expanded="true" signature="2512:2593" placeholder="SELECT * FRO... equipamentos" />
+            <marker date="1481917285586" expanded="true" signature="2851:3116" placeholder="SELECT * FRO... equipamentos" />
+            <marker date="1481917285586" expanded="true" signature="2851:3121" placeholder="SELECT * FRO... equipamentos" />
+            <marker date="1481917285586" expanded="true" signature="2950:3045" placeholder="SELECT id_eq... colaborador_equipamentos" />
+            <marker date="1481917285586" expanded="true" signature="3377:3458" placeholder="INSERT INTO equipamentos... " />
+            <marker date="1481917285586" expanded="true" signature="4020:4118" placeholder="UPDATE equip... " />
+            <marker date="1481917285586" expanded="true" signature="4669:4718" placeholder="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/dbRelacionamento.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="794">
+          <caret line="185" column="71" selection-start-line="185" selection-start-column="71" selection-end-line="185" selection-end-column="71" />
+          <folding>
+            <marker date="1481918470089" expanded="true" signature="3884:4154" placeholder="SELECT eqpmt... equipes_equipamentos" />
+            <marker date="1481918470089" expanded="true" signature="3884:4159" placeholder="SELECT eqpmt... equipes_equipamentos" />
+            <marker date="1481918470089" expanded="true" signature="3884:4177" placeholder="SELECT eqpmt... equipes_equipamentos" />
+            <marker date="1481918470089" expanded="true" signature="3884:4190" placeholder="SELECT eqpmt... equipes_equipamentos" />
+            <marker date="1481918470089" expanded="true" signature="4457:4762" placeholder="SELECT eqpmt... equipes_equipamentos" />
+            <marker date="1481918470089" expanded="true" signature="4457:4763" placeholder="SELECT eqpmt... equipes_equipamentos" />
+            <marker date="1481918470089" expanded="true" signature="5020:5388" placeholder="SELECT eqp.c... equipes" />
+            <marker date="1481918470089" expanded="true" signature="5662:5714" placeholder="DELETE FROM " />
+            <marker date="1481918470089" expanded="true" signature="5662:5727" placeholder="DELETE FROM " />
+            <marker date="1481918470089" expanded="true" signature="6317:6444" placeholder="DELETE FROM " />
+            <marker date="1481918470089" expanded="true" signature="6317:6467" placeholder="DELETE FROM " />
+            <marker date="1481918470089" expanded="true" signature="6317:6485" placeholder="DELETE FROM " />
+            <marker date="1481918470089" expanded="true" signature="6370:6443" placeholder="SELECT id_eq... equipes" />
+            <marker date="1481918470089" expanded="true" signature="7043:7465" placeholder="SELECT colab... colaborador" />
+            <marker date="1481918470089" expanded="true" signature="7747:7807" placeholder="DELETE FROM " />
+            <marker date="1481918470089" expanded="true" signature="7747:7824" placeholder="DELETE FROM " />
+            <marker date="1481918470089" expanded="true" signature="7807:7824" placeholder="SELECT id_co... colaborador" />
+            <marker date="1481918470089" expanded="true" signature="8419:8587" placeholder="DELETE FROM " />
+            <marker date="1481918470089" expanded="true" signature="8480:8563" placeholder="SELECT id_co... colaborador" />
+            <marker date="1481918470089" expanded="true" signature="8562:8563" placeholder="SELECT id_eq... equipes" />
+            <marker date="1481918470089" expanded="true" signature="9158:9441" placeholder="SELECT colab... colaborador" />
+            <marker date="1481918470089" expanded="true" signature="9158:9518" placeholder="SELECT colab... colaborador" />
+            <marker date="1481918470089" expanded="true" signature="9791:9841" placeholder="DELETE FROM " />
+            <marker date="1481918470089" expanded="true" signature="9791:9842" placeholder="DELETE FROM " />
+            <marker date="1481918470089" expanded="true" signature="9791:9855" placeholder="DELETE FROM " />
+            <marker date="1481918470089" expanded="true" signature="10444:10597" placeholder="DELETE FROM " />
+            <marker date="1481918470089" expanded="true" signature="10444:10677" placeholder="DELETE FROM " />
+            <marker date="1481918470089" expanded="true" signature="10500:10583" placeholder="SELECT id_co... colaborador" />
+            <marker date="1481918470089" expanded="true" signature="10603:10676" placeholder="SELECT id_eq... equipes" />
+            <marker date="1481918470089" expanded="true" signature="11224:11666" placeholder="SELECT eqp.i... equipes" />
+            <marker date="1481918470089" expanded="true" signature="11924:12214" placeholder="SELECT colab... colaborador" />
+            <marker date="1481918470089" expanded="true" signature="12487:12822" placeholder="SELECT colab... colaborador" />
+            <marker date="1481918470089" expanded="true" signature="12487:12859" placeholder="SELECT eqpmt... colaborador" />
+            <marker date="1481918470089" expanded="true" signature="12487:12864" placeholder="SELECT eqpmt... colaborador" />
+            <marker date="1481918470089" expanded="true" signature="13127:13396" placeholder="SELECT eqpmt... equipe" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/view/Dashboard/dash2.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="74" column="55" selection-start-line="74" selection-start-column="55" selection-end-line="74" selection-end-column="55" />
+        <state relative-caret-position="402">
+          <caret line="125" column="86" selection-start-line="125" selection-start-column="86" selection-end-line="125" selection-end-column="86" />
           <folding>
-            <marker date="1481899057951" expanded="true" signature="4162:4176" placeholder="..." />
-            <marker date="1481899057951" expanded="false" signature="4162:4195" placeholder="..." />
-            <marker date="1481899057951" expanded="false" signature="4876:4920" placeholder="..." />
-            <marker date="1481899057951" expanded="false" signature="4989:5019" placeholder="..." />
+            <marker date="1481918537240" expanded="true" signature="4179:4193" placeholder="..." />
+            <marker date="1481918537240" expanded="false" signature="4179:4212" placeholder="..." />
+            <marker date="1481918537240" expanded="false" signature="5214:5258" placeholder="..." />
+            <marker date="1481918537240" expanded="false" signature="5327:5357" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/Dashboard/dash.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1069">
+          <caret line="112" column="6" selection-start-line="112" selection-start-column="6" selection-end-line="112" selection-end-column="6" />
+          <folding>
+            <marker date="1481918495618" expanded="true" signature="2091:2100" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/Dashboard/modalDash2.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="58">
+          <caret line="126" column="36" selection-start-line="126" selection-start-column="36" selection-end-line="126" selection-end-column="36" />
+          <folding>
+            <marker date="1481918572469" expanded="false" signature="4877:4910" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/db_equatorial.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="452" column="0" selection-start-line="452" selection-start-column="0" selection-end-line="452" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

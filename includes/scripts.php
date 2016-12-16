@@ -70,6 +70,22 @@
 		}
 	}
 
+	if ($(window).width() < 755) {
+		toggle = false;
+		$('div.matter').find('.container').removeClass("hideSidebar");
+		$('#ShowHide').hide();
+	}
+
+	$(window).resize(function() {
+//		console.log($(window).width());
+		if ($(window).width() < 755) {
+			toggle = false;
+			$('div.matter').find('.container').removeClass("hideSidebar");
+			$('#ShowHide').hide();
+		} else{
+			$('#ShowHide').show();
+		}
+	});
 </script>
 
 <script>

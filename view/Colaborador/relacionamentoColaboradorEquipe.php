@@ -106,32 +106,36 @@ $equipe = new dbEquipe();
 						</div>
 					</div>
 
+					<center><div id="layourFluido"></div></center>
 					<br><br>
 					<hr>
 					<br>
 
 				</div>
 
-				<form method="post" action="/SimulacaoCelpa/controller/relacionamentoCtrl.php">
-					<input type="hidden" name="tipo" value="colaboradorEquipe">
-					<input type="hidden" name="id_equipes" id="id_equipes">
-					<table class="table table-bordered table-responsive" id="listaColaborador">
-						<thead style="background-color: rgba(39, 72, 114, 1); font-weight: bold;">
-						<tr>
-							<th style="color: white; text-align: center;vertical-align: middle">Código</th>
-							<th style="color: white; text-align: center;vertical-align: middle">Nome do Colaborador</th>
-							<th style="color: white; text-align: center;vertical-align: middle">Ações</th>
-						</tr>
-						</thead>
-						<tbody id="dadosColaborador" align="center"></tbody>
-					</table>
+				<div class="col-md-12 table-responsive">
+					<form method="post" action="/SimulacaoCelpa/controller/relacionamentoCtrl.php">
+						<input type="hidden" name="tipo" value="colaboradorEquipe">
+						<input type="hidden" name="id_equipes" id="id_equipes">
+						<table class="table table-bordered table-responsive" id="listaColaborador">
+							<thead style="background-color: rgba(39, 72, 114, 1); font-weight: bold;">
+							<tr>
+								<th style="color: white; text-align: center;vertical-align: middle">Código</th>
+								<th style="color: white; text-align: center;vertical-align: middle">Nome do Colaborador</th>
+								<th style="color: white; text-align: center;vertical-align: middle">Ações</th>
+							</tr>
+							</thead>
+							<tbody id="dadosColaborador" align="center"></tbody>
+						</table>
 
-					<br>
-					<hr>
-					<br>
-					<button class="btn btn-success pull-right" type="submit" style="margin-right: 20px; width: 120px">Salvar</button>
-				</form>
-
+						<br>
+						<hr>
+						<br>
+						<button class="btn btn-success pull-right" type="submit" style="margin-right: 20px; width: 120px">Salvar</button>
+						<br>
+						<br>
+					</form>
+				</div>
 
 			</div>
 		</div>
@@ -169,45 +173,9 @@ $equipe = new dbEquipe();
 		var id_equipe = $('#equipe').val();
 		$('#id_equipes').val(id_equipe);
 	});
-
-	var id = [];
-	$('#colaborador').keypress(function(event) {
-		var keycode = event.keyCode || event.which;
-		if (keycode == '13') {
-			if($.inArray($('#colaborador').val(), id) == -1) {
-				id.push($('#colaborador').val());
-				$.ajax({
-					url: '/SimulacaoCelpa/database/dbRelacionamento.php',
-					type: 'post',
-					data: {'id': $('#colaborador').val(), 'action': 'colaborador'},
-					datatype: 'json',
-					success: function (output) {
-						if(output != false){
-							var dados = '';
-							dados += '<tr id="itens">';
-							dados += '<td style="vertical-align: middle;">' + output[0].id_colaborador;
-							dados += '<input type="hidden" name="id_colaborador[]" value="' + output[0].id_colaborador + '"></td>';
-							dados += '<td style="vertical-align: middle;">' + output[0].nm_colaborador + '</td>';
-							dados += '<td style="vertical-align: middle;font-size: 18px;"><button class="addColaborador removerlinha"><i class="fa fa-trash" aria-hidden="true"></i>&nbsp;</button></td>';
-							dados += '</tr>';
-							$('#dadosColaborador').append(dados);
-
-							$(".removerlinha").click(function () {
-								$(this).closest('tr').remove();
-							});
-						} else {
-							alert('Código não existente!');
-							id.splice( $.inArray($('#colaborador').val(), id), 1 );
-						}
-					}
-				});
-			} else{
-				alert('Dados repetidos!');
-			}
-			$('#colaborador').val('');
-		}
-	});
 </script>
+
+<script type="text/javascript" src="ajaxColaboradorEquipe.js"></script>
 
 </body>
 </html>

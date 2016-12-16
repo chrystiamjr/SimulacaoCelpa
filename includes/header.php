@@ -3,7 +3,9 @@
 		<!-- Menu button for smallar screens -->
 		<div class="navbar-header" style="margin-left: -20px">
 			<div class="container">
-				<a href="#" id="ShowHide" class="navbar-brand" style="font-size: 30px;margin-top: 10px;"><i class="fa fa-bars" aria-hidden="true"></i></a>
+				<a href="#" id="ShowHide" class="navbar-brand" style="font-size: 30px;margin-top: 10px;">
+					<i class="fa fa-bars" aria-hidden="true"></i>
+				</a>
 				<a href="/SimulacaoCelpa/view/Dashboard/dash2.php" class="navbar-brand" style="display: block">
 					<img src="/SimulacaoCelpa/img/favicon/logo.png" style="position: relative; top: -10px;display: inline-block">
 					<img src="/SimulacaoCelpa/img/favicon/logo2.png" style="position: relative; top: -6px;display: inline-block">

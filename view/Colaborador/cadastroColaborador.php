@@ -89,7 +89,7 @@ $regional = new dbRegional();
 				<div class="container" id="conteudoPrincipal">
 					<?php if(isset($_SESSION['msg'])){echo $_SESSION['msg'];} ?>
 
-<!--					<div class="col-md-12">-->
+					<div class="col-md-12 table-responsive">
 						<div class="pull-right" style="margin-right: 10px;margin-bottom: 10px; font-size: 40px;">
 							<button type="button" class="addColaborador" data-toggle="modal" data-target="#Adicionar">
 								<i class="fa fa-plus-circle" aria-hidden="true"></i>
@@ -158,7 +158,7 @@ $regional = new dbRegional();
 						</table>
 					</div>
 				</div>
-<!--			</div>-->
+			</div>
 
 		</div><!--/ Mainbar ends -->
 

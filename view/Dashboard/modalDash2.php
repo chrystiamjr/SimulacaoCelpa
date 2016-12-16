@@ -124,7 +124,40 @@
 </div>
 
 <!-- Modal Listar todos EPC e Ferramenta baseado em um equipe -->
-<div class="modal fade" id="listaEquipamentosPorEquipe" role="dialog" aria-labelledby="myModalLabel" style="width: auto">
+<div class="modal fade" id="listaEPCPorEquipe" role="dialog" aria-labelledby="myModalLabel" style="width: auto">
+	<div class="modal-dialog" role="document">
+		<div class="modal-content">
+			<div class="modal-header" style="background-color: #31708f;">
+				<h4 class="modal-title" id="myModalLabel" style="color: white">
+					<i class="fa fa-plus-circle modal-title" aria-hidden="true"></i> Listagem de EPIs por Colaborador</h4>
+			</div>
+			<div class="modal-body">
+				<div class="form-horizontal">
+					<div class="content">
+						<table class="table table-bordered" id="listaRelacionamentoEquipamentosPorEquipe">
+							<thead style="background-color: rgba(39, 72, 114, 1); font-weight: bold;">
+							<tr>
+								<th style="color: white; text-align: center;">Código do Equipamento</th>
+								<th style="color: white; text-align: center;">Tipo</th>
+								<th style="color: white; text-align: center;">Descrição</th>
+								<!--								<th style="color: white; text-align: center;">#</th>-->
+							</tr>
+							</thead>
+							<tbody id="listagemEquipamentos" style="text-align: center"></tbody>
+						</table>
+					</div>
+					<br>
+					<div class="modal-footer">
+						<button class="btn btn-default" data-dismiss="modal">Fechar</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Modal Listar todos EPC e Ferramenta baseado em um equipe -->
+<div class="modal fade" id="listaFerramentaPorEquipe" role="dialog" aria-labelledby="myModalLabel" style="width: auto">
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
 			<div class="modal-header" style="background-color: #31708f;">

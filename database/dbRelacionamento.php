@@ -4,19 +4,68 @@ function listarColaboradores($id)
 	include "dbColaborador.php";
 	$colab = new dbColaborador();
 	$result = $colab->listarUmColaborador($id);
-	header('Content-Type: application/json');
-	$coded = json_encode($result);
-	echo $coded;
+	if($result != false){
+		$result2 = $colab->listarUmColaboradorDisponível($id);
+		if($result2 != false){
+			header('Content-Type: application/json');
+			$coded = json_encode($result2);
+			echo $coded;
+		}else{
+			header('Content-Type: application/json');
+			$coded = 2; // Dado já cadastrado
+			echo $coded;
+		}
+	}else{
+		header('Content-Type: application/json');
+		$coded = 3; // Código não existente
+		echo $coded;
+	}
 }
 
-function listarEquipamentos($id)
+function listarEquipamentosEPIDisp($id)
 {
 	include "dbEquipamento.php";
 	$equip = new dbEquipamento();
-	$result = $equip->listarUmEquipamento($id);
-	header('Content-Type: application/json');
-	$coded = json_encode($result);
-	echo $coded;
+	$result = $equip->listarUmEquipamentoEPI($id);
+	if($result != false){
+		$result2 = $equip->listarUmEquipamentoDisponível($id);
+		if($result2 != false){
+			header('Content-Type: application/json');
+			$coded = json_encode($result2);
+			echo $coded;
+		}else{
+			header('Content-Type: application/json');
+			$coded = 2; // Dado já cadastrado
+			echo $coded;
+		}
+	}else{
+		header('Content-Type: application/json');
+		$coded = 3; // Código não existente
+		echo $coded;
+	}
+}
+
+function listarEquipamentosEPCFerramentaDisp($id)
+{
+	include "dbEquipamento.php";
+	$equip = new dbEquipamento();
+	$result = $equip->listarUmEPCFerramenta($id);
+	if($result != false){
+		$result2 = $equip->listarUmEPCFerramentaDisp($id);
+		if($result2 != false){
+			header('Content-Type: application/json');
+			$coded = json_encode($result2);
+			echo $coded;
+		}else{
+			header('Content-Type: application/json');
+			$coded = 2; // Dado já cadastrado
+			echo $coded;
+		}
+	}else{
+		header('Content-Type: application/json');
+		$coded = 3; // Código não existente
+		echo $coded;
+	}
 }
 
 function listarColaboradorporEquipeID($id)
@@ -46,6 +95,15 @@ function listarEquipamentoPorEquipeID($id)
 	echo $coded;
 }
 
+function listarEPCPorEquipe($id)
+{
+	$colEq = new dbRelacionamento();
+	$result = $colEq->listarRelacionamentoEquipesEquipamentos($id);
+	header('Content-Type: application/json');
+	$coded = json_encode($result);
+	echo $coded;
+}
+
 if (isset($_POST['action']) && !empty($_POST['action']) && isset($_POST['id']) && !empty($_POST['id'])) {
 	$action = $_POST['action'];
 	$id = $_POST['id'];
@@ -53,8 +111,11 @@ if (isset($_POST['action']) && !empty($_POST['action']) && isset($_POST['id']) &
 		case 'colaborador' :
 			listarColaboradores($id);
 			break;
-		case 'equipamento' :
-			listarEquipamentos($id);
+		case 'equipamentoEPIDisp' :
+			listarEquipamentosEPIDisp($id);
+			break;
+		case 'equipamentoEPCFerramentaDisp' :
+			listarEquipamentosEPCFerramentaDisp($id);
 			break;
 		case 'listarColaboradores' :
 			listarColaboradorporEquipeID($id);
@@ -63,10 +124,15 @@ if (isset($_POST['action']) && !empty($_POST['action']) && isset($_POST['id']) &
 			listarEPIPorColaboradorID($id);
 			break;
 		case 'listarEquipamentoPorEquipeID' :
-			listarEquipamentoPorEquipeID($id);
+			listarEPIPorColaboradorID($id);
 			break;
 	}
 }
+
+
+
+// ================================================================================================================================== //
+
 
 if (session_status() == PHP_SESSION_NONE) {
 	session_start();
@@ -83,6 +149,48 @@ class dbRelacionamento
 			// echo "Sucesso";
 		} catch (PDOException $e) {
 			echo "Falha: " . $e->getMessage();
+		}
+	}
+
+	public function listarEPCPorEquipes_EquipesEquipamentos($id)
+	{
+		$sql = "SELECT 
+					    eqpmt.id_equipamentos,
+					    eqpmt.tipo_equipamento,
+					    eqpmt.descricao
+						FROM
+					    equipes_equipamentos eqq
+				        INNER JOIN
+					    equipamentos eqpmt ON eqpmt.id_equipamentos = eqq.id_equipamentos
+						WHERE eqq.id_equipes = {$id} AND eqpmt.tipo_equipamento = 1";
+		$stmt = $this->conn->query($sql);
+		$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+		if (isset($result) && $result != null) {
+			return $result;
+		} else {
+			return false;
+		}
+	}
+
+	public function listarFerramentaPorEquipes_EquipesEquipamentos($id)
+	{
+		$sql = "SELECT 
+					    eqpmt.id_equipamentos,
+					    eqpmt.tipo_equipamento,
+					    eqpmt.descricao
+						FROM
+					    equipes_equipamentos eqq
+				        INNER JOIN
+					    equipamentos eqpmt ON eqpmt.id_equipamentos = eqq.id_equipamentos
+						WHERE eqq.id_equipes = {$id} AND eqpmt.tipo_equipamento = 2";
+		$stmt = $this->conn->query($sql);
+		$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+		if (isset($result) && $result != null) {
+			return $result;
+		} else {
+			return false;
 		}
 	}
 
@@ -253,7 +361,7 @@ class dbRelacionamento
 					  LEFT JOIN
 					  	equipes_equipamentos eqq ON eqq.id_equipes = eqp.id_equipes
 					  GROUP BY eqp.nm_equipe
-						ORDER BY eqp.id_equipes";
+ORDER BY eqp.id_equipes";
 		$stmt = $this->conn->query($sql);
 		$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 

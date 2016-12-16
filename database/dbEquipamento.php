@@ -40,6 +40,97 @@
 			}
 		}
 
+		public function listarUmEquipamentoEPI ($id){
+			$sql = "SELECT * FROM equipamentos WHERE id_equipamentos = {$id} AND tipo_equipamento = 0";
+			$stmt = $this->conn->query($sql);
+			$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+			if(isset($result) && $result != null) {
+				return $result;
+			} else {
+				return false;
+			}
+		}
+
+		public function listarUmEPCFerramenta ($id){
+			$sql = "SELECT * FROM equipamentos WHERE id_equipamentos = {$id} AND tipo_equipamento != 0";
+			$stmt = $this->conn->query($sql);
+			$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+			if(isset($result) && $result != null) {
+				return $result;
+			} else {
+				return false;
+			}
+		}
+
+		public function listarUmEPCFerramentaDisp ($id){
+			$sql = "SELECT *
+							FROM
+						    equipamentos
+							WHERE
+						    id_equipamentos NOT IN (
+						    	SELECT 
+          				  id_equipamentos
+                  FROM
+            				equipes_equipamentos)
+              AND id_equipamentos = {$id} AND tipo_equipamento != 0";
+			$stmt = $this->conn->query($sql);
+			$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+			if(isset($result) && $result != null) {
+				return $result;
+			} else {
+				return false;
+			}
+		}
+
+		public function listarUmEquipamentoEPC ($id){
+			$sql = "SELECT * FROM equipamentos WHERE id_equipamentos = {$id} AND tipo_equipamento = 1";
+			$stmt = $this->conn->query($sql);
+			$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+			if(isset($result) && $result != null) {
+				return $result;
+			} else {
+				return false;
+			}
+		}
+
+		public function listarUmEquipamentoFerramenta ($id){
+			$sql = "SELECT * FROM equipamentos WHERE id_equipamentos = {$id} AND tipo_equipamento = 2";
+			$stmt = $this->conn->query($sql);
+			$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+			if(isset($result) && $result != null) {
+				return $result;
+			} else {
+				return false;
+			}
+		}
+
+		public function listarUmEquipamentoDisponível ($id){
+			$sql = "SELECT *
+							FROM
+							  equipamentos
+							WHERE
+							  id_equipamentos NOT IN (
+							  SELECT 
+            			id_equipamentos
+        				FROM
+            			colaborador_equipamentos)
+        			AND tipo_equipamento = 0
+        			AND id_equipamentos = {$id}";
+			$stmt = $this->conn->query($sql);
+			$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+			if(isset($result) && $result != null) {
+				return $result;
+			}else {
+				return false;
+			}
+		}
+
 		public function cadastroEquipamento ($tipo, $desc){
 			$sql = "INSERT INTO equipamentos (tipo_equipamento, descricao) values ({$tipo},'{$desc}')";
 			$stmt = $this->conn->exec($sql);
