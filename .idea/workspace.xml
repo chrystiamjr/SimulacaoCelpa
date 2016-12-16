@@ -1,31 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c3b6166d-4b9d-41fe-b1f3-0d317661f300" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/Colaborador/ajaxColaboradorEquipamento.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/Colaborador/ajaxColaboradorEquipe.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/Equipe/ajaxEquipeEquipamento.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/dbColaborador.php" afterPath="$PROJECT_DIR$/database/dbColaborador.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/dbEquipamento.php" afterPath="$PROJECT_DIR$/database/dbEquipamento.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/dbRelacionamento.php" afterPath="$PROJECT_DIR$/database/dbRelacionamento.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/header.php" afterPath="$PROJECT_DIR$/includes/header.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/includes/scripts.php" afterPath="$PROJECT_DIR$/includes/scripts.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/Atividades/cadastroAtividade.php" afterPath="$PROJECT_DIR$/view/Atividades/cadastroAtividade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/Colaborador/cadastroColaborador.php" afterPath="$PROJECT_DIR$/view/Colaborador/cadastroColaborador.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/Colaborador/relacionamentoColaboradorEquipamento.php" afterPath="$PROJECT_DIR$/view/Colaborador/relacionamentoColaboradorEquipamento.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/Colaborador/relacionamentoColaboradorEquipe.php" afterPath="$PROJECT_DIR$/view/Colaborador/relacionamentoColaboradorEquipe.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/Dashboard/dash.js" afterPath="$PROJECT_DIR$/view/Dashboard/dash.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/Dashboard/dash2.php" afterPath="$PROJECT_DIR$/view/Dashboard/dash2.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/Dashboard/modalDash2.php" afterPath="$PROJECT_DIR$/view/Dashboard/modalDash2.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/Equipamentos/cadastroEquipamento.php" afterPath="$PROJECT_DIR$/view/Equipamentos/cadastroEquipamento.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/Equipe/cadastroEquipe.php" afterPath="$PROJECT_DIR$/view/Equipe/cadastroEquipe.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/Equipe/relacionamentoEquipeEquipamento.php" afterPath="$PROJECT_DIR$/view/Equipe/relacionamentoEquipeEquipamento.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/Instalacoes/cadastroInstalacao.php" afterPath="$PROJECT_DIR$/view/Instalacoes/cadastroInstalacao.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/Obras/cadastroObra.php" afterPath="$PROJECT_DIR$/view/Obras/cadastroObra.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/Usuario/cadastroUsuario.php" afterPath="$PROJECT_DIR$/view/Usuario/cadastroUsuario.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/Veiculos/cadastroVeiculo.php" afterPath="$PROJECT_DIR$/view/Veiculos/cadastroVeiculo.php" />
-    </list>
+    <list default="true" id="c3b6166d-4b9d-41fe-b1f3-0d317661f300" name="Default" comment="" />
     <ignored path="SimulacaoCelpa.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -434,12 +410,12 @@
       <workItem from="1481684033420" duration="5178000" />
       <workItem from="1481716944876" duration="12460000" />
       <workItem from="1481736175517" duration="11682000" />
-      <workItem from="1481802869619" duration="40556000" />
+      <workItem from="1481802869619" duration="40575000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="133289000" />
+    <option name="totallyTimeSpent" value="133308000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1" y="1" width="1364" height="766" extended-state="0" />
