@@ -83,7 +83,7 @@ $colaborador = new dbColaborador();
 			<div class="matter">
 				<div class="container">
 
-					<div class="col-md-12 table-responsive">
+					<div class="table-responsive">
 						<div class="container">
 							<h4 align="center">Equipes/Colaboradores
 								<div class="pull-right" style="position:relative; bottom: 4px; font-size: 40px;">

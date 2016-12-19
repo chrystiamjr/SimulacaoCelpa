@@ -113,7 +113,7 @@ $equipe = new dbEquipe();
 
 				</div>
 
-				<div class="col-md-12 table-responsive">
+				<div class="table-responsive">
 					<form method="post" action="/SimulacaoCelpa/controller/relacionamentoCtrl.php">
 						<input type="hidden" name="tipo" value="colaboradorEquipe">
 						<input type="hidden" name="id_equipes" id="id_equipes">
