@@ -98,7 +98,16 @@ function listarEquipamentoPorEquipeID($id)
 function listarEPCPorEquipe($id)
 {
 	$colEq = new dbRelacionamento();
-	$result = $colEq->listarRelacionamentoEquipesEquipamentos($id);
+	$result = $colEq->listarEPCPorEquipes_EquipesEquipamentos($id);
+	header('Content-Type: application/json');
+	$coded = json_encode($result);
+	echo $coded;
+}
+
+function listarFerramentaPorEquipe($id)
+{
+	$colEq = new dbRelacionamento();
+	$result = $colEq->listarFerramentaPorEquipes_EquipesEquipamentos($id);
 	header('Content-Type: application/json');
 	$coded = json_encode($result);
 	echo $coded;
@@ -123,8 +132,11 @@ if (isset($_POST['action']) && !empty($_POST['action']) && isset($_POST['id']) &
 		case 'listarEquipamentoPorColaboradorID' :
 			listarEPIPorColaboradorID($id);
 			break;
-		case 'listarEquipamentoPorEquipeID' :
-			listarEPIPorColaboradorID($id);
+		case 'listarEPCPorEquipeID' :
+			listarEPCPorEquipe($id);
+			break;
+		case 'listarFerramentaPorEquipeID' :
+			listarFerramentaPorEquipe($id);
 			break;
 	}
 }
@@ -317,19 +329,6 @@ class dbRelacionamento
 	public function removerTodosRelacionamentoColaboradorEquipes($id_equipes)
 	{
 		$sql = "DELETE FROM colaborador_equipes WHERE id_equipes = {$id_equipes}";
-		$stmt = $this->conn->exec($sql);
-		if ($stmt) {
-			$_SESSION['msg'] = '<div class="alert alert-info" role="alert" id="msg">Dados removidos com sucesso!<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a></div>';
-			return true;
-		} else {
-			$_SESSION['msg'] = '<div class="alert alert-danger" role="alert" id="msg">Erro ao remover os dados!<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a></div>';
-			return false;
-		}
-	}
-
-	public function removerUmRelacionamentoColaboradorEquipes($cpf_colaborador, $cod_equatorial)
-	{
-		$sql = "DELETE FROM colaborador_equipes WHERE id_colaborador = (SELECT id_colaborador FROM colaborador WHERE cpf_colaborador = '{$cpf_colaborador}') AND id_equipes = (SELECT id_equipes FROM equipes WHERE cod_equatorial = '{$cod_equatorial}')";
 		$stmt = $this->conn->exec($sql);
 		if ($stmt) {
 			$_SESSION['msg'] = '<div class="alert alert-info" role="alert" id="msg">Dados removidos com sucesso!<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a></div>';

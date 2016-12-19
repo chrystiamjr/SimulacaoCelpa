@@ -132,7 +132,7 @@
 				success: function (data) {
 					$('#loader#overlay').remove();
 					if (data == 1) {
-						window.location.href = window.location.href + "view/Dashboard/dash2.php";
+						window.location.href = window.location.href + "view/Dashboard/dash.php";
 					} else {
 						alert('CPF e senha inválidos ou inexistentes');
 						$('#cpfLogin').val("");
@@ -147,12 +147,9 @@
 		}
 	})
 
-//	$(document).keypress(function (event) {
-//		var keycode = event.keyCode || event.which;
-//		if (keycode == '13') {
-//			alert('You pressed a "enter" key in somewhere');
-//		}
-//	});
+	$(document).ready(function (event) {
+		$('#cpfLogin').focus();
+	});
 
 	$(document).keypress(function (event) {
 		$('#cpfLogin').removeClass('label-danger');
@@ -176,7 +173,7 @@
 					success: function (data) {
 						$('#loader#overlay').remove();
 						if (data == 1) {
-							window.location.href = window.location.href + "view/Dashboard/dash2.php";
+							window.location.href = window.location.href + "view/Dashboard/dash.php";
 						} else {
 							alert('CPF e senha inválidos ou inexistentes');
 							$('#cpfLogin').val("");

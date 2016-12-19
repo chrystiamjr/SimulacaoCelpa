@@ -11,12 +11,10 @@ $(document).ready(function () {
   $('#Tab1').hide();
 });
 
-$(".removerUmColaboradorPorEquipe").click(function () {
-  var id = $(this).find('.idEquipeRemoveColab').val();
-  var cpf = $(this).find('.cpfColaboradorRemoveColab').val();
+$(".removerTudoPorEquipe").click(function () {
+  var id = $(this).find('.idEquipeRemoveAll').val();
 
-  $('#idEquipeRemoveColab').val(id);
-  $('#cpfColaboradorRemoveColab').val(cpf);
+  $('#id_equipes').val(id);
 });
 
 var toggle1 = true;
@@ -62,7 +60,7 @@ $('.listaColaboradores').click(function () {
         conteudoEquipes += "<td>" + data[i].cpf_colaborador + "</td>";
         conteudoEquipes += "<td>" + data[i].matricula + "</td>";
         conteudoEquipes += "<td>";
-        conteudoEquipes += '<button class="relacionamento listaEPIColaborador" title="Listar EPIs" style="margin: 0" href="#listaEPIPorColaborador" data-toggle="modal">';
+        conteudoEquipes += '<button class="relacionamento listaEPIColaborador" title="Listar EPIs" style="margin: 0" href="#listaEPIPorColaborador" data-toggle="modal" data-backdrop="static" data-keyboard="false">';
         conteudoEquipes += '<input type="hidden" class="idColaboradorEPI" value="'+data[i].id_colaborador+'">';
         conteudoEquipes += '<i class="fa fa-wrench" aria-hidden="true"></i>';
         conteudoEquipes += "</button>";
@@ -106,6 +104,18 @@ $('.listaColaboradores').click(function () {
             }
             $('#listagemEPI tr').remove();
             $('#listagemEPI').append(conteudoEPI);
+
+            if (!$.fn.DataTable.isDataTable('#listaRelacionamentoEPIPorColaborador')) {
+              $('#listaRelacionamentoEPIPorColaborador').DataTable({
+                "bLengthChange": false,
+                "language": {
+                  "search": "Pesquisar:",
+                  "paginate": {"first": "Primeiro", "last": "Ultimo", "next": "Próximo", "previous": "Anterior"}
+                },
+                "info": false,
+                "iDisplayLength": 5
+              });
+            }
           }
         })
       });
@@ -126,32 +136,33 @@ $('.listaColaboradores').click(function () {
 });
 
 var conteudoEPC = "";
-$('.listaEPCFerramenta').click(function () {
+$('.listaEPC').click(function () {
   globalIDEquipes = $(this).find('.idEquipe').val();
   $('#listagemEquipamentos tr').remove();
-  conteudoEPCFerramenta = "";
+  conteudoEPC = "";
 
   $.ajax({
     url: "/SimulacaoCelpa/database/dbRelacionamento.php",
-    data: {"id": globalIDEquipes, "action": 'listarEquipamentoPorEquipeID'},
+    data: {"id": globalIDEquipes, "action": 'listarEPCPorEquipeID'},
     type: "post",
     success: function (data) {
+      // console.log(data);
       var tipo = "";
       for (var i = 0; i < data.length; i++) {
         if(data[i].tipo_equipamento == 0){tipo = "EPI";}
         else if(data[i].tipo_equipamento == 1){tipo = "EPC";}
         else if(data[i].tipo_equipamento == 2){tipo = "FERRAMENTA";}
-        conteudoEPCFerramenta += "<tr>";
-        conteudoEPCFerramenta += "<td>" + data[i].id_equipamentos + "</td>";
-        conteudoEPCFerramenta += "<td>" + tipo + "</td>";
-        conteudoEPCFerramenta += "<td>" + data[i].descricao + "</td>";
-        // conteudoEPCFerramenta += '<td><button class="relacionamento listaEPIColaborador" title="Listar EPIs" style="margin: 0" data-toggle="modal" data-target="#"></button></td>';
-        conteudoEPCFerramenta += "</tr>";
+        conteudoEPC += "<tr>";
+        conteudoEPC += "<td>" + data[i].id_equipamentos + "</td>";
+        conteudoEPC += "<td>" + tipo + "</td>";
+        conteudoEPC += "<td>" + data[i].descricao + "</td>";
+        // conteudoEPC += '<td><button class="relacionamento listaEPIColaborador" title="Listar EPIs" style="margin: 0" data-toggle="modal" data-target="#"></button></td>';
+        conteudoEPC += "</tr>";
       }
-      $('#listagemEquipamentos').append(conteudoEPCFerramenta);
+      $('#listagemEquipamentos').append(conteudoEPC);
 
-      if (!$.fn.DataTable.isDataTable('#listaRelacionamentoEquipamentosPorEquipe')) {
-        $('#listaRelacionamentoEquipamentosPorEquipe').DataTable({
+      if (!$.fn.DataTable.isDataTable('#listaRelacionamentoEPCPorEquipe')) {
+        $('#listaRelacionamentoEPCPorEquipe').DataTable({
           "bLengthChange": false,
           "language": {
             "search": "Pesquisar:",
@@ -165,33 +176,34 @@ $('.listaEPCFerramenta').click(function () {
   })
 });
 
-var conteudoEPCFerramenta = "";
-$('.listaEPCFerramenta').click(function () {
+var conteudoFerramenta = "";
+$('.listaFerramenta').click(function () {
   globalIDEquipes = $(this).find('.idEquipe').val();
-  $('#listagemEquipamentos tr').remove();
-  conteudoEPCFerramenta = "";
+  $('#listagemFerramentas tr').remove();
+  conteudoFerramenta = "";
 
   $.ajax({
     url: "/SimulacaoCelpa/database/dbRelacionamento.php",
-    data: {"id": globalIDEquipes, "action": 'listarEquipamentoPorEquipeID'},
+    data: {"id": globalIDEquipes, "action": 'listarFerramentaPorEquipeID'},
     type: "post",
     success: function (data) {
+      console.log(data);
       var tipo = "";
       for (var i = 0; i < data.length; i++) {
         if(data[i].tipo_equipamento == 0){tipo = "EPI";}
         else if(data[i].tipo_equipamento == 1){tipo = "EPC";}
         else if(data[i].tipo_equipamento == 2){tipo = "FERRAMENTA";}
-        conteudoEPCFerramenta += "<tr>";
-        conteudoEPCFerramenta += "<td>" + data[i].id_equipamentos + "</td>";
-        conteudoEPCFerramenta += "<td>" + tipo + "</td>";
-        conteudoEPCFerramenta += "<td>" + data[i].descricao + "</td>";
-        // conteudoEPCFerramenta += '<td><button class="relacionamento listaEPIColaborador" title="Listar EPIs" style="margin: 0" data-toggle="modal" data-target="#"></button></td>';
-        conteudoEPCFerramenta += "</tr>";
+        conteudoFerramenta += "<tr>";
+        conteudoFerramenta += "<td>" + data[i].id_equipamentos + "</td>";
+        conteudoFerramenta += "<td>" + tipo + "</td>";
+        conteudoFerramenta += "<td>" + data[i].descricao + "</td>";
+        // conteudoFerramenta += '<td><button class="relacionamento listaEPIColaborador" title="Listar EPIs" style="margin: 0" data-toggle="modal" data-target="#"></button></td>';
+        conteudoFerramenta += "</tr>";
       }
-      $('#listagemEquipamentos').append(conteudoEPCFerramenta);
+      $('#listagemFerramentas').append(conteudoFerramenta);
 
-      if (!$.fn.DataTable.isDataTable('#listaRelacionamentoEquipamentosPorEquipe')) {
-        $('#listaRelacionamentoEquipamentosPorEquipe').DataTable({
+      if (!$.fn.DataTable.isDataTable('#listaFerramentaPorEquipeTable')) {
+        $('#listaFerramentaPorEquipeTable').DataTable({
           "bLengthChange": false,
           "language": {
             "search": "Pesquisar:",
@@ -204,3 +216,8 @@ $('.listaEPCFerramenta').click(function () {
     }
   })
 });
+//
+// $('body').click(function () {
+//   $('div'). removeClass('modal-backdrop');
+//   $('#listarColaboradoresPorEquipes').removeClass('in hide');
+// })

@@ -6,7 +6,7 @@
 				<a href="#" id="ShowHide" class="navbar-brand" style="font-size: 30px;margin-top: 10px;">
 					<i class="fa fa-bars" aria-hidden="true"></i>
 				</a>
-				<a href="/SimulacaoCelpa/view/Dashboard/dash2.php" class="navbar-brand" style="display: block">
+				<a href="/SimulacaoCelpa/view/Dashboard/dash.php" class="navbar-brand" style="display: block">
 					<img src="/SimulacaoCelpa/img/favicon/logo.png" style="position: relative; top: -10px;display: inline-block">
 					<img src="/SimulacaoCelpa/img/favicon/logo2.png" style="position: relative; top: -6px;display: inline-block">
 				</a>
@@ -21,13 +21,11 @@
 			<ul class="nav navbar-nav navbar-right">
 				<li class="dropdown">
 					<a data-toggle="dropdown" class="dropdown-toggle" href="#">
-						<img src="img/user.jpg" alt="" class="nav-user-pic img-responsive" /> Admin <b class="caret"></b>
+						Admin <b class="caret"></b>
 					</a>
 					<!-- Dropdown menu -->
 					<ul class="dropdown-menu">
-						<li><a href="#"><i class="fa fa-user"></i> Profile</a></li>
-						<li><a href="#"><i class="fa fa-cogs"></i> Settings</a></li>
-						<li><a href="login.html"><i class="fa fa-power-off"></i> Logout</a></li>
+						<li><a href="/SimulacaoCelpa/"><i class="fa fa-power-off"></i> Logout</a></li>
 					</ul>
 				</li>
 			</ul>
