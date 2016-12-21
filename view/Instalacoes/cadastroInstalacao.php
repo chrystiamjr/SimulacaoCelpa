@@ -136,6 +136,10 @@ $ativ = new dbAtividade();
 											<i class="fa fa-trash" aria-hidden="true"></i>&nbsp;
 										</button>
 										<button class="addInstalacao codigo" title="Código de Barras" style="margin: 0;" data-toggle="modal" data-target="#Codigo">
+											<input type="hidden" class="codigoEquatCodigo" value="<?php echo $dado['cod_equatorial']; ?>">
+											<input type="hidden" class="nomeInstCodigo" value="<?php echo $dado['nm_instalacao']; ?>">
+											<input type="hidden" class="tipoInstCodigo" value="<?php echo $dado['tp_instalacao']; ?>">
+											<input type="hidden" class="siglaInstCodigo" value="<?php echo $dado['sigla']; ?>">
 											<i class="fa fa-barcode" aria-hidden="true"></i>&nbsp;
 										</button>
 									</td>
@@ -189,8 +193,56 @@ $ativ = new dbAtividade();
 		});
 
 		$(".remover").click(function(){
-			var id = $(this).find('.editaID').val();
+			var id = $(this).find('.codigoEquat').val();
 			$('#idInstalacaoRemover').val(id);
+		});
+
+		var nomeCodigo = "";
+		var tipoCodigo = "";
+		var siglaCodigo = "";
+		var equatorialCodigo = "";
+		var tipoDado = "";
+
+		$(".codigo").click(function(){
+			if(nomeCodigo != $(this).find('.nomeInstCodigo').val() &&
+				tipoCodigo != $(this).find('.tipoInstCodigo').val() &&
+				siglaCodigo != $(this).find('.siglaInstCodigo').val() &&
+				equatorialCodigo != $(this).find('.codigoEquatCodigo').val())
+			{
+				$('#dados #itens').remove();
+
+				nomeCodigo = $(this).find('.nomeInstCodigo').val();
+				tipoCodigo = $(this).find('.tipoInstCodigo').val();
+				siglaCodigo = $(this).find('.siglaInstCodigo').val();
+				equatorialCodigo = $(this).find('.codigoEquatCodigo').val();
+
+//				alert(equatorialCodigo);
+
+				var dados = '';
+				dados += '<div id="itens">';
+				dados += '<h5 id="printNomeInstalacao"></h5>';
+				dados += '<h5 id="printTipoInstalacao"></h5>';
+				dados += '<h5 id="printSiglaInstalacao"></h5>';
+				dados += '<hr>';
+				dados += '<div id="barcodecontainer">';
+				dados += '<div id="barcode"></div>';
+				dados += '</div>';
+				dados += '</div>';
+				$('#dados').append(dados);
+
+				if(tipoCodigo == 0){ tipoDado = "SUBESTAÇÃO";}
+				else if(tipoCodigo == 1){ tipoDado = "AGÊNCIA";}
+				else if(tipoCodigo == 2){ tipoDado = "USINA";}
+				else if(tipoCodigo == 3){ tipoDado = "ALMOXARIFADO";}
+				else if(tipoCodigo == 4){ tipoDado = "OFICINA";}
+
+				$('#barcode').append(DrawHTMLBarcode_Code39ASCII(equatorialCodigo,1,"yes","in",0,3,1,3,"bottom","center","","black","white"));
+				$('#printNomeInstalacao').append("Nome da Instalação: "+nomeCodigo);
+				$('#printTipoInstalacao').append("Tipo: "+tipoDado);
+				$('#printSiglaInstalacao').append("Sigla: "+siglaCodigo);
+
+				$('#imprimirCodigo').on('click', function(){$("#Codigo").print({addGlobalStyles : true,stylesheet : '/SimulacaoCelpa/css/printing.css',rejectWindow : true,noPrintSelector : ".no-print",append : null,prepend : null});});
+			}
 		});
 
 	</script>

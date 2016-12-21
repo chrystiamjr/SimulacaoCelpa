@@ -171,3 +171,25 @@
     </div>
   </div>
 </div>
+
+<!-- Modal Codigo de Barras -->
+<div class="modal fade" id="Codigo" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header" style="background-color: #31708f;">
+        <h4 class="modal-title" id="myModalLabel" style="color: white">
+          <i class="fa fa-plus-circle modal-title" aria-hidden="true"></i> Etiqueta de Identificação</h4>
+      </div>
+      <div class="modal-body">
+        <div class="content">
+          <div id="dados">
+          </div>
+        </div>
+        <div class="modal-footer no-print">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+          <button type="button" class="btn btn-default" id="imprimirCodigo">Imprimir</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
