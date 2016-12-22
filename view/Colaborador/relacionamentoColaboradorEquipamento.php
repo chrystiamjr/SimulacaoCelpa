@@ -159,6 +159,7 @@ $colaborador = new dbColaborador();
 			"paging": false,
 			"info": false
 		});
+
 		$('#dadosColaborador tr').remove();
 	});
 
@@ -166,7 +167,7 @@ $colaborador = new dbColaborador();
 		<?php unset($_SESSION['msg']); ?>
 		console.log('Dados da session[msg] apagados');
 	};
-
+	$('#equipamento').focus();
 	$('#id_colaborador').val($('#colaborador').val());
 
 	$('#colaborador').on('change', function(){

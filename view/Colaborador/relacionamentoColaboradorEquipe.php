@@ -159,6 +159,7 @@ $equipe = new dbEquipe();
 			"paging": false,
 			"info": false
 		});
+		$('#colaborador').focus();
 		$('#dadosColaborador tr').remove();
 	});
 

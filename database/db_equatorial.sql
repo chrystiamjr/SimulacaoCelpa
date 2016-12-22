@@ -446,7 +446,7 @@ INSERT INTO `equipamentos` (`tipo_equipamento`,`descricao`) VALUES (1, 'FITA DE 
 INSERT INTO `equipamentos` (`tipo_equipamento`,`descricao`) VALUES (1, 'CONE');
 INSERT INTO `equipamentos` (`tipo_equipamento`,`descricao`) VALUES (2, 'MARTELO');
 INSERT INTO `equipamentos` (`tipo_equipamento`,`descricao`) VALUES (2, 'MARRETA');
-INSERT INTO `equipamentos` (`tipo_equipamento`,`descricao`) VALUES (2, 'VARA PARA FIO TERRA');
+INSERT INTO `equipamentos` (`tipo_equipamento`,`descricao`) VALUES (2, 'VARA DE MANOBRA');
 INSERT INTO `equipamentos` (`tipo_equipamento`,`descricao`) VALUES (2, 'ESCADA');
 INSERT INTO `equipamentos` (`tipo_equipamento`,`descricao`) VALUES (2, 'LANTERNA');
 

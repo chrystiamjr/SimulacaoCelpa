@@ -157,6 +157,7 @@ $equipe = new dbEquipe();
 			"paging": false,
 			"info": false
 		});
+		$('#equipamento').focus();
 		$('#dados tr').remove();
 	});
 
