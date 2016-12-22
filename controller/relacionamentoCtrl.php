@@ -9,6 +9,9 @@ if($tipo == "colaboradorEquipe")
 {
 	$id_colaborador = $_POST['id_colaborador'];
 	$id_equipes = $_POST['id_equipes'];
+//	var_dump($id_colaborador);
+//	echo $id_equipes;
+//	die();
 	if($id_colaborador != null && $id_equipes != null)
 	{
 		foreach ($id_colaborador as $dados)

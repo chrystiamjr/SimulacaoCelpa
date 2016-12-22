@@ -51,7 +51,7 @@ $('#equipamento').keypress(function(event) {
             id.splice($.inArray($('#equipamento').val(), id), 1);
             $('#equipamento').val('');
           } else {
-            alert('Código não exixtente');
+            alert('Código não existente');
             id.splice($.inArray($('#equipamento').val(), id), 1);
             $('#equipamento').val('');
           }
@@ -105,7 +105,7 @@ $('#btnValidar').click(function () {
           idMob.splice($.inArray($('#equipamento').val(), idMob), 1);
           $('#equipamento').val('');
         } else {
-          alert('Código não exixtente');
+          alert('Código não existente');
           idMob.splice($.inArray($('#equipamento').val(), idMob), 1);
           $('#equipamento').val('');
         }

@@ -343,19 +343,15 @@ class dbRelacionamento
 	public function listarEquipes_ColaboradorEquipe()
 	{
 		$sql = "SELECT 
-							eqp.id_equipes,
-					    eqp.cod_equatorial,
-					    eqp.nm_equipe
+						    eqp.id_equipes, eqp.cod_equatorial, eqp.nm_equipe
 						FROM
-					    equipes eqp
-		        LEFT JOIN
-					    colaborador_equipes ceq ON ceq.id_equipes = eqp.id_equipes
-					  LEFT JOIN
-					  	colaborador_equipamentos ceqpm ON ceqpm.id_colaborador = ceq.id_colaborador
-					  LEFT JOIN
-					  	equipes_equipamentos eqq ON eqq.id_equipes = eqp.id_equipes
-					  GROUP BY eqp.nm_equipe
-ORDER BY eqp.id_equipes";
+						    equipes eqp
+						        INNER JOIN
+						    colaborador_equipes ceq ON ceq.id_equipes = eqp.id_equipes
+						        LEFT JOIN
+						    equipes_equipamentos eqq ON eqq.id_equipes = eqp.id_equipes
+						GROUP BY eqp.nm_equipe
+						ORDER BY eqp.id_equipes";
 		$stmt = $this->conn->query($sql);
 		$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 

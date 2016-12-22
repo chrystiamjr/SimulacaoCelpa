@@ -35,7 +35,7 @@ $('#colaborador').keypress(function(event) {
             id.splice($.inArray($('#colaborador').val(), id), 1);
             $('#colaborador').val('');
           } else {
-            alert('Código não exixtente');
+            alert('Código não existente');
             id.splice($.inArray($('#colaborador').val(), id), 1);
             $('#colaborador').val('');
           }
@@ -86,7 +86,7 @@ $('#btnValidar').click(function () {
           idMB.splice($.inArray($('#colaborador').val(), idMB), 1);
           $('#colaborador').val('');
         } else {
-          alert('Código não exixtente');
+          alert('Código não existente');
           idMB.splice($.inArray($('#colaborador').val(), idMB), 1);
           $('#colaborador').val('');
         }
