@@ -61,6 +61,26 @@
               <input type="text" class="form-control" id="siglaInstalacao" name="sigla" pattern=".{2,}" required maxlength="2">
             </div>
           </div>
+
+          <div class="form-group">
+            <label for="ativoInstalacao" class="col-sm-4 control-label">Ativo:</label>
+            <div class="col-sm-4">
+              <input type="text" class="form-control" id="ativoInstalacao" name="ativo[]" required>
+            </div>
+
+            <label for="ativoInstalacaoSigla" class="col-sm-1 control-label">Sigla:</label>
+            <div class="col-sm-2">
+              <input type="text" class="form-control" id="ativoInstalacaoSigla" name="ativoSigla[]" required>
+            </div>
+
+            <a href="#" id="addCampos" class="btn btn-primary">
+              <i class="fa fa-plus-circle" aria-hidden="true"></i>
+            </a>
+
+            <div id="campos"></div>
+
+          </div>
+
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
             <button type="submit" class="btn btn-primary">Adicionar</button>
@@ -136,6 +156,18 @@
               <input type="text" class="form-control" id="siglaInstalacaoEditar" name="siglaEditar" pattern=".{2,}" required maxlength="2">
             </div>
           </div>
+
+          <div class="form-group">
+            <label for="editaAtivoInstalacao" class="col-sm-4 control-label">Ativo:</label>
+            <div class="col-sm-4">
+              <input type="text" class="form-control" id="editaAtivoInstalacao" name="editaAtivo" required>
+            </div>
+            <label for="editaAtivoInstalacaoSigla" class="col-sm-1 control-label">Sigla:</label>
+            <div class="col-sm-2">
+              <input type="text" class="form-control" id="editaAtivoInstalacaoSigla" name="editaAtivoSigla" required>
+            </div>
+          </div>
+
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
             <button type="submit" class="btn btn-primary">Alterar</button>

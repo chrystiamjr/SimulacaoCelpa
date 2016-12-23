@@ -94,7 +94,7 @@
 					<div class="form-group">
 						<label for="matricula" class="col-sm-4 control-label">Matrícula:</label>
 						<div class="col-sm-8">
-							<input type="text" class="form-control" id="matricula" name="matricula" required maxlength="11">
+							<input type="text" class="form-control" id="matricula" name="matricula" maxlength="11">
 						</div>
 					</div>
 					<div class="modal-footer">

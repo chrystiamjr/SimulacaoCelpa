@@ -97,7 +97,7 @@ $equipe = new dbEquipe();
 					<br>
 
 					<div class="form-group">
-						<label for="equipamento" class="col-sm-2 control-label" style="text-align: center !important">Código do equipamento:</label>
+						<label for="equipamento" class="col-sm-2 control-label" style="text-align: center !important">Equipamento:</label>
 						<div class="col-sm-10">
 							<input type="text" class="form-control" id="equipamento" required>
 						</div>

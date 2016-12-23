@@ -15,8 +15,18 @@ if($sOP == "Cadastro") {
 	$tipo = mb_strtoupper($_POST['tipo']);
 	$sigla = mb_strtoupper($_POST['sigla']);
 	$qtd = 0;
+	$atv= $_POST['ativo'];
+	$ativo = array();
+	foreach ($atv as $at){
+		array_push($ativo,mb_strtoupper($at));
+	}
+	$atvSigla = $_POST['ativoSigla'];
+	$ativoSigla = array();
+	foreach ($atvSigla as $atS) {
+		array_push($ativoSigla,mb_strtoupper($atS));
+	}
 
-	if($regID != null && $ativID != null && $nome != null && $tipo != null && $sigla != null)
+	if($regID != null && $ativID != null && $nome != null && $tipo != null && $sigla != null && !empty($ativo) && !empty($ativoSigla))
 	{
 		$resultadoRegional = $regional->listarSiglasRegionalDistribuidora($regID);
 		$resultadoAtividade = $atividade->listarUmAtividade($ativID);
@@ -30,6 +40,27 @@ if($sOP == "Cadastro") {
 		}
 		$cod_equatorial = $resultadoRegional[0]['sigla_dist'].$resultadoRegional[0]['sigla_reg']."BEL".$sigla.$resultadoAtividade[0]['sigla'].$sequencial;
 		$instalacao->cadastroInstalacao($regID,$ativID,$cod_equatorial,$nome,$tipo, $sigla);
+
+		$id_instalacoes = $instalacao->listarUmInstalacaoEquatorial($cod_equatorial);
+
+		$i = 0;
+		foreach($ativo as $a){
+//		echo $cod_equatorial;
+
+			if ($instalacao->listarTodosInstalacaoAtivo())
+			{
+				$qtd = count($instalacao->listarTodosInstalacaoAtivo());
+				$sequencialAtivo = sprintf('%04d', $qtd+1);
+			} else
+			{
+				$sequencialAtivo = sprintf('%04d', $qtd+1);
+			}
+
+			$cod_equatorial_ativo = $cod_equatorial.$ativoSigla[$i].$sequencialAtivo;
+			$instalacao->cadastroInstalacaoAtivo($id_instalacoes[0]['id_instalacoes'],$a,$ativoSigla[$i],$cod_equatorial_ativo);
+			$i++;
+		}
+//		die();
 
 	} else
 	{

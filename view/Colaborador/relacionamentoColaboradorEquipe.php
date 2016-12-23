@@ -100,7 +100,7 @@ $equipe = new dbEquipe();
 					<br>
 
 					<div class="form-group">
-						<label for="colaborador" class="col-sm-2 control-label" style="text-align: center !important">Nome do colaborador:</label>
+						<label for="colaborador" class="col-sm-2 control-label" style="text-align: center !important">Colaborador:</label>
 						<div class="col-sm-10">
 							<input type="text" class="form-control" id="colaborador" required>
 						</div>

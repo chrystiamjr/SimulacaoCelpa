@@ -9,6 +9,7 @@ $(document).ready(function () {
     "iDisplayLength": 5
   });
   $('#Tab1').hide();
+  $('#Tab2').hide();
 });
 
 $(".removerTudoPorEquipe").click(function () {
@@ -39,6 +40,28 @@ $('#compactarTab1').click(function () {
   }
 });
 
+var toggle2 = true;
+$('#compactarTab2').click(function () {
+  toggle2 = !toggle2;
+  if (toggle2) {
+    $("#Tab2").slideUp("slow", function () {
+      $('#Tab2').hide();
+    });
+    $('#compactarTab2 i').remove();
+    var dados = '<i class="fa fa-sort-desc" aria-hidden="true"></i>';
+    $('#compactarTab2').append(dados);
+
+  }
+  else {
+    $("#Tab2").slideDown("slow", function () {
+      $('#Tab2').show();
+    });
+    $('#compactarTab2 i').remove();
+    var dados = '<i class="fa fa-sort-asc" aria-hidden="true"></i>';
+    $('#compactarTab2').append(dados);
+  }
+});
+
 var globalIDEquipes = "";
 var conteudoEquipes = "";
 var conteudoEPI = "";
@@ -60,9 +83,9 @@ $('.listaColaboradores').click(function () {
         conteudoEquipes += "<td>" + data[i].cpf_colaborador + "</td>";
         conteudoEquipes += "<td>" + data[i].matricula + "</td>";
         conteudoEquipes += "<td>";
-        conteudoEquipes += '<button class="relacionamento listaEPIColaborador" title="Listar EPIs" style="margin: 0" href="#listaEPIPorColaborador" data-toggle="modal" data-backdrop="static" data-keyboard="false">';
+        conteudoEquipes += '<button class="relacionamento listaEPIColaborador" title="Listar EPIs" style="margin: 0;font-size: 25px;" href="#listaEPIPorColaborador" data-toggle="modal" data-backdrop="static" data-keyboard="false">';
         conteudoEquipes += '<input type="hidden" class="idColaboradorEPI" value="'+data[i].id_colaborador+'">';
-        conteudoEquipes += '<i class="fa fa-wrench" aria-hidden="true"></i>';
+        conteudoEquipes += '<i class="fa fa-sign-language" aria-hidden="true"></i>';
         conteudoEquipes += "</button>";
         conteudoEquipes += "</td>";
         conteudoEquipes += "</tr>";

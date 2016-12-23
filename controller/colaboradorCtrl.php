@@ -27,7 +27,7 @@ if($sOP == "Cadastro") {
 	$cpfMascara = str_replace('.', '', $cpfMascara);
 	$cpf = str_replace('-', '', $cpfMascara);
 
-	if($distID != null && $dirID != null && $gerID != null && $areID != null && $regID != null && $nome != null && $cpf != null && $matricula != null)
+	if($distID != null && $dirID != null && $gerID != null && $areID != null && $regID != null && $nome != null && $cpf != null)
 	{
 		$colaborador->cadastroColaborador($distID,$dirID,$gerID,$areID,$regID,$nome,$cpf,$matricula);
 	} else

@@ -83,9 +83,9 @@ $colaborador = new dbColaborador();
 			<div class="matter">
 				<div class="container">
 
-					<div class="table-responsive">
+					<div class="col-md-12 table-responsive">
 						<div class="container">
-							<h4 align="center">Equipes/Colaboradores
+							<h4 align="center">Visão de Relacionamento - Segurança
 								<div class="pull-right" style="position:relative; bottom: 4px; font-size: 40px;">
 									<button type="button" class="relacionamento" id="compactarTab1">
 										<i class="fa fa-sort-desc" aria-hidden="true"></i>
@@ -134,8 +134,63 @@ $colaborador = new dbColaborador();
 								</tbody>
 							</table>
 						</div>
-						<br>
+
+						<br><br>
 					</div>
+
+<!--					<div class="col-md-12 table-responsive">-->
+<!--						<div class="container">-->
+<!--							<h4 align="center">Visão de Relacionamento - Ativos-->
+<!--								<div class="pull-right" style="position:relative; bottom: 4px; font-size: 40px;">-->
+<!--									<button type="button" class="relacionamento" id="compactarTab2">-->
+<!--										<i class="fa fa-sort-desc" aria-hidden="true"></i>-->
+<!--									</button>-->
+<!--								</div>-->
+<!--							</h4>-->
+<!--						</div>-->
+<!--						<hr>-->
+<!---->
+<!--						<div id="Tab2">-->
+<!--							<table class="table table-bordered listaRelacionamento">-->
+<!--								<thead style="background-color: rgba(39, 72, 114, 1); font-weight: bold;">-->
+<!--								<tr>-->
+<!--									<th style="color: white; text-align: center;">Nome da Equipe</th>-->
+<!--									<th style="color: white; text-align: center;">Código Equatorial</th>-->
+<!--									<th style="color: white; text-align: center;">#</th>-->
+<!--								</tr>-->
+<!--								</thead>-->
+<!--								<tbody align="center">-->
+<!--								--><?php //if ($relacionamento->listarEquipes_ColaboradorEquipe() != null) {
+//									foreach ($relacionamento->listarEquipes_ColaboradorEquipe() as $dado) { ?>
+<!--										<tr style="font-size: 12px">-->
+<!--											<td style="vertical-align: middle;">--><?php //echo $dado['nm_equipe']; ?><!--</td>-->
+<!--											<td style="vertical-align: middle;">--><?php //echo $dado['cod_equatorial']; ?><!--</td>-->
+<!--											<td style="vertical-align: middle;font-size: 18px;">-->
+<!--												<button class="relacionamento listaColaboradores"  title="Listar Colaboradores" style="margin: 0" data-toggle="modal" href="#listarColaboradoresPorEquipes" data-backdrop="static" data-keyboard="false">-->
+<!--													<input type="hidden" class="idEquipe" value="--><?php //echo $dado['id_equipes']; ?><!--">-->
+<!--													<i class="fa fa-address-card" aria-hidden="true"></i>&nbsp;-->
+<!--												</button>-->
+<!--												<button class="relacionamento listaEPC"  title="Listar EPCs" style="margin: 0" data-toggle="modal" href="#listaEPCPorEquipe" data-backdrop="static" data-keyboard="false">-->
+<!--													<input type="hidden" class="idEquipe" value="--><?php //echo $dado['id_equipes']; ?><!--">-->
+<!--													<i class="fa fa-fire-extinguisher" aria-hidden="true"></i>&nbsp;-->
+<!--												</button>-->
+<!--												<button class="relacionamento listaFerramenta"  title="Listar Ferramentas" style="margin: 0" data-toggle="modal" href="#listaFerramentaPorEquipe" data-backdrop="static" data-keyboard="false">-->
+<!--													<input type="hidden" class="idEquipe" value="--><?php //echo $dado['id_equipes']; ?><!--">-->
+<!--													<i class="fa fa-wrench" aria-hidden="true"></i>&nbsp;-->
+<!--												</button>-->
+<!--												<button class="relacionamento removerTudoPorEquipe" title="Remover" style="margin: 0" data-toggle="modal" data-target="#DeletarUmColaboradorPorEquipe" data-backdrop="static" data-keyboard="false">-->
+<!--													<input type="hidden" class="idEquipeRemoveAll" value="--><?php //echo $dado['id_equipes']; ?><!--">-->
+<!--													<i class="fa fa-trash" aria-hidden="true"></i>&nbsp;-->
+<!--												</button>-->
+<!--											</td>-->
+<!--										</tr>-->
+<!--									--><?php //}
+//								} ?>
+<!--								</tbody>-->
+<!--							</table>-->
+<!--						</div>-->
+<!--						<br>-->
+<!--					</div>-->
 
 				</div>
 			</div>
