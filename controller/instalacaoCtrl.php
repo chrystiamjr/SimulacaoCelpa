@@ -70,12 +70,16 @@ if($sOP == "Cadastro") {
 } elseif($sOP == "Editar")
 {
 	$instID = $_POST['idInstalacao'];
+	$instAtivoID = $_POST['idInstalacaoAtivo'];
 	$regID = $_POST['regionalEditar'];
 	$ativID = $_POST['atividadeEditar'];
 	$codigo = $_POST['cod_equatorialEditar'];
+	$codigoAtivo = $_POST['cod_equatorialAtivoEditar'];
 	$nome = mb_strtoupper($_POST['nomeEditar']);
 	$tipo = mb_strtoupper($_POST['tipoEditar']);
 	$sigla = mb_strtoupper($_POST['siglaEditar']);
+	$ativo = mb_strtoupper($_POST['editaAtivo']);
+	$ativoSigla = mb_strtoupper($_POST['editaAtivoSigla']);
 //	echo $regID;
 //	die();
 
@@ -86,6 +90,12 @@ if($sOP == "Cadastro") {
 		$codSequencial = substr($codigo, 11, 20);
 		$cod_equatorial = $resultadoRegional[0]['sigla_dist'].$resultadoRegional[0]['sigla_reg']."BEL".$sigla.$resultadoAtividade[0]['sigla'].$codSequencial;
 		$instalacao->alterarInstalacao($instID,$regID,$ativID,$cod_equatorial,$nome,$tipo,$sigla);
+
+		$codigoAtivoSequencial = substr($codigoAtivo, 17, 21);
+
+		$codigo_equatorial_ativo = $cod_equatorial.$ativoSigla.$codigoAtivoSequencial;
+
+		$instalacao->alterarInstalacaoAtivo($instAtivoID,$instID,$ativo,$ativoSigla,$codigo_equatorial_ativo);
 	} else
 	{
 		$_SESSION['msg'] = '<div class="alert alert-danger" role="alert" id="msg">Os campos não podem estar em branco!<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a></div>';
@@ -94,9 +104,11 @@ if($sOP == "Cadastro") {
 } elseif($sOP == "Deletar")
 {
 	$id = $_POST['idInstalacaoRemover'];
+	$idAtivo = $_POST['idInstalacaoRemover'];
 	if($id != null)
 	{
 		$instalacao->removerInstalacao($id);
+		$instalacao->removerInstalacaoAtivoPorAtivoID($id);
 	}
 	header("location:/SimulacaoCelpa/view/Instalacoes/cadastroInstalacao.php");
 }

@@ -103,7 +103,9 @@
         <form class="form-horizontal" action="/SimulacaoCelpa/controller/instalacaoCtrl.php" method="post">
           <input type="hidden" name="sOP" value="Editar">
           <input type="hidden" name="idInstalacao" id="idInstalacao">
+          <input type="hidden" name="idInstalacaoAtivo" id="idInstalacaoAtivo">
           <input type="hidden" name="cod_equatorialEditar" id="cod_equatorialEditar">
+          <input type="hidden" name="cod_equatorialAtivoEditar" id="cod_equatorialAtivoEditar">
           <div class="form-group">
             <label for="regionalEditar" class="col-sm-4 control-label">Regional:</label>
             <div class="col-sm-8">
@@ -190,6 +192,7 @@
         <form class="form-horizontal" action="/SimulacaoCelpa/controller/instalacaoCtrl.php" method="post">
           <input type="hidden" name="sOP" value="Deletar">
           <input type="hidden" name="idInstalacaoRemover" id="idInstalacaoRemover">
+          <input type="hidden" name="idInstalacaoAtivoRemover" id="idInstalacaoAtivoRemover">
           <div class="content">
             <h4 style="text-align: center;">Deseja remover a entrada?
           </div>

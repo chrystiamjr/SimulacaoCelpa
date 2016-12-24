@@ -123,7 +123,7 @@ INNER JOIN instalacoes_ativos ia ON ia.id_instalacoes = ins.id_instalacoes";
 	}
 
 	public function alterarInstalacaoAtivo ($id, $id_instalacoes, $nm_ativo, $sigla, $cod_equatorial) {
-		$sql = "UPDATE instalacoes SET id_instalacoes={$id_instalacoes}, nm_ativo='{$nm_ativo}', sigla_ativo='{$sigla}', codigo_equatorial='{$cod_equatorial}' WHERE id_instalacoes_ativos = {$id}";
+		$sql = "UPDATE instalacoes_ativos SET id_instalacoes={$id_instalacoes}, nm_ativo='{$nm_ativo}', sigla_ativo='{$sigla}', codigo_equatorial='{$cod_equatorial}' WHERE id_instalacoes_ativos = {$id}";
 		$stmt = $this->conn->exec($sql);
 		if($stmt){
 			$_SESSION['msg'] = '<div class="alert alert-info" role="alert" id="msg">Dados alterados com sucesso!<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a></div>';
@@ -136,6 +136,18 @@ INNER JOIN instalacoes_ativos ia ON ia.id_instalacoes = ins.id_instalacoes";
 
 	public function removerInstalacaoAtivo ($id) {
 		$sql = "DELETE FROM instalacoes_ativos WHERE id_instalacoes_ativos = {$id}";
+		$stmt = $this->conn->exec($sql);
+		if($stmt){
+			$_SESSION['msg'] = '<div class="alert alert-info" role="alert" id="msg">Dados removidos com sucesso!<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a></div>';
+			return true;
+		} else {
+			$_SESSION['msg'] = '<div class="alert alert-danger" role="alert" id="msg">Erro ao remover os dados!<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a></div>';
+			return false;
+		}
+	}
+
+	public function removerInstalacaoAtivoPorAtivoID ($id) {
+		$sql = "DELETE FROM instalacoes_ativos WHERE id_instalacoes = {$id}";
 		$stmt = $this->conn->exec($sql);
 		if($stmt){
 			$_SESSION['msg'] = '<div class="alert alert-info" role="alert" id="msg">Dados removidos com sucesso!<a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a></div>';

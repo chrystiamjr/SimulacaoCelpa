@@ -129,7 +129,9 @@ $ativ = new dbAtividade();
 								<td style="vertical-align: middle;font-size: 18px;">
 									<button class="addInstalacao editar" title="Editar" style="margin: 0" data-toggle="modal" data-target="#Editar">
 										<input type="hidden" class="editaID" value="<?php echo $dado['id_instalacoes']; ?>">
+										<input type="hidden" class="editaIDAtivo" value="<?php echo $dado['id_instalacoes_ativos']; ?>">
 										<input type="hidden" class="editaCodigo" value="<?php echo $dado['cod_equatorial']; ?>">
+										<input type="hidden" class="editaCodigoAtivo" value="<?php echo $dado['codigo_equatorial']; ?>">
 										<input type="hidden" class="editaRegional" value="<?php echo $dado['id_regional']; ?>">
 										<input type="hidden" class="editaAtividade" value="<?php echo $dado['id_atividades']; ?>">
 										<input type="hidden" class="editaNome" value="<?php echo $dado['nm_instalacao']; ?>">
@@ -141,6 +143,7 @@ $ativ = new dbAtividade();
 									</button>
 									<button class="addInstalacao remover" title="Remover" style="margin: 0" data-toggle="modal" data-target="#Deletar">
 										<input type="hidden" class="removeID" value="<?php echo $dado['id_instalacoes']; ?>">
+										<input type="hidden" class="removeAtivoID" value="<?php echo $dado['id_instalacoes_ativos']; ?>">
 										<i class="fa fa-trash" aria-hidden="true"></i>&nbsp;
 									</button>
 									<button class="addInstalacao codigo" title="Código de Barras" style="margin: 0;" data-toggle="modal" data-target="#Codigo">
@@ -186,9 +189,11 @@ $ativ = new dbAtividade();
 
 	$(".editar").click(function(){
 		var id = $(this).find('.editaID').val();
+		var idAtivo = $(this).find('.editaIDAtivo').val();
 		var reg = $(this).find('.editaRegional').val();
 		var ativ = $(this).find('.editaAtividade').val();
 		var cod = $(this).find('.editaCodigo').val();
+		var codAtivo = $(this).find('.editaCodigoAtivo').val();
 		var nm = $(this).find('.editaNome').val();
 		var tpo = $(this).find('.editaTipo').val();
 		var sig = $(this).find('.editaSigla').val();
@@ -196,9 +201,11 @@ $ativ = new dbAtividade();
 		var atvSig = $(this).find('.editaAtivoSigla').val();
 
 		$('#idInstalacao').val(id);
+		$('#idInstalacaoAtivo').val(idAtivo);
 		$('#regionalEditar').val(reg);
 		$('#atividadeEditar').val(ativ);
 		$('#cod_equatorialEditar').val(cod);
+		$('#cod_equatorialAtivoEditar').val(codAtivo);
 		$('#nomeInstalacaoEditar').val(nm);
 		$('#tipoInstalacaoEditar').val(tpo);
 		$('#siglaInstalacaoEditar').val(sig);
@@ -209,7 +216,9 @@ $ativ = new dbAtividade();
 
 	$(".remover").click(function(){
 		var id = $(this).find('.removeID').val();
+		var id = $(this).find('.removeAtivoID').val();
 		$('#idInstalacaoRemover').val(id);
+		$('#idInstalacaoAtivoRemover').val(id);
 	});
 
 	var nomeCodigo = "";

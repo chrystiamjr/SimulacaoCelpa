@@ -59,7 +59,7 @@
 					<div class="form-group">
 						<label for="nome" class="col-sm-4 control-label">Nome da equipe:</label>
 						<div class="col-sm-8">
-							<input type="text" class="form-control" id="nome" name="nome" required>
+							<input type="text" class="form-control" id="nome" name="nome">
 						</div>
 					</div>
 					<div class="modal-footer">
@@ -135,7 +135,7 @@
 					<div class="form-group">
 						<label for="nomeEditar" class="col-sm-4 control-label">Nome da equipe:</label>
 						<div class="col-sm-8">
-							<input type="text" class="form-control" id="nomeEditar" name="nomeEditar" required>
+							<input type="text" class="form-control" id="nomeEditar" name="nomeEditar">
 						</div>
 					</div>
 					<div class="modal-footer">
