@@ -103,9 +103,7 @@
         <form class="form-horizontal" action="/SimulacaoCelpa/controller/instalacaoCtrl.php" method="post">
           <input type="hidden" name="sOP" value="Editar">
           <input type="hidden" name="idInstalacao" id="idInstalacao">
-          <input type="hidden" name="idInstalacaoAtivo" id="idInstalacaoAtivo">
           <input type="hidden" name="cod_equatorialEditar" id="cod_equatorialEditar">
-          <input type="hidden" name="cod_equatorialAtivoEditar" id="cod_equatorialAtivoEditar">
           <div class="form-group">
             <label for="regionalEditar" class="col-sm-4 control-label">Regional:</label>
             <div class="col-sm-8">
@@ -161,7 +159,7 @@
 
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
-            <button type="submit" class="btn btn-primary">Alterar</button>
+            <button id="AlterarBTn" type="submit" class="btn btn-primary">Alterar</button>
           </div>
         </form>
       </div>
@@ -232,11 +230,10 @@
             <table class="table table-bordered" id="listaAtivosInstalacaoTable">
               <thead style="background-color: rgba(39, 72, 114, 1); font-weight: bold;">
                 <tr>
-                  <th style="color: white; text-align: center;">ID</th>
+                  <th style="color: white; text-align: center;">#</th>
                   <th style="color: white; text-align: center;">Nome Ativo</th>
                   <th style="color: white; text-align: center;">Sigla</th>
                   <th style="color: white; text-align: center;">Código Equatorial Ativos</th>
-                  <th style="color: white; text-align: center;">#</th>
                 </tr>
               </thead>
               <tbody id="listagemAtivos" style="text-align: center"></tbody>
@@ -251,3 +248,11 @@
     </div>
   </div>
 </div>
+
+<!--<script>
+$('form').submit(function () {
+  $('input[type=text]').val(function () {
+    return this.value.toUpperCase();
+  })
+});
+</script>-->

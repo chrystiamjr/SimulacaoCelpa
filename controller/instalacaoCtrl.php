@@ -70,11 +70,9 @@ if($sOP == "Cadastro") {
 } elseif($sOP == "Editar")
 {
 	$instID = $_POST['idInstalacao'];
-	$instAtivoID = $_POST['idInstalacaoAtivo'];
 	$regID = $_POST['regionalEditar'];
 	$ativID = $_POST['atividadeEditar'];
 	$codigo = $_POST['cod_equatorialEditar'];
-	$codigoAtivo = $_POST['cod_equatorialAtivoEditar'];
 	$nome = mb_strtoupper($_POST['nomeEditar']);
 	$tipo = mb_strtoupper($_POST['tipoEditar']);
 	$sigla = mb_strtoupper($_POST['siglaEditar']);

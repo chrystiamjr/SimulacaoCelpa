@@ -304,7 +304,6 @@ $ativ = new dbAtividade();
               conteudoAtivo += "<td>" + data[i].nm_ativo + "</td>";
               conteudoAtivo += "<td>" + data[i].sigla_ativo + "</td>";
               conteudoAtivo += "<td>" + data[i].codigo_equatorial + "</td>";
-              conteudoAtivo += "<td></td>";
               conteudoAtivo += "</tr>";
             }
             $('#listagemAtivos').append(conteudoAtivo);
