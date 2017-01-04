@@ -159,17 +159,6 @@
             </div>
           </div>
 
-          <div class="form-group">
-            <label for="editaAtivoInstalacao" class="col-sm-4 control-label">Ativo:</label>
-            <div class="col-sm-4">
-              <input type="text" class="form-control" id="editaAtivoInstalacao" name="editaAtivo" required>
-            </div>
-            <label for="editaAtivoInstalacaoSigla" class="col-sm-1 control-label">Sigla:</label>
-            <div class="col-sm-2">
-              <input type="text" class="form-control" id="editaAtivoInstalacaoSigla" name="editaAtivoSigla" required>
-            </div>
-          </div>
-
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
             <button type="submit" class="btn btn-primary">Alterar</button>

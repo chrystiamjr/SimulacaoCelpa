@@ -98,10 +98,10 @@ $ativ = new dbAtividade();
                     <th style="color: white; text-align: center;vertical-align: middle">#</th>
                     <th style="color: white; text-align: center;vertical-align: middle">Regional</th>
                     <th style="color: white; text-align: center;vertical-align: middle">Atividade</th>
-                    <th style="color: white; text-align: center;vertical-align: middle">Código Equatorial</th>
                     <th style="color: white; text-align: center;vertical-align: middle">Nome da instalação</th>
                     <th style="color: white; text-align: center;vertical-align: middle">Tipo</th>
                     <th style="color: white; text-align: center;vertical-align: middle">Sigla</th>
+                    <th style="color: white; text-align: center;vertical-align: middle">Código Equatorial</th>
                     <th style="color: white; text-align: center;vertical-align: middle">Ações</th>
                   </tr>
                 </thead>
@@ -114,7 +114,6 @@ $ativ = new dbAtividade();
                         <td style="vertical-align: middle;"><?php echo $dado['id_instalacoes']; ?></td>
                         <td style="vertical-align: middle;"><?php echo $reg->listarUmRegional($dado['id_regional'])[0]['nm_regional'] ?></td>
                         <td style="vertical-align: middle;"><?php echo $ativ->listarUmAtividade($dado['id_atividades'])[0]['descricao'] ?></td>
-                        <td style="vertical-align: middle;"><?php echo $dado['cod_equatorial']; ?></td>
                         <td style="vertical-align: middle;"><?php echo $dado['nm_instalacao']; ?></td>
                         <td style="vertical-align: middle;">
                           <?php
@@ -132,6 +131,7 @@ $ativ = new dbAtividade();
                           ?>
                         </td>
                         <td style="vertical-align: middle;"><?php echo $dado['sigla']; ?></td>
+                        <td style="vertical-align: middle;"><?php echo $dado['cod_equatorial']; ?></td>
                         <td style="vertical-align: middle;font-size: 18px;">
                           <button class="addInstalacao editar" title="Editar" style="margin: 0" data-toggle="modal" data-target="#Editar">
                             <input type="hidden" class="editaID" value="<?php echo $dado['id_instalacoes']; ?>">
@@ -289,7 +289,7 @@ $ativ = new dbAtividade();
       var conteudoAtivo = "";
       $('.listaAtivos').click(function () {
         globalIDInstalacoes = $(this).find('.listaID').val();
-        alert(globalIDInstalacoes);
+//        alert(globalIDInstalacoes);
         $('#listagemAtivos tr').remove();
         conteudoAtivo = "";
 
