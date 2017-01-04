@@ -159,17 +159,6 @@
             </div>
           </div>
 
-          <div class="form-group">
-            <label for="editaAtivoInstalacao" class="col-sm-4 control-label">Ativo:</label>
-            <div class="col-sm-4">
-              <input type="text" class="form-control" id="editaAtivoInstalacao" name="editaAtivo" required>
-            </div>
-            <label for="editaAtivoInstalacaoSigla" class="col-sm-1 control-label">Sigla:</label>
-            <div class="col-sm-2">
-              <input type="text" class="form-control" id="editaAtivoInstalacaoSigla" name="editaAtivoSigla" required>
-            </div>
-          </div>
-
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
             <button type="submit" class="btn btn-primary">Alterar</button>
@@ -223,6 +212,40 @@
         <div class="modal-footer no-print">
           <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
           <button type="button" class="btn btn-default" id="imprimirCodigo">Imprimir</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Listar todos ativos baseado em uma instalacao -->
+<div class="modal fade" id="listaAtivosInstalacao" role="dialog" aria-labelledby="myModalLabel" style="width: auto">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header" style="background-color: #31708f;">
+        <h4 class="modal-title" id="myModalLabel" style="color: white">
+          <i class="fa fa-plus-circle modal-title" aria-hidden="true"></i> Listagem de Ferramentas por Equipe</h4>
+      </div>
+      <div class="modal-body">
+        <div class="form-horizontal">
+          <div class="content table-responsive">
+            <table class="table table-bordered" id="listaAtivosInstalacaoTable">
+              <thead style="background-color: rgba(39, 72, 114, 1); font-weight: bold;">
+                <tr>
+                  <th style="color: white; text-align: center;">ID</th>
+                  <th style="color: white; text-align: center;">Nome Ativo</th>
+                  <th style="color: white; text-align: center;">Sigla</th>
+                  <th style="color: white; text-align: center;">Código Equatorial Ativos</th>
+                  <th style="color: white; text-align: center;">#</th>
+                </tr>
+              </thead>
+              <tbody id="listagemAtivos" style="text-align: center"></tbody>
+            </table>
+          </div>
+          <br>
+          <div class="modal-footer">
+            <button class="btn btn-default" data-dismiss="modal">Fechar</button>
+          </div>
         </div>
       </div>
     </div>
